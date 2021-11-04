@@ -80,7 +80,12 @@ app.post('/create-checkout-session', async (req, res) => {
     line_items: [
       {
         price: process.env.PRICE,
-        quantity: quantity
+        quantity: quantity,
+        adjustable_quantity: {
+          enabled: true,
+          minimum: 1,
+          maximum: 10,
+        },
       },
     ],
     // ?session_id={CHECKOUT_SESSION_ID} means the redirect will have the session ID set as a query param
