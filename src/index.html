@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <!-- <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Stripe Checkout Sample</title>
@@ -10,39 +10,15 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/global.css" />
     <script src="https://js.stripe.com/v3/"></script>
-    <script src="./index.js" defer></script>
+    <script src="./index.js" defer></script> -->
+    <meta charset="utf-8">
+    <title>Test</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
 
   <body>
-    <div class="sr-root">
-      <div class="sr-main">
-        <section class="container">
-          <div>
-            <h1>custom title</h1>
-            <h4>Purchase a Pasha original photo</h4>
-
-            <div class="pasha-image">
-              <img
-                src="https://picsum.photos/280/320?random=4"
-                width="140"
-                height="160"
-              />
-            </div>
-          </div>
-
-          <form action="/create-checkout-session" method="POST">
-            <div class="quantity-setter">
-              <button class="increment-btn" id="subtract" disabled type="button">-</button>
-              <input type="number" id="quantity-input" min="1" value="1" name="quantity" />
-              <button class="increment-btn" id="add" type="button">+</button>
-            </div>
-
-            <button type="submit" id="submit">Buy</button>
-          </form>
-        </section>
-
-        <div id="error-message"></div>
-      </div>
-    </div>
+    <app-root></app-root>
   </body>
 </html>
