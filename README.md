@@ -1,5 +1,5 @@
 ## To Run
-```cd server/node```
+```cd server```
 ```npm start```
 navigate to localhost:4242 in your favorite web browser.
 
