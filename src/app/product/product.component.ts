@@ -26,7 +26,13 @@ export class ProductComponent {
     const stripe = await this.stripePromise;
     const { error } = await stripe.redirectToCheckout({
       mode: 'payment',
-      lineItems: [{ price: this.priceId, quantity: this.quantity }],
+      lineItems: [
+        { 
+          price: this.priceId,
+          quantity: this.quantity 
+        }
+      ],
+      shippingAddressCollection: {allowedCountries: ["US"]},
       successUrl: `${window.location.href}/success`,
       cancelUrl: `${window.location.href}/failure`,
     });
