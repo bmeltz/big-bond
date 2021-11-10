@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { loadStripe } from '@stripe/stripe-js';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +8,5 @@ import { loadStripe } from '@stripe/stripe-js';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
+
 }
