@@ -6,20 +6,22 @@ import { ProductComponent } from './product/product.component';
 import { SuccessComponent } from './success/success.component';
 import { FailureComponent } from './failure/failure.component';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     SuccessComponent,
-    FailureComponent
+    FailureComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {
         path: '',
-        component: ProductComponent
+        component: HomeComponent
       },
       {
         path: 'success',
@@ -31,7 +33,7 @@ import { RouterModule } from '@angular/router';
       },
       {
         path: '**',
-        component: ProductComponent
+        component: HomeComponent
       }
     ], { useHash: true })
   ],

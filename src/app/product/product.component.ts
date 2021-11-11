@@ -34,7 +34,7 @@ export class ProductComponent {
       ],
       shippingAddressCollection: {allowedCountries: ["US"]},
       successUrl: `${window.location.href}/success`,
-      cancelUrl: `${window.location.href}/failure`,
+      cancelUrl: `${window.location.href}/`,
     });
     // If `redirectToCheckout` fails due to a browser or network
     // error, display the localized error message to your customer
