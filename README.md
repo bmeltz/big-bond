@@ -5,7 +5,7 @@ and is based on this repo: https://github.com/unimedia-technology/angular-stripe
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
+NOTE: the first time running `ng serve` you will need to run `npm i` first. You may need to install npm if you haven't already.
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
