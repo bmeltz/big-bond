@@ -1,10 +1,13 @@
+
+
 .bg {
-    /* The image used */
-    background-image: url("../../assets/bigbend_nosky.jpg");
-    /* Full height */
-    height: 100vh;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  color: white;
+  /* The image used */
+  background-image: url("../../assets/bb_mway.jpg");
+  /* Full height */
+  height: 100vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

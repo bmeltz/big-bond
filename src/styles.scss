@@ -1,7 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);
 * { box-sizing: border-box; }
 
+@font-face {
+  font-family: Moon;
+  src: url("assets/fonts/Moon\ Light.otf");
+}
+
 body {
-  font-family: "Raleway";
+  font-family: "Moon";
   margin: 0;
 }
+
