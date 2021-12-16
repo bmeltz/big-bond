@@ -1,52 +1,58 @@
-.bg {
+
+section
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: -webkit-fill-available;
+    justify-content: center;
+    align-content: center;
+}
+
+
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 1001;
+}
+section img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
+#top_text
+{
+  position: relative;
+  text-align: center;
   color: white;
-  /* The image used */
-  background-image: url("../../assets/sky.png");
-  /* Full height */
-  height: 100vh;
-
-  width:100%; 
-  height:-webkit-fill-available;
-  background-attachment: fixed;
-
-  /* Center and scale the image nicely */
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.parent {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.image1 {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.image2 {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-#logo {
-  width: 20%;
-  position: absolute;
-  max-width: 30vh;
-  bottom: 30%;
-  right: 0px;
-  left: 0px;
+  font-size: 70px;
+  transform: translateY(100px);
   z-index: 100;
 }
 
 
-@media only screen and (max-width: 430px) {
-.bg {
-  background-attachment: scroll;
+#logo {
+  width: 20%;
+  height: auto;
+  position: absolute;
+  bottom: 30%;
+  right: 0px;
+  left: 0px;
 }
+
+
+@media only screen and (max-width: 430px) {
   #logo{
     width: 130px;
     height: auto;
