@@ -1,10 +1,9 @@
 
-section
-{
+section {
   position: relative;
   width: 100%;
   height: 100vh;
-  padding: 100px;
+  /* padding: 100px; */
   display: flex;
   /* background: inherit; */
   justify-content: center;
@@ -12,8 +11,7 @@ section
 }
 
 
-section::before
-{
+section::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -21,8 +19,7 @@ section::before
     height: 30px;
     z-index: 1001;
 }
-section img
-{
+section img {
   position: absolute;
   top: 0;
   left: 0;
@@ -32,27 +29,42 @@ section img
   pointer-events: none;
 }
 
-
-#top_text
-{
-  position: fixed;
+.top_text {
+  letter-spacing: 3vw;
+  position: absolute;
   right: 0px;
   left: 0;
+  top: 10vh;
+  text-shadow: 0 0 10px white;
+}
+
+#title {
+
   text-align: center;
   color: white;
   font-size: 70px;
-  margin-top: 10%;
+  padding-top: 3vh;
   z-index: 1;
 }
+
+#subtitle {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 2vw;
+}
+
 #ground {
   z-index: 2;
+  height: 100%;
 }
 
 
 #logo {
-  width: 20%;
+  position: fixed;
   z-index: 100;
-  height: auto;
+  height: 20%;
+  min-height: 90px;
   position: absolute;
   bottom: 20%;
   right: 0px;
@@ -64,6 +76,18 @@ section img
   #logo{
     width: 130px;
     height: auto;
+  }
+  .top_text {
+    letter-spacing: 3px;
+  }
+}
+
+@media only screen and (max-height: 210px) {
+  #title {
+    display: none;
+  }
+  #subtitle {
+    display: none;
   }
 }
 
