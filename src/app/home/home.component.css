@@ -1,13 +1,40 @@
-
-
 .bg {
   color: white;
   /* The image used */
-  background-image: url("../../assets/bb_mway.jpg");
+  background-image: url("../../assets/bb_mway_tall.jpg");
   /* Full height */
   height: 100vh;
+
+  width:100%; 
+  height:-webkit-fill-available;
+
   /* Center and scale the image nicely */
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#logo {
+  width: 20%;
+  position: absolute;
+  bottom: 30%;
+  right: 0px;
+  left: 0px;
+  /* height: auto;
+  width: 330px; */
+  /* bottom: 32%;
+  left: 10px;
+  right: 10px;   */
+}
+
+
+@media only screen and (max-width: 430px) {
+
+  #logo{
+    /* padding: 20px; */
+    width: 130px;
+    height: auto;
+  }
+}
+
+
