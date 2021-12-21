@@ -10,34 +10,20 @@ import { HomeComponent } from './pages/home/home.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // If You need animations
+import { AppRoutingModule } from './app-routing.module';
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     SuccessComponent,
     FailureComponent,
-    HomeComponent
+    HomeComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: HomeComponent
-      },
-      {
-        path: 'success',
-        component: SuccessComponent
-      },
-      {
-        path: 'failure',
-        component: FailureComponent
-      },
-      {
-        path: '**',
-        component: HomeComponent
-      }
-    ], { useHash: true }),
+    AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule
   ],
