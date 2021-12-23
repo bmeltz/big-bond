@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { loadStripe } from '@stripe/stripe-js';
 import { environment } from 'src/environments/environment';
 
@@ -8,8 +8,9 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
+  @Input() quantity: number = 1;
+
   priceId = environment.PRICE;
-  quantity = 1;
   stripePromise = loadStripe(environment.STRIPE_PUBLISHABLE_KEY);
 
   async checkout() {

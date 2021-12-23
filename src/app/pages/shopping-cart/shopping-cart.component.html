@@ -1,5 +1,20 @@
-<p>shopping-cart works!</p>
-<button (click)=homeClicked()>
-    home
-</button>
-<app-product></app-product>
+
+<div class="page">
+    <div style="position: relative;" class="column">
+        <button mdbBtn mdbWavesEffect color="primary" class="homebtn" (click)=homeClicked()>
+            home
+        </button>
+        <div class="center">
+            <!-- <img src="../../../assets/wristband.png" > -->
+            <div>
+                <button (click)="minusQuantity()"><i class="fa fa-minus"></i></button>
+                <input [(ngModel)]="quantity" min=1 type='number' name='Quantity'/>
+                <button (click)="plusQuantity()"><i class='fa fa-plus'></i></button>
+            </div>
+
+            <app-product [quantity] = "quantity"></app-product>  
+
+        </div>
+    </div>
+
+</div>

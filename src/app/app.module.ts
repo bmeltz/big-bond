@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './pages/shopping-cart/product/product.component';
 import { SuccessComponent } from './pages/success/success.component';
 import { FailureComponent } from './pages/failure/failure.component';
-import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -25,7 +25,8 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
