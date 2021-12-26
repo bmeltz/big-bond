@@ -1,4 +1,4 @@
-<div style="display: flex">
+<div id="page">
     <div class="left-col">
       <div class="container">
         <button (click)=homeClicked() class="back-button">
@@ -7,41 +7,24 @@
             home
         </button>
         <div class="center">
-            <p style="color:rgb(207, 207, 207)">big bend wristband</p>
-            <h1>$20.00</h1>
-            <img src="../../../assets/wristband.png" >
+            <div id="info">
+                <p style="color:rgb(207, 207, 207)">big bend wristband</p>
+                <h2>$20.00</h2>
+            </div>
+            <img id="product-image" src="../../../assets/wristband.png" >
         </div>
       </div>
     </div>
     <div class="right-col">
-        <div>
-            <button (click)="minusQuantity()"><i class="fa fa-minus"></i></button>
-            <input [(ngModel)]="quantity" min=1 type='number' name='Quantity'/>
-            <button (click)="plusQuantity()"><i class='fa fa-plus'></i></button>
+        <div class="container">
+            <div>
+                <button (click)="minusQuantity()"><i class="fa fa-minus"></i></button>
+                <input [(ngModel)]="quantity" min=1 type='number' name='Quantity'/>
+                <button (click)="plusQuantity()"><i class='fa fa-plus'></i></button>
+            </div>
+        
+            <app-product [quantity] = "quantity"></app-product> 
         </div>
-    
-        <app-product [quantity] = "quantity"></app-product> 
-    </div>
-  </div>
-<!-- 
-<div class="page">
 
-    <div class="left-content">
-        <button mdbBtn mdbWavesEffect color="primary" (click)=homeClicked()
-        style="margin-bottom: 100px;">
-        home
-        </button>
-        <img src="../../../assets/wristband.png" >
     </div>
-    <div class="right-content">
-        <div>
-            <button (click)="minusQuantity()"><i class="fa fa-minus"></i></button>
-            <input [(ngModel)]="quantity" min=1 type='number' name='Quantity'/>
-            <button (click)="plusQuantity()"><i class='fa fa-plus'></i></button>
-        </div>
-    
-        <app-product [quantity] = "quantity"></app-product> 
-    </div>
-
-
-</div> -->
+</div>

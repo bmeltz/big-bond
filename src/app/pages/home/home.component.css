@@ -30,6 +30,7 @@ section img {
 }
 
 .top_text {
+  font-family: "Moon";
   letter-spacing: 3vw;
   position: absolute;
   right: 0px;
