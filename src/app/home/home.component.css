@@ -80,7 +80,7 @@ section img {
 }
 
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 430px) {
   #logo{
     width: 130px;
     height: auto;
