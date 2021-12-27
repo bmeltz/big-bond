@@ -10,15 +10,15 @@ import { environment } from 'src/environments/environment';
 })
 export class ShoppingCartComponent implements OnInit {
   public quantity = 1;
+  public price: number = 20.0;
   priceId = environment.PRICE;
   
   stripePromise = loadStripe(environment.STRIPE_PUBLISHABLE_KEY);
-  public price: number;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.getPrice();
+    // this.getPrice();
   }
 
   public homeClicked() {
@@ -36,10 +36,8 @@ export class ShoppingCartComponent implements OnInit {
   public async getPrice() {
     // const stripe = await this.stripePromise ;
     // const stripe = require('stripe')(environment.STRIPE_SECRET_KEY);
-    const price = 99;
     // const price = await stripe.prices.retrieve(environment.PRICE);
-    console.log(price);
-    this.price = price;
+    // this.price = price;
   }
 
 }

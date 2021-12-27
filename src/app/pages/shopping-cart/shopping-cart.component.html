@@ -1,30 +1,23 @@
-<div id="page">
-    <div class="left-col">
-      <div class="container">
-        <div class="center">
-            <button (click)=homeClicked() class="back-button">
-                <i class="fas fa-arrow-left"></i>
-                <img src="../../../assets/temp_logo.png" style="border-radius: 1000px; height: 30px; width: auto;">
-                home
-            </button>
-            <div id="info">
-                <p style="color:rgb(207, 207, 207)">big bend wristband</p>
-            </div>
-            <img id="product-image" src="../../../assets/wristband.png" >
-        </div>
-      </div>
-    </div>
-    <div class="right-col">
-        <div style="height: 100%; width: 20%">
-            <ngx-number-spinner
-                [fullscreen]="false"
-                [value]="1"
-                [min]="1"
-                [(ngModel)]="quantity">
-            </ngx-number-spinner>
-        
-            <app-product [quantity] = "quantity"></app-product> 
-        </div>
 
+<div class="page">
+    <button (click)=homeClicked() class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        <img src="../../../assets/temp_logo.png" style="border-radius: 1000px; height: 30px; width: auto;">
+        home
+    </button>
+    <div id="info">
+        <p style="color:rgb(182, 182, 182); font-size: 30px;">big bend wristband</p>
+        <h2>${{quantity * price}}</h2>
+        <p style="color:rgb(182, 182, 182); font-size: 14px;">Qty. {{quantity}}, ${{price}} each</p>
     </div>
+    <img id="product-image" src="../../../assets/wristband.png" >
+    <ngx-number-spinner 
+        style="color: black; width: 120px; margin: 20px auto; background-color: rgb(214, 214, 214); border-radius: 7px;"
+        [value]="1"
+        [min]="1"
+        [max]="10"
+        [(ngModel)]="quantity">
+    </ngx-number-spinner>
+
+    <app-product [quantity] = "quantity"></app-product> 
 </div>
