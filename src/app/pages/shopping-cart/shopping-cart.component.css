@@ -57,10 +57,6 @@ input[type=number] {
   margin-top: 60px;
 }
 
-#product-image {
-  padding: 0;
-}
-
 .back-button {
   position: relative;
   left: 0;
