@@ -27,16 +27,14 @@ input[type=number] {
 }
     
 .container {
-  position: relative;
-  /* width: 100%; */
+  /* position: relative; */
+  width: 100%;
   height: inherit;
-  padding: 100px;
 }
 
 .back-button {
     color: white;
-    padding-bottom: 10px;
-    margin-bottom: 10%; 
+    padding: 20px;
     display: inline-flex;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -51,16 +49,28 @@ input[type=number] {
 }
 
 .center {
+  /* position: relative; */
   display: -webkit-flex; /* Safari */
   display: flex;
   flex-direction: column;
   text-align: center;
+  height: 100%;
 }
 
-img {
+#product-image {
   border-radius: 10px;
   width: 220px;
   display: block;
+}
+
+#info {
+  font-size: 30px;
+}
+
+#minus {
+  border-radius: 5px 5px;
+  border: none;
+  background-color: red;
 }
 
 @media only screen and (max-width: 970px) {
@@ -79,10 +89,19 @@ img {
   width: 100%;
 }
 
+.center {
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
 #info {
   -webkit-order: 2;
   order: 2;
   text-align: center;
+  font-size: 16px;
+  padding: 10px;
 }
 
 #product-image {
@@ -92,10 +111,14 @@ img {
 }
 
 .back-button {
-  padding-left: 0;
+  position: relative;
+  left: 0;
+  width: 100vw;
+  padding: 0;
+  /* background-color: red; */
 }
 
-img {
+#product-image {
   width: 120px;
 }
 } 

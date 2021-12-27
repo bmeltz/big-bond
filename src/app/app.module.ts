@@ -12,6 +12,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // If You need animations
 import { AppRoutingModule } from './app-routing.module';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule, 
+    NgxNumberSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
