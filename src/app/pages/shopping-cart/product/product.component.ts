@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { loadStripe } from '@stripe/stripe-js';
-import { environment } from '../../environments/environment';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-product',
@@ -8,15 +8,9 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
-  title = 'angular-stripe';
+  @Input() quantity: number = 1;
+
   priceId = environment.PRICE;
-  product = {
-    title: 'Classic Peace Lily',
-    subTitle: 'Popular House Plant',
-    description: 'Classic Peace Lily is a spathiphyllum floor plant arranged in a bamboo planter with a blue & red ribbom and butterfly pick.',
-    price: 18.00
-  };
-  quantity = 1;
   stripePromise = loadStripe(environment.STRIPE_PUBLISHABLE_KEY);
 
   async checkout() {
@@ -29,7 +23,7 @@ export class ProductComponent {
       lineItems: [
         { 
           price: this.priceId,
-          quantity: this.quantity 
+          quantity: this.quantity
         }
       ],
       shippingAddressCollection: {allowedCountries: ["US"]},
@@ -40,7 +34,6 @@ export class ProductComponent {
     // error, display the localized error message to your customer
     // using `error.message`.
     if (error) {
-      console.log('ah crap');
       console.log(error);
     }
 

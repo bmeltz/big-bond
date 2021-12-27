@@ -8,8 +8,6 @@ export const environment = {
   STRIPE_SECRET_KEY: "sk_test_51JHiV9L2xwG7RCwgEtYrcHDj69dXwqZwYD9llUJVVAXvryq2VgyKLNseoOyUWyT12XFIhY5KiCFopLU9MaNR4uKX00eGRScZrf",
   PRICE:"price_1JmrzpL2xwG7RCwge5NhXYWH",
   PAYMENT_METHOD_TYPES: "card"
-
-
 };
 
 /*

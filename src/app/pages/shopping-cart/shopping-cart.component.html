@@ -1,0 +1,25 @@
+
+<div class="page">
+    <button (click)=homeClicked() class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        <img src="../../../assets/temp_logo.png" 
+            style="border-radius: 1000px; height: 30px; 
+            margin-left: 10px; margin-right: 10px; width: auto;">
+        home
+    </button>
+    <div id="info">
+        <p style="color:rgb(182, 182, 182); font-size: 30px;">big bend wristband</p>
+        <h2>${{quantity * price}}</h2>
+        <p style="color:rgb(182, 182, 182); font-size: 14px;">Qty. {{quantity}}, ${{price}} each</p>
+    </div>
+    <img id="product-image" src="../../../assets/wristband.png" >
+    <ngx-number-spinner 
+        style="color: black; width: 120px; margin: 20px auto; background-color: rgb(214, 214, 214); border-radius: 7px;"
+        [value]="1"
+        [min]="1"
+        [max]="10"
+        [(ngModel)]="quantity">
+    </ngx-number-spinner>
+
+    <app-product [quantity] = "quantity"></app-product> 
+</div>
