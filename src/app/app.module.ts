@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AppRoutingModule } from './app-routing.module';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
     FormsModule, 
     NgxNumberSpinnerModule
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy , useClass: PathLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
