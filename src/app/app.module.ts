@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AppRoutingModule } from './app-routing.module';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
+import { MatTabsModule } from '@angular/material/tabs'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
     MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule, 
-    NgxNumberSpinnerModule
+    NgxNumberSpinnerModule,
+    MatTabsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

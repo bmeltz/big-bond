@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);
 * { box-sizing: border-box; }
-
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @font-face {
   font-family: Moon;
   src: url("assets/fonts/Moon\ Light.otf");

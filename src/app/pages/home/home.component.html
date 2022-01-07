@@ -14,7 +14,26 @@
 <div class="nav-content">
     <h1 style="text-align: center; font-family: Moon;">about</h1>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor illum eum at laboriosam ipsam odio culpa officiis soluta aperiam quae adipisci, debitis accusamus suscipit consectetur sapiente vitae ut error distinctio?</p>
-    <button (click)="wristbandsClicked()">
-        wristbands
-    </button>
+    <div style="display: flex; justify-content: center; padding-bottom: 15px;">
+        <button mdbBtn color="primary" (click)="wristbandsClicked()" style="border-radius: 5px;">
+            wristbands
+        </button>
+        
+    </div>
+    <mat-tab-group #tabGroup mat-align-tabs="center" [selectedIndex]="0" style='min-height:200px'>
+        <mat-tab label="packing list">
+            <div style="padding: 30px;">
+                packing list
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor illum eum at laboriosam ipsam odio culpa officiis soluta aperiam quae adipisci, debitis accusamus suscipit consectetur sapiente vitae ut error distinctio?</p>
+            </div>
+        </mat-tab>
+        <mat-tab label="directions">
+            <div style="padding: 30px;">
+                directions
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor illum eum at laboriosam ipsam odio culpa officiis soluta aperiam quae adipisci, debitis accusamus suscipit consectetur sapiente vitae ut error distinctio?</p>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+
 </div>
