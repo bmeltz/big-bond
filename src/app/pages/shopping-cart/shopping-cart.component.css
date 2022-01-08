@@ -11,7 +11,7 @@ input[type=number] {
 }
     
 .page {
-  position: relative;
+  /* position: relative; */
   display: -webkit-flex; /* Safari */
   display: flex;
   flex-direction: column;
@@ -22,10 +22,9 @@ input[type=number] {
 }
 
 .back-button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   text-align: center;
-  justify-content: left;
   color: white;
   margin: 20px;
   padding-left: 100px;
@@ -36,8 +35,6 @@ input[type=number] {
   cursor: pointer;
   overflow: hidden;
   outline: none;
-
-  background-color: red;
 }
 
 #product-image {
@@ -61,11 +58,12 @@ input[type=number] {
 }
 
 .back-button {
-  position: absolute;
-  left: 10px;
+  position: relative;
+  left: 0;
   width: 100vw;
-  margin-top: 20px;
-  background-color: teal;
+  padding: 0;
+  margin: 20px;
+  /* background-color: red; */
 }
 
 #product-image {
