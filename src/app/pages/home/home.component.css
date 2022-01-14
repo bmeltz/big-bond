@@ -25,7 +25,7 @@ section img {
   position: absolute;
   right: 0px;
   left: 0;
-  top: 10vh;
+  top: 12vh;
   text-shadow: 0 0 10px white;
 }
 
@@ -75,7 +75,7 @@ section img {
   height: 20%;
   min-height: 90px;
   position: absolute;
-  bottom: 20%;
+  bottom: 25%;
   right: 0px;
   left: 0px;
 }
