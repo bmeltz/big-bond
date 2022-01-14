@@ -1,16 +1,13 @@
-import { AfterViewInit, Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { MatTabGroup } from '@angular/material/tabs';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  selected = new FormControl(0);
   constructor(private router: Router) { }
 
   ngOnInit(): void {

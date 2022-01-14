@@ -13,7 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AppRoutingModule } from './app-routing.module';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
-import { MatTabsModule } from '@angular/material/tabs'
+import { MatTabsModule } from '@angular/material/tabs';
+import { InfoTabsComponent } from './pages/home/info-tabs/info-tabs.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatTabsModule } from '@angular/material/tabs'
     SuccessComponent,
     FailureComponent,
     HomeComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    InfoTabsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,7 @@ import { MatTabsModule } from '@angular/material/tabs'
     BrowserAnimationsModule,
     FormsModule, 
     NgxNumberSpinnerModule,
-    MatTabsModule,
+    MatTabsModule
     
   ],
   providers: [],
