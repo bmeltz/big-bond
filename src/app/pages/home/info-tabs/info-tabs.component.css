@@ -5,6 +5,24 @@
   padding-top: 15px;
 }
 
+.column {
+  display: inline-block;
+
+  justify-content: left;
+  width: 50%;
+}
+
+ul {
+  list-style-position: inside;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .mat-tab-label{
     background:#282833ec;
     color: white;
