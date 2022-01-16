@@ -5,7 +5,7 @@
     </section>
     <div class="top_text">
         <h2 id="title">big bond</h2>
-        <p id="subtitle">March xx-xx</p>
+        <p id="subtitle">April xx-xx</p>
     </div>
     <img id="logo" src="../../assets/logo_transparent_white.gif" class="img-fluid mx-auto d-block">
     <div class="transition"><p style="display: none;">test</p></div>
@@ -14,7 +14,11 @@
 <div class="nav-content">
     <h1 style="text-align: center; font-family: Moon;">about</h1>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor illum eum at laboriosam ipsam odio culpa officiis soluta aperiam quae adipisci, debitis accusamus suscipit consectetur sapiente vitae ut error distinctio?</p>
-    <button (click)="wristbandsClicked()">
-        wristbands
-    </button>
+    <div style="display: flex; justify-content: center; padding-bottom: 15px;">
+        <button mdbBtn color="primary" (click)="wristbandsClicked()" style="border-radius: 5px; font-family: Moon;">
+            wristbands
+        </button>
+        
+    </div>
+    <info-tabs></info-tabs>
 </div>

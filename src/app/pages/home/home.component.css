@@ -68,6 +68,12 @@ section img {
   background-color:#1a1a20;
 }
 
+div button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 #logo {
   position: fixed;
