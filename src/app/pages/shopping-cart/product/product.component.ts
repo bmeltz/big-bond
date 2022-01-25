@@ -11,7 +11,7 @@ export class ProductComponent {
   @Input() quantity: number = 1;
 
   priceId = environment.PRICE;
-  stripePromise = loadStripe(environment.STRIPE_PUBLISHABLE_KEY);
+  stripePromise = loadStripe(environment.STRIPE_TEST_PUBLISHABLE_KEY);
 
   async checkout() {
     // Call your backend to create the Checkout session.
