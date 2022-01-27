@@ -10,12 +10,16 @@ import { environment } from 'src/environments/environment';
 export class ProductComponent {
   @Input() quantity: number = 1;
 
-  priceId = environment.PRICE;
+  origin = window.location.origin;
+  success_url = origin.concat("/success");
+  failure_url = origin.concat("/failure");
+  // change these to the live values when the time comes
+  priceId = environment.TEST_PRICE;
   stripePromise = loadStripe(environment.STRIPE_TEST_PUBLISHABLE_KEY);
+
 
   async checkout() {
     // Call your backend to create the Checkout session.
-
     // When the customer clicks on the button, redirect them to Checkout.
     const stripe = await this.stripePromise;
     const { error } = await stripe.redirectToCheckout({
@@ -27,8 +31,8 @@ export class ProductComponent {
         }
       ],
       shippingAddressCollection: {allowedCountries: ["US"]},
-      successUrl: `${window.location.href}/success`,
-      cancelUrl: `${window.location.href}/`,
+      successUrl: this.success_url,
+      cancelUrl: this.failure_url,
     });
     // If `redirectToCheckout` fails due to a browser or network
     // error, display the localized error message to your customer

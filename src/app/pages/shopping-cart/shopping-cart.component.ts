@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ShoppingCartComponent implements OnInit {
   public quantity = 1;
-  public price: number = 20.0;
+  public price: number = 80.0;
 
   constructor(private router: Router) { }
 
