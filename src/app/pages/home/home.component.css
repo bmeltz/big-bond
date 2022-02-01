@@ -40,8 +40,8 @@ section img {
 #subtitle {
   text-align: center;
   color: white;
-  font-size: 20px;
-  letter-spacing: 2vw;
+  font-size: 25px;
+  letter-spacing: 20px;
 }
 
 #ground {
@@ -100,7 +100,7 @@ div button {
   }
 }
 
-@media only screen and (max-height: 210px) {
+@media only screen and (max-height: 256px) {
   #title {
     display: none;
   }

@@ -2,9 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ProductComponent } from './pages/shopping-cart/product/product.component';
 import { SuccessComponent } from './pages/success/success.component';
-import { FailureComponent } from './pages/failure/failure.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
@@ -19,9 +17,7 @@ import { InfoTabsComponent } from './pages/home/info-tabs/info-tabs.component'
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
     SuccessComponent,
-    FailureComponent,
     HomeComponent,
     ShoppingCartComponent,
     InfoTabsComponent

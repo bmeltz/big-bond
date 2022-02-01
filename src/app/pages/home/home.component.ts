@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    window.sessionStorage.setItem("quantity", "1");
+
     const sky = window.document.getElementById('sky');
 
     window.addEventListener('scroll', function(){

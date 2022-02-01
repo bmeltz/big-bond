@@ -31,12 +31,12 @@ section img {
   color: white;
   text-align: center;
   background-color: rgba(126, 126, 126, 0.384);
-  /* backdrop-filter: blur(5px); */
+  backdrop-filter: blur(5px);
   padding-top: 10px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 20px;
-
+  box-shadow: 0px 0px 20px rgba(26, 33, 48, 0.397);
   width: 600px;
 
   border-radius: 20px;
