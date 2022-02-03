@@ -1,19 +1,18 @@
-<div id="container">
-    <div id="success-box">
-        <div class="dot"></div>
-        <div class="dot two"></div>
-        <div class="face">
-            <div class="eye"></div>
-            <div class="eye right"></div>
-            <div class="mouth happy"></div>
-        </div>
-        <div class="shadow scale"></div>
-        <div class="message">
-            <h1 class="alert">Success!</h1>
-            <p>yay, your box of joyfulness is on your way.</p>
-        </div>
-        <button class="button-box" [routerLink]="['/']">
-            <h1 class="green">continue</h1>
-        </button>
+<div>
+    <section>
+        <img src="../../../assets/successimg.jpg">
+    </section>
+    
+    <div class="container">
+        <i class="fa fa-check-circle" style="font-size: 40px; padding: 10px;"></i>
+        <div class="header">Payment Successful</div>
+        <p>You should get an email with a reciept. You can expect your wristband to arrive by idk when.</p>
+        <button mdbBtn color="primary" style="border-radius: 30px; font-family: Moon; letter-spacing: 3px;" (click)=homeClicked()>home</button>
     </div>
+    <!-- <div style="position: fixed; bottom: 40px; text-align: center; width: 100vw; color: rgba(170, 170, 170, 0.514); font-size: 12px;
+        margin-top: 30px;">
+        <p style="margin: 3px;">contact big bond</p>
+        <p>info@bigbond.us</p>
+    </div> -->
+
 </div>
