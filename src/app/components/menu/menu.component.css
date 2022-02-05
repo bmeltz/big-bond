@@ -9,7 +9,6 @@
  * prefixes.
  */
 
- 
  a
  {
    text-decoration: none;
@@ -26,9 +25,9 @@
  #menuToggle
  {
    display: block;
-   position: absolute;
-   top: 30px;
-   right: 30px;
+   position: relative;
+   margin: auto 100%;
+   transform: translateX(-40px);
    
    z-index: 1;
    
