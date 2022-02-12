@@ -2,11 +2,8 @@ section {
   position: relative;
   width: 100%;
   height: 100vh;
-  /* padding: 100px; */
   display: flex;
-  /* background: inherit; */
   justify-content: center;
-  /* align-content: center; */
 }
 
 section img {
