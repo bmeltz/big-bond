@@ -46,6 +46,7 @@ section img {
 .transition {
   content: '';
   position: absolute;
+  top: 100%;
   /* the height and calc number needs to match */
   height: 70px;
   top: calc(100vh - 70px);

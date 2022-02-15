@@ -71,9 +71,9 @@
    
    transform-origin: 4px 0px;
    
-   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-               opacity 0.55s ease;
+   transition: transform .2s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.3s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity .3s ease;
  }
  
  #menuToggle span:first-child
@@ -141,7 +141,7 @@
    transform-origin: 0% 0%;
    transform: translate(100%, 0);
    
-   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+   transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
  }
  
  #menu li
@@ -164,6 +164,6 @@
      transform: none;
      opacity: 0;
  
-     transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+     transition: opacity 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
    }
  }
