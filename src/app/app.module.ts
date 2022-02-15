@@ -16,6 +16,7 @@ import { InfoTabsComponent } from './pages/home/info-tabs/info-tabs.component';
 import { PackingListComponent } from './pages/packing-list/packing-list.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { DirectionsComponent } from './pages/directions/directions.component'
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,9 @@ import { DirectionsComponent } from './pages/directions/directions.component'
     MatTabsModule
     
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: PathLocationStrategy },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
