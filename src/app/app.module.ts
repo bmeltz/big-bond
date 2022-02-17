@@ -12,7 +12,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
 import { MatTabsModule } from '@angular/material/tabs';
-import { InfoTabsComponent } from './pages/home/info-tabs/info-tabs.component'
+import { InfoTabsComponent } from './pages/home/info-tabs/info-tabs.component';
+import { PackingListComponent } from './pages/packing-list/packing-list.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { DirectionsComponent } from './pages/directions/directions.component'
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,10 @@ import { InfoTabsComponent } from './pages/home/info-tabs/info-tabs.component'
     SuccessComponent,
     HomeComponent,
     ShoppingCartComponent,
-    InfoTabsComponent
+    InfoTabsComponent,
+    PackingListComponent,
+    MenuComponent,
+    DirectionsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,9 @@ import { InfoTabsComponent } from './pages/home/info-tabs/info-tabs.component'
     MatTabsModule
     
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: PathLocationStrategy },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

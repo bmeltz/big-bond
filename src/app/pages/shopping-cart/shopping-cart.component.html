@@ -1,29 +1,32 @@
-
-<div class="page">
-    <button (click)=homeClicked() class="back-button">
-        <i class="fas fa-arrow-left"></i>
-        <img src="../../../assets/temp_logo.png" 
-            style="border-radius: 1000px; height: 30px; 
-            margin-left: 10px; margin-right: 10px; width: auto;">
-        home
-    </button>
-    <div id="info">
-        <p style="color:rgb(182, 182, 182); font-size: 30px;">big bond wristband</p>
-        <h2>${{quantity * price}}</h2>
-        <p style="color:rgb(182, 182, 182); font-size: 14px;">Qty. {{quantity}}, ${{price}} each</p>
-    </div>
-    <img id="product-image" src="../../../assets/wristband.png" >
-    <ngx-number-spinner 
-        style="color: black; width: 120px; margin: 20px auto; background-color: rgb(214, 214, 214); border-radius: 7px;"
-        [value]="1"
-        [min]="1"
-        [max]="10"
-        [(ngModel)]="quantity">
-    </ngx-number-spinner>
-
-    <div style="display: flex; justify-content: center;">
-        <button mdbBtn color="primary" (click)="checkout()" style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
-            checkout
-        </button>
+<div style="overflow: hidden">
+    <menu></menu>
+    <div class="page">
+        <!-- <button (click)=homeClicked() class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            <img src="../../../assets/temp_logo.png" 
+                style="border-radius: 1000px; height: 30px; 
+                margin-left: 10px; margin-right: 10px; width: auto;">
+            home
+        </button> -->
+        <div id="info">
+            <p style="color:rgb(182, 182, 182); font-size: 30px;">big bond wristband</p>
+            <h2>${{quantity * price}}</h2>
+            <p style="color:rgb(182, 182, 182); font-size: 14px;">Qty. {{quantity}}, ${{price}} each</p>
+        </div>
+        <img id="product-image" src="../../../assets/wristband.png" >
+        <ngx-number-spinner 
+            style="color: black; width: 120px; margin: 20px auto; background-color: rgb(214, 214, 214); border-radius: 7px;"
+            [value]="1"
+            [min]="1"
+            [max]="10"
+            [(ngModel)]="quantity">
+        </ngx-number-spinner>
+    
+        <div style="display: flex; justify-content: center;">
+            <button mdbBtn color="primary" (click)="checkout()" style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
+                checkout
+            </button>
+        </div>
     </div>
 </div>
+

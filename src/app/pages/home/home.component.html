@@ -1,29 +1,36 @@
-<div style="min-height: 100vh; overflow: hidden;">
-    <section>
-        <img src="../../assets/sky_2.png" id="sky">
-        <img src="../../assets/ground_2.png" id="ground">
-    </section>
-    <div class="top_text">
-        <h2 id="title">big bond</h2>
-        <div id="subtitle">
-            April 
-            <div style="font-size: 18px; letter-spacing: 10px;">29 & 30 </div>
+
+<div style="min-height: calc(100%); overflow: hidden;">
+
+    <div>
+        <section>
+            <menu></menu>
+
+            <img src="../../assets/sky_2-min.png" id="sky">
+            <img src="../../assets/ground_2-min.png" id="ground">
+            <div class="transition"><p style="display: none;"></p></div>
+
+        </section>
+    
+        <div class="top_text">
+    
+            <h2 id="title">big bond</h2>
+            <div id="subtitle">
+                April 
+                <div style="font-size: 18px; letter-spacing: 10px;">29 & 30 </div>
+            </div>
         </div>
-
-
+        <img id="logo" src="../../assets/logo_transparent_white.gif" class="img-fluid mx-auto d-block">
     </div>
-    <img id="logo" src="../../assets/logo_transparent_white.gif" class="img-fluid mx-auto d-block">
-    <div class="transition"><p style="display: none;">test</p></div>
 </div>
-
-<div class="nav-content">
+<div class="content">
     <h1 style="text-align: center; font-family: Moon;">about</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor illum eum at laboriosam ipsam odio culpa officiis soluta aperiam quae adipisci, debitis accusamus suscipit consectetur sapiente vitae ut error distinctio?</p>
-    <div style="display: flex; justify-content: center; padding-bottom: 15px;">
-        <button mdbBtn color="primary" (click)="wristbandsClicked()" style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
+    <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor illum eum at laboriosam ipsam odio culpa officiis soluta aperiam quae adipisci, debitis accusamus suscipit consectetur sapiente vitae ut error distinctio?</p>
+    <div style="display: flex; justify-content: center; padding: 20px; margin-bottom: 40px;">
+        <button mdbBtn color="primary" (click)="wristbandsClicked()" 
+        style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
             wristbands
         </button>
         
     </div>
-    <info-tabs></info-tabs>
+    <!-- <p style="text-align: center; margin-top: 50px; color: rgb(179, 179, 179)">contact us</p> -->
 </div>
