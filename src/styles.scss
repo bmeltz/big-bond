@@ -24,3 +24,14 @@ body {
 .main-txt {
   font-family: 'Moon';
 }
+
+hr.divider {
+  margin: 2px;
+  height:1px;
+  border:none;
+  color:rgb(201, 201, 201); 
+  background-color:rgb(201, 201, 201); 
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
