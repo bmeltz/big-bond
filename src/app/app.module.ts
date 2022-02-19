@@ -17,6 +17,7 @@ import { PackingListComponent } from './pages/packing-list/packing-list.componen
 import { MenuComponent } from './components/menu/menu.component';
 import { DirectionsComponent } from './pages/directions/directions.component'
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { NoCeilFloorComponent } from './components/no-ceil-floor/no-ceil-floor.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
     InfoTabsComponent,
     PackingListComponent,
     MenuComponent,
-    DirectionsComponent
+    DirectionsComponent,
+    NoCeilFloorComponent
   ],
   imports: [
     BrowserModule,
