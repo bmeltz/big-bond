@@ -76,6 +76,8 @@ section img {
 @media only screen and (max-width: 600px) {
   .container {
     width: 80vw;
+    position: absolute;
+    top: 40px;
   }
   .header{
     font-size: 20px;

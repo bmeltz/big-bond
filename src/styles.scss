@@ -17,12 +17,18 @@ html {
 
 body {
   font-family: Nunito;
+  font-size: 18px;
   margin: 0;
   background-color: #1a1a20;
 }
 
 .main-txt {
   font-family: 'Moon';
+}
+
+a {
+  color: rgb(57, 179, 235);
+  text-decoration: underline;
 }
 
 hr.divider {
