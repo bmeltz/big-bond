@@ -58,6 +58,8 @@ section img {
 
 .content{
   position: absolute;
+  font-size: 22px;  width: 100%;
+  align-content: center;
   top: calc(100%);
   color: white;
   padding: 100px;
@@ -94,7 +96,9 @@ div button {
   }
   .content {
     padding: 20px;
-    
+  }
+  p {
+    font-size: 18px;
   }
 }
 
