@@ -1,11 +1,35 @@
-<div style="min-height: 100vh; overflow: hidden;" class="top">
-    <section>
-        <img src="../../assets/sky_2.png" id="sky">
-        <img src="../../assets/ground_2.png" id="ground">
-    </section>
-    <div class="top_text">
-        <h2 id="title">big bond</h2>
-        <p id="subtitle">coming soon</p>
+
+<div style="min-height: calc(100%); overflow: hidden;">
+
+    <div>
+        <section>
+            <menu></menu>
+
+            <img src="../../assets/sky_2-min.png" id="sky">
+            <img src="../../assets/ground_2-min.png" id="ground">
+            <div class="transition"><p style="display: none;"></p></div>
+
+        </section>
+    
+        <div class="top_text">
+    
+            <h2 id="title">big bond</h2>
+            <div id="subtitle">
+                April 
+                <div style="font-size: 18px; letter-spacing: 10px;">29 & 30 </div>
+            </div>
+        </div>
+        <img id="logo" src="../../assets/logo_transparent_white.gif" class="img-fluid mx-auto d-block">
     </div>
-    <img id="logo" src="../../assets/logo_transparent_white.gif" class="img-fluid mx-auto d-block">
+</div>
+<div class="content">
+    <p style="text-align: center; letter-spacing: 3px;">We can all escape.<br> Let's dance in the desert.</p>
+    <div style="display: flex; justify-content: center; padding: 30px;">
+        <button mdbBtn color="primary" (click)="wristbandsClicked()" 
+        style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
+            wristbands
+        </button>
+    </div>
+    <no-ceil-floor></no-ceil-floor>
+
 </div>

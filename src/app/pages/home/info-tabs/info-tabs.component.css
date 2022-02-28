@@ -1,0 +1,39 @@
+#icon {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  padding-top: 15px;
+}
+
+.column {
+  display: inline-block;
+
+  justify-content: left;
+  width: 50%;
+}
+
+ul {
+  list-style-position: inside;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.mat-tab-label{
+    background:#282833ec;
+    color: white;
+    font-size: 18px;
+    font-family: 'Moon';
+  }
+  .mat-tab-group.mat-primary .mat-ink-bar{
+    background: rgb(59, 143, 192);
+    border-radius: 20px;
+  } 
+  ::ng-deep.mat-tab-label, ::ng-deep.mat-tab-label-active{
+    padding: 5px !important;
+    margin: 3px!important;
+   }

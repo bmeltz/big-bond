@@ -1,13 +1,43 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,700);
 * { box-sizing: border-box; }
-
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @font-face {
   font-family: Moon;
   src: url("assets/fonts/Moon\ Light.otf");
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+@font-face {
+  font-family: Nunito;
+  src: url("assets/fonts/Nunito-VariableFont_wght.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Nunito;
+  font-size: 18px;
+  margin: 0;
+  background-color: #1a1a20;
+}
+
+.main-txt {
+  font-family: 'Moon';
+}
+
+a {
+  color: rgb(57, 179, 235);
+  text-decoration: underline;
+}
+
+hr.divider {
+  margin: 2px;
+  height:1px;
+  border:none;
+  color:rgb(201, 201, 201); 
+  background-color:rgb(201, 201, 201); 
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
