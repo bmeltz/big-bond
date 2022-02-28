@@ -31,8 +31,8 @@ export class ShoppingCartComponent implements OnInit {
   success_url = origin.concat("/success");
   cancel_url = origin.concat("/cart");
   // change these to the live values when the time comes
-  priceId = environment.TEST_PRICE;
-  stripePromise = loadStripe(environment.STRIPE_TEST_PUBLISHABLE_KEY);
+  priceId = environment.PRICE;
+  stripePromise = loadStripe(environment.STRIPE_PUBLISHABLE_KEY);
 
 
   async checkout() {
