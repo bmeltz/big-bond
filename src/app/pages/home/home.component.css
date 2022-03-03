@@ -21,14 +21,16 @@ section img {
   left: 0;
   top: 12vh;
   text-shadow: 0 0 10px white;
+  z-index: 10;
+
 }
 
 #title {
   text-align: center;
   color: white;
   font-size: 70px;
+  white-space: nowrap;
   padding-top: 3vh;
-  z-index: 1;
 }
 
 #subtitle {
@@ -36,6 +38,13 @@ section img {
   color: white;
   font-size: 25px;
   letter-spacing: 20px;
+
+}
+
+.dates {
+  font-size: 18px; 
+  letter-spacing: 10px;
+  text-align: center;
 }
 
 #ground {
@@ -78,7 +87,7 @@ div button {
 #logo {
   z-index: 100;
   height: 20%;
-  min-height: 90px;
+  
   position: absolute;
   bottom: 25%;
   right: 0px;
@@ -87,10 +96,7 @@ div button {
 
 
 @media only screen and (max-width: 430px) {
-  #logo{
-    width: 130px;
-    height: auto;
-  }
+
   .top_text {
     letter-spacing: 3px;
   }
@@ -102,12 +108,26 @@ div button {
   }
 }
 
-@media only screen and (max-height: 256px) {
+@media only screen and (max-width: 360px) {
   #title {
-    display: none;
+    font-size: 15vw;
+    text-align: center;
   }
   #subtitle {
-    display: none;
+    font-size: 8vw;
+  }
+  .dates {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .top_text {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #logo {
+    z-index: -2;
   }
 }
 
