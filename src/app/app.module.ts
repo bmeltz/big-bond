@@ -18,6 +18,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { DirectionsComponent } from './pages/directions/directions.component'
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { NoCeilFloorComponent } from './components/no-ceil-floor/no-ceil-floor.component';
+import { LineupComponent } from './pages/lineup/lineup.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NoCeilFloorComponent } from './components/no-ceil-floor/no-ceil-floor.c
     PackingListComponent,
     MenuComponent,
     DirectionsComponent,
-    NoCeilFloorComponent
+    NoCeilFloorComponent,
+    LineupComponent
   ],
   imports: [
     BrowserModule,
