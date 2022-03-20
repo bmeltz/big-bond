@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-lineup',
+  selector: 'lineup',
   templateUrl: './lineup.component.html',
   styleUrls: ['./lineup.component.css']
 })

@@ -25,6 +25,11 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['directions']);
 
   }
+
+  goToLineup() {
+    this.router.navigate(['lineup']);
+  }
+
   goToCart() {
     this.router.navigate(['cart']);
   }

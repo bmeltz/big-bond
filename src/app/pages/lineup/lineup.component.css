@@ -1,0 +1,12 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    top: calc(100%);
+    color: white;
+    margin: 0 auto;
+}
+
+#logo {
+    z-index: 100;
+    height: 100px;
+}
