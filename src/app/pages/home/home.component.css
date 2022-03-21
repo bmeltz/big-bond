@@ -61,20 +61,21 @@ section img {
   width: 100%;
   z-index: 100;
   background: linear-gradient(to top, #1a1a20, transparent);
-  /* background-color: purple; */
 }
 
 
 .content{
-  position: absolute;
   font-size: 22px;  width: 100%;
-  align-content: center;
-  top: calc(100%);
+  display: block;
   color: white;
   padding: 100px;
   padding-bottom: 0;
   padding-top: 50px;
   background-color: #1a1a20;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  background-color: red;
 }
 
 div button {
