@@ -11,6 +11,7 @@ section img {
   height: calc(100vh);
   object-fit: cover;
   pointer-events: none;
+  z-index: -3;
 }
 
 .top_text {
@@ -52,15 +53,20 @@ section img {
   height: 100%;
 }
 
+#sky {
+  z-index: 1;
+  height: 100%;
+}
+
 .transition {
   content: '';
   position: absolute;
   /* the height and calc number needs to match */
   height: 70px;
-  top: calc(100% - 70px);
+  top: calc(100vh - 70px);
   width: 100%;
   z-index: 100;
-  background: linear-gradient(to top, #1a1a20, transparent);
+  background: linear-gradient(to top, #5858ca, transparent);
 }
 
 
@@ -68,14 +74,11 @@ section img {
   font-size: 22px;  width: 100%;
   display: block;
   color: white;
-  padding: 100px;
   padding-bottom: 0;
   padding-top: 50px;
-  background-color: #1a1a20;
+  background-color: #49499e;  /*  #1a1a20 */
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
-  background-color: red;
 }
 
 div button {
