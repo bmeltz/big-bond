@@ -1,3 +1,11 @@
+.top {
+    min-height: 100vh;
+    height: fill-available;
+    padding-left: 30px;
+    padding-right: 30px;
+  
+  }
+  
 @media only screen and (max-width: 430px) {
     iframe {
         width: 100%;
