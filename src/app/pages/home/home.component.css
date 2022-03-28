@@ -63,7 +63,7 @@ section img {
   position: absolute;
   /* the height and calc number needs to match */
   height: 70px;
-  top: calc(100vh - 70px);
+  top: calc(100% - 70px);
   width: 100%;
   z-index: 100;
   background: linear-gradient(to top, #1a1a20, transparent);
