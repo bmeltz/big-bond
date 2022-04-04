@@ -26,8 +26,8 @@ export class MenuComponent implements OnInit {
 
   }
 
-  goToLineup() {
-    this.router.navigate(['lineup']);
+  goToschedule() {
+    this.router.navigate(['schedule']);
   }
 
   goToCart() {

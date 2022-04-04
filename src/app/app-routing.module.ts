@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DirectionsComponent } from './pages/directions/directions.component';
 import { HomeComponent } from './pages/home/home.component';
-import { LineupComponent } from './pages/lineup/lineup.component';
+import { scheduleComponent } from './pages/schedule/schedule.component';
 import { PackingListComponent } from './pages/packing-list/packing-list.component';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { SuccessComponent } from './pages/success/success.component';
@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'success', component: SuccessComponent},
   { path: 'packing-list', component: PackingListComponent},
   { path: 'directions', component: DirectionsComponent},
-  { path: 'lineup', component: LineupComponent},
+  { path: 'schedule', component: scheduleComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home' }
 ];
