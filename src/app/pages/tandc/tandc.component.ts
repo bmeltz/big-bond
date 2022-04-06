@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'tandc',
+  selector: 'terms-and-conditions',
   templateUrl: './tandc.component.html',
   styleUrls: ['./tandc.component.css']
 })

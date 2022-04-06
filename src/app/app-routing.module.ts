@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'success', component: SuccessComponent},
   { path: 'packing-list', component: PackingListComponent},
   { path: 'directions', component: DirectionsComponent},
-  { path: 'tandc', component: TandcComponent},
+  { path: 'terms-and-conditions', component: TandcComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home' }
 ];

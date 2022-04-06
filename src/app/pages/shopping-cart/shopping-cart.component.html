@@ -19,7 +19,7 @@
             [(ngModel)]="quantity">
         </ngx-number-spinner>
         <mdb-checkbox style="color: white; font-size: 14px; margin: 15px;" (change)="onCheckboxChange()" ([ngModel])="checkboxStatus" [default]="true">
-            I agree to the <a [routerLink]="['/tandc']">terms and conditions</a>
+            I agree to the <a [routerLink]="['/terms-and-conditions']">terms and conditions</a>
         </mdb-checkbox>       
         <div style="display: flex; justify-content: center;">
             <button mdbBtn color="primary" (click)="checkout()" [disabled]="!checkboxStatus" style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
