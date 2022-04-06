@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PackingListComponent } from './pages/packing-list/packing-list.component';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { SuccessComponent } from './pages/success/success.component';
+import { TandcComponent } from './pages/tandc/tandc.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'success', component: SuccessComponent},
   { path: 'packing-list', component: PackingListComponent},
   { path: 'directions', component: DirectionsComponent},
+  { path: 'tandc', component: TandcComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home' }
 ];

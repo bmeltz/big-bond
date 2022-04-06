@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InfoTabsComponent } from './info-tabs.component';
+import { TandcComponent } from './tandc.component';
 
-describe('InfoTabsComponent', () => {
-  let component: InfoTabsComponent;
-  let fixture: ComponentFixture<InfoTabsComponent>;
+describe('TandcComponent', () => {
+  let component: TandcComponent;
+  let fixture: ComponentFixture<TandcComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InfoTabsComponent ]
+      declarations: [ TandcComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InfoTabsComponent);
+    fixture = TestBed.createComponent(TandcComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

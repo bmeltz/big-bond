@@ -11,13 +11,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AppRoutingModule } from './app-routing.module';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
-import { MatTabsModule } from '@angular/material/tabs';
-import { InfoTabsComponent } from './pages/home/info-tabs/info-tabs.component';
 import { PackingListComponent } from './pages/packing-list/packing-list.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { DirectionsComponent } from './pages/directions/directions.component'
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { NoCeilFloorComponent } from './components/no-ceil-floor/no-ceil-floor.component';
+import { TandcComponent } from './pages/tandc/tandc.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +24,11 @@ import { NoCeilFloorComponent } from './components/no-ceil-floor/no-ceil-floor.c
     SuccessComponent,
     HomeComponent,
     ShoppingCartComponent,
-    InfoTabsComponent,
     PackingListComponent,
     MenuComponent,
     DirectionsComponent,
-    NoCeilFloorComponent
+    NoCeilFloorComponent,
+    TandcComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +36,7 @@ import { NoCeilFloorComponent } from './components/no-ceil-floor/no-ceil-floor.c
     MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule, 
-    NgxNumberSpinnerModule,
-    MatTabsModule
-    
+    NgxNumberSpinnerModule,    
   ],
   providers: [
     { provide: LocationStrategy, useClass: PathLocationStrategy },
