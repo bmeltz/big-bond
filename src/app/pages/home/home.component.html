@@ -1,28 +1,26 @@
+ <!-- may god be with those who decide to edit the style heights here -->
+<div style="height: -webkit-fill-available; max-height: 100vh; overflow: hidden;">
+    <section>
+        <menu></menu>
+        <img src="../../assets/sky_2-min.png" id="sky">
+        <img src="../../assets/ground_2-min.png" id="ground">
+        
+    </section>
+    <div class="top_text">
 
-<div style="height: -webkit-fill-available; overflow: hidden;">
-
-    <div>
-        <section>
-            <menu></menu>
-
-            <img src="../../assets/sky_2-min.png" id="sky">
-            <img src="../../assets/ground_2-min.png" id="ground">
-            <div class="transition"><p style="display: none;"></p></div>
-
-        </section>
-    
-        <div class="top_text">
-    
-            <h2 id="title">big bond</h2>
-            <div id="subtitle">
-                April 
-                <div class="dates">29 & 30 </div>
-            </div>
+        <h2 id="title">big bond</h2>
+        <div id="subtitle">
+            April 
+            <div class="dates">29 & 30 </div>
         </div>
-        <img id="logo" src="../../assets/logo_transparent_white.gif" class="img-fluid mx-auto d-block">
     </div>
+    <img id="logo" src="../../assets/logo_transparent_white.gif" class="img-fluid mx-auto d-block">
+
 </div>
+<div class="transition"><p style="display: none;"></p></div>
+
 <div class="content">
+    
     <p style="text-align: center; letter-spacing: 3px;">We can all escape.<br> Let's dance in the desert.</p>
     <div style="display: flex; justify-content: center; padding: 30px;">
         <button mdbBtn color="primary" (click)="wristbandsClicked()" 
@@ -31,17 +29,17 @@
         </button>
 
     </div>
-    <div style="letter-spacing: 3px; font-size: 18px;" id="dt-schedule">
+    <div style="letter-spacing: 3px; font-size: 18px;" id="dt-lineup">
         Bastiansé<span> &#8226;</span>Biagi<span>&#8226;</span> Cut & Sew <br>
         Fomentum<span> &#8226;</span> JD <span> &#8226;</span>Manic Muse<span> &#8226;</span>S.I.D <br>
         TiDDY<span> &#8226;</span>Trunk Space<span> &#8226;</span>Weix
     </div>
-    <div style="letter-spacing: 3px; font-size: 18px;" id="mobile-schedule">
+    <div style="letter-spacing: 3px; font-size: 18px;" id="mobile-lineup">
         Bastiansé<br> Biagi <br>Cut & Sew <br>
         Fomentum <br> JD <br> Manic Muse <br> S.I.D <br>
         TiDDY <br>Trunk Space<br> Weix
     </div>
-    <app-info-card></app-info-card>
+    <!-- <app-info-card></app-info-card> -->
     <p style="font-size: 12px;color:#a4a4a6;">Tap artist name for details</p>
 
 

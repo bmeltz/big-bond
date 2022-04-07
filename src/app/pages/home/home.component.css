@@ -1,3 +1,11 @@
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+html {
+  height: -webkit-fill-available;
+}
+
 section {
   width: 100%;
   min-height: 100vh;
@@ -8,7 +16,6 @@ section img {
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100vh);
   object-fit: cover;
   pointer-events: none;
   z-index: -3;
@@ -69,8 +76,9 @@ section img {
   background: linear-gradient(to top, #1a1a20, transparent);
 }
 
-
 .content{
+  position: relative;
+  z-index: 999;
   font-size: 22px;  width: 100%;
   display: block;
   color: white;
@@ -92,12 +100,12 @@ span {
   padding: 10px;
 }
 
-#mobile-schedule {
+#mobile-lineup {
   display: none;
   margin-bottom: 20px;
 }
 
-#dt-schedule {
+#dt-lineup {
   display: block;
   font-size: 18px;
   margin-bottom: 20px;
@@ -113,11 +121,11 @@ span {
   left: 0px;
 }
 @media only screen and (max-width: 630px) {
-  #mobile-schedule {
+  #mobile-lineup {
     display: block;
   }
   
-  #dt-schedule {
+  #dt-lineup {
     display: none;
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
 
@@ -11,13 +11,13 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    window.sessionStorage.setItem("quantity", "1");
-
     const sky = window.document.getElementById('sky');
 
     window.addEventListener('scroll', function(){
       let value = window.scrollY;
-      sky.style.top = value * .5 + 'px';
+      sky.style.top = value * .8 + 'px';
+
+
     });
   }
 
