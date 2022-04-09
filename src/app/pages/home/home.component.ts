@@ -23,33 +23,23 @@ export class HomeComponent implements OnInit, OnDestroy {
 
 
     });
-    var self = this;
     // document.querySelector("html").addEventListener("click", function(e){
     //   self.toggleCard(e)
     // })
+    var self = this;
     document.querySelector("html").addEventListener("click", function(e) {
-      self.toggleCard(e);
+      toggleCard(e, self);
     })
   }
 
   ngOnDestroy(): void {
-    var self = this;
-    document.querySelector("html").removeEventListener("click", function(e){
-      self.toggleCard(e);
+    // this doesn't have the desired effect. :(
+    document.querySelector("html").removeEventListener("click", function(e) {
+      toggleCard(e, self);
     })
   }
 
-  toggleCard(e) {
-    console.log('omg');
-    if(e.target == document.querySelector(".artist-name")){
-      document.querySelector(".slider").classList.toggle("close");
-      this.artistCardStatus = !this.artistCardStatus;
-    }
-    else if(e.target != document.querySelector(".slider") && this.artistCardStatus){
-      document.querySelector(".slider").classList.toggle("close");
-      this.artistCardStatus = !this.artistCardStatus;
-    }
-  }
+ 
 
   wristbandsClicked(){
     this.router.navigate(['cart']);
@@ -63,4 +53,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.artistCardStatus = val;
   }
 
+}
+function toggleCard(e, obj: any) {
+  console.log('omg');
+  if(e.target == document.querySelector(".artist-name")){
+    document.querySelector(".slider").classList.toggle("close");
+    obj.artistCardStatus = !obj.artistCardStatus;
+  }
+  else if(e.target != document.querySelector(".slider") && obj.artistCardStatus){
+    document.querySelector(".slider").classList.toggle("close");
+    obj.artistCardStatus = !obj.artistCardStatus;
+  }
 }
