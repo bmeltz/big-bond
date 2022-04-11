@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
+import { ArtistCardService } from 'src/app/services/artist-card.service';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  private artistCardStatus = false;
-  constructor(private router: Router) {
-    console.log('construct', this.artistCardStatus);
-   }
+  private comingFromDestroy = false;
+  private toggleCard;
+  constructor(private router: Router,
+    private cardService: ArtistCardService) 
+  {
+  }
 
   ngOnInit(): void {
 
@@ -20,48 +23,22 @@ export class HomeComponent implements OnInit, OnDestroy {
     window.addEventListener('scroll', function(){
       let value = window.scrollY;
       sky.style.top = value * .8 + 'px';
-
-
     });
-    // document.querySelector("html").addEventListener("click", function(e){
-    //   self.toggleCard(e)
-    // })
-    var self = this;
-    document.querySelector("html").addEventListener("click", function(e) {
-      toggleCard(e, self);
-    })
+    
+    // document.querySelector("html").addEventListener("click", this.toggleCard);
   }
 
-  ngOnDestroy(): void {
-    // this doesn't have the desired effect. :(
-    document.querySelector("html").removeEventListener("click", function(e) {
-      toggleCard(e, self);
-    })
+  ngOnDestroy(): void {    
+    // remove the event listener and toggle the card one more time if the card is active (i.e. hide it)
+    // document.querySelector("html").removeEventListener("click", this.toggleCard);
+    // if(this.cardService.cardIsActive){
+    //   document.getElementById("artist-card").classList.toggle("close");
+    //   this.cardService.cardIsActive = false;
+    // }
   }
-
- 
 
   wristbandsClicked(){
     this.router.navigate(['cart']);
   }
 
-  public getCardStatus() {
-    return this.artistCardStatus;
-  }
-
-  public setCardStatus(val: boolean) {
-    this.artistCardStatus = val;
-  }
-
-}
-function toggleCard(e, obj: any) {
-  console.log('omg');
-  if(e.target == document.querySelector(".artist-name")){
-    document.querySelector(".slider").classList.toggle("close");
-    obj.artistCardStatus = !obj.artistCardStatus;
-  }
-  else if(e.target != document.querySelector(".slider") && obj.artistCardStatus){
-    document.querySelector(".slider").classList.toggle("close");
-    obj.artistCardStatus = !obj.artistCardStatus;
-  }
 }
