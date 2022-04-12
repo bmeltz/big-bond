@@ -8,15 +8,13 @@ import { ArtistCardService } from 'src/app/services/artist-card.service';
   styleUrls: ['./info-card.component.css']
 })
 export class InfoCardComponent implements OnInit, OnDestroy {
-  private comingFromDestroy = false;
   private toggleCard;
   constructor(private router: Router,
     private cardService: ArtistCardService) 
   {
 
     this.toggleCard = function toggleCard(e) {
-      console.log('test', e.target, document.querySelector(".artist-name"), document.getElementById("artist-card"));
-      if(e.target == document.querySelector(".artist-name")){
+      if(e.target.classList.contains("dt-artist-name") || e.target.classList.contains("mobile-artist-name")){
         console.log('aaaa')
         document.getElementById("artist-card").classList.toggle("close");
         cardService.cardIsActive = true;
@@ -26,6 +24,8 @@ export class InfoCardComponent implements OnInit, OnDestroy {
         document.getElementById("artist-card").classList.toggle("close");
         cardService.cardIsActive = false;
       }
+      console.log('test', document.getElementById("artist-card"));
+
     }
   }
 
