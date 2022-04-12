@@ -8,6 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  public selectedName: string;
+  public artistPicMap = {
+    "Bastiansé": "../../../assets/artist_pics/bastianse.jpg",
+    "Biagi": "../../../assets/artist_pics/biagi.jpg"
+  }
   constructor(private router: Router) 
   {
   }
@@ -29,4 +34,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.router.navigate(['cart']);
   }
 
+  public setArtistName(event: any) {
+    this.selectedName = event.target.innerHTML;
+    console.log(event.target.innerHTML);
+  }
 }

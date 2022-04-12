@@ -100,12 +100,33 @@ span {
 #mobile-lineup {
   display: none;
   margin-bottom: 20px;
+  letter-spacing: 3px; 
+  font-size: 18px;
 }
 
 #dt-lineup {
   display: block;
-  font-size: 18px;
   margin-bottom: 20px;
+}
+
+#dt-lineup button {
+  display: inline-block !important;
+  background-color: transparent;
+  border: none;
+  color: white;
+  letter-spacing: 3px; 
+  font-size: 18px;
+  outline: none;
+}
+
+#mobile-lineup button {
+  display: inline-block !important;
+  background-color: transparent;
+  border: none;
+  color: white;
+  letter-spacing: 3px; 
+  font-size: 18px;
+  outline: none;
 }
 
 #logo {

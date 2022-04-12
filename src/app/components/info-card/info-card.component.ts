@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ArtistCardService } from 'src/app/services/artist-card.service';
 
@@ -8,6 +8,10 @@ import { ArtistCardService } from 'src/app/services/artist-card.service';
   styleUrls: ['./info-card.component.css']
 })
 export class InfoCardComponent implements OnInit, OnDestroy {
+  
+  @Input() name: string;
+  @Input() image: string;
+
   private toggleCard;
   constructor(private router: Router,
     private cardService: ArtistCardService) 
@@ -15,17 +19,13 @@ export class InfoCardComponent implements OnInit, OnDestroy {
 
     this.toggleCard = function toggleCard(e) {
       if(e.target.classList.contains("dt-artist-name") || e.target.classList.contains("mobile-artist-name")){
-        console.log('aaaa')
         document.getElementById("artist-card").classList.toggle("close");
         cardService.cardIsActive = true;
       }
       else if(e.target != document.getElementById("artist-card") && cardService.cardIsActive){
-        console.log('bbbb')
         document.getElementById("artist-card").classList.toggle("close");
         cardService.cardIsActive = false;
       }
-      console.log('test', document.getElementById("artist-card"));
-
     }
   }
 
