@@ -75,7 +75,7 @@ section img {
 
 .content{
   position: relative;
-  z-index: 999;
+  z-index: 998;
   font-size: 22px;  width: 100%;
   display: block;
   color: white;
@@ -117,6 +117,7 @@ span {
   letter-spacing: 3px; 
   font-size: 18px;
   outline: none;
+  padding-bottom: 16px;
 }
 
 #mobile-lineup button {
@@ -139,9 +140,30 @@ span {
   left: 0px;
 }
 
+mat-accordion mat-expansion-panel{
+  margin: auto auto;
+  background-color: inherit;
+  box-shadow: 0 0 5px 5px #2a2a33;
+  color: white;
+  max-width: 600px;
+  width: 90%;
+}
+
+mat-expansion-panel-header:hover {
+  background-color: inherit !important;
+}
+
+mat-expansion-panel-header {
+  color: white;
+  padding: 0;
+}
+
 @media only screen and (max-width: 630px) {
   #mobile-lineup {
     display: block;
+  }
+  #mobile-lineup button{
+    padding: 5px;
   }
   
   #dt-lineup {

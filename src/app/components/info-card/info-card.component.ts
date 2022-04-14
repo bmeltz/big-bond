@@ -18,11 +18,12 @@ export class InfoCardComponent implements OnInit, OnDestroy {
   {
 
     this.toggleCard = function toggleCard(e) {
+      console.log(e.target.classList);
       if(e.target.classList.contains("dt-artist-name") || e.target.classList.contains("mobile-artist-name")){
         document.getElementById("artist-card").classList.toggle("close");
         cardService.cardIsActive = true;
       }
-      else if(e.target != document.getElementById("artist-card") && cardService.cardIsActive){
+      else if(e.target != document.getElementById("artist-card") && !document.getElementById("artist-card").contains(e.target) && cardService.cardIsActive){
         document.getElementById("artist-card").classList.toggle("close");
         cardService.cardIsActive = false;
       }

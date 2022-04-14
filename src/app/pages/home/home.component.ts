@@ -1,4 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { MatAccordion } from '@angular/material/expansion';
 
 import { Router } from '@angular/router';
 
@@ -8,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  @ViewChild(MatAccordion) accordion: MatAccordion;
   public selectedName: string;
   public artistPicMap = {
     "Bastiansé": "../../../assets/artist_pics/bastianse.jpg",
@@ -23,7 +25,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     window.addEventListener('scroll', function(){
       let value = window.scrollY;
-      sky.style.top = value * .8 + 'px';
+      sky.style.top = value * .5 + 'px';
     });
   }
 
@@ -36,6 +38,5 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   public setArtistName(event: any) {
     this.selectedName = event.target.innerHTML;
-    console.log(event.target.innerHTML);
   }
 }
