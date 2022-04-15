@@ -64,9 +64,15 @@
             <div style="letter-spacing: 3px; font-size: 18px;" id="mobile-lineup">
                 <button class="mobile-artist-name" (click)="setArtistName($event)">Bastiansé</button><br> 
                 <button class="mobile-artist-name" (click)="setArtistName($event)">Biagi</button> <br>
-                Cut & Sew <br>
-                Fomentum <br> JD <br> Manic Muse <br> S.I.D <br>
-                TiDDY <br>Trunk Space<br> Weix
+                <button class="mobile-artist-name" (click)="setArtistName($event)">CJ</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Cut & Sew</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Fomentum</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">James Lang</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Jorco</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Manic Muse</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">TiDDY</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Trunk Space</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Weix</button>
             </div>
             <p style="font-size: 12px;color:#a4a4a6;">Tap artist name for details</p>
             
@@ -74,7 +80,8 @@
     
     </mat-accordion>
       
-    <info-card name={{selectedName}} image={{artistPicMap[selectedName]}}></info-card>
+    <info-card name={{selectedName}} image={{artistInfoMap[selectedName].pic}} insta={{artistInfoMap[selectedName].insta}}
+    spotify={{artistInfoMap[selectedName].spotify}} soundcloud={{artistInfoMap[selectedName].soundCloud}}></info-card>
 
     <no-ceil-floor></no-ceil-floor>
 

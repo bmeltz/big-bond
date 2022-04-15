@@ -2,8 +2,14 @@
     <img src="{{image}}" id="artist-pic">
     <p style="text-align: center; padding-top: 20px;">{{name}}</p>
     <div class="link-area">
-        <img src="../../../assets/spotify_logo.png">
-        <img src="../../../assets/soundcloud_logo.png">
-
+        <a *ngIf="insta != ''" href="{{insta}}">
+            <img src="../../../assets/ig_logo.png">
+        </a>
+        <a *ngIf="spotify != ''" href="{{spotify}}">
+            <img src="../../../assets/spotify_logo.png">
+        </a>
+        <a *ngIf="soundcloud != ''" href="{{soundcloud}}">
+            <img src="../../../assets/soundcloud_logo.png">
+        </a>
     </div>
 </div>

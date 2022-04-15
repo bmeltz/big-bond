@@ -11,6 +11,9 @@ export class InfoCardComponent implements OnInit, OnDestroy {
   
   @Input() name: string;
   @Input() image: string;
+  @Input() insta: string;
+  @Input() soundcloud: string;
+  @Input() spotify: string;
 
   private toggleCard;
   constructor(private router: Router,
@@ -18,7 +21,8 @@ export class InfoCardComponent implements OnInit, OnDestroy {
   {
 
     this.toggleCard = function toggleCard(e) {
-      console.log(e.target.classList);
+      console.log(this.insta, 'spotify:', this.spotify);
+
       if(e.target.classList.contains("dt-artist-name") || e.target.classList.contains("mobile-artist-name")){
         document.getElementById("artist-card").classList.toggle("close");
         cardService.cardIsActive = true;
