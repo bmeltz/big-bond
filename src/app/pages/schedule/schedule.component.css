@@ -1,0 +1,51 @@
+.top {
+    padding: 20px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+tr {
+    width: 100%
+}
+td, th {
+    text-align: center;
+    padding: 8px;
+    /* font-size: 17px; */
+  }
+
+.center-container {
+    display: flex;
+    background-color: #14141a;
+    /* border: solid 1px #ffffff; */
+    /* round the corners */
+    -webkit-border-radius: 10px;
+    -moz-border-radius:    10px;
+         border-radius:    10px;
+
+
+  /* make it glow! */
+  -webkit-box-shadow: 0 0 5px 5px #2a2a33;
+     -moz-box-shadow: 0 0 5px 5px #2a2a33;
+          box-shadow: 0 0 5px 5px #2a2a33;
+
+}
+
+.day {
+    display: block;
+    font-size: 18px;
+    margin: auto auto;
+    width: 100%;
+
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #23232b;
+  }
+
+@media only screen and (max-width: 630px) {
+    .center-container {
+        display: block;
+    }
+}

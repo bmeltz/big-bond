@@ -15,7 +15,10 @@ const routes: Routes = [
   { path: 'success', component: SuccessComponent},
   { path: 'packing-list', component: PackingListComponent},
   { path: 'directions', component: DirectionsComponent},
+<<<<<<< HEAD
   { path: 'schedule', component: scheduleComponent},
+=======
+>>>>>>> develop
   { path: 'terms-and-conditions', component: TandcComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home' }

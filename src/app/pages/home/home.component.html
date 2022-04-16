@@ -1,35 +1,89 @@
+ <!-- may god be with those who decide to edit the style heights here -->
+<div style="height: -webkit-fill-available; max-height: 100vh; overflow: hidden;">
+    <section>
+        <menu></menu>
+        <img src="../../assets/sky_2-min.png" id="sky">
+        <img src="../../assets/ground_2-min.png" id="ground">
+        
+    </section>
+    <div class="top_text">
 
-<div style="min-height: calc(100%); overflow: hidden;">
-
-    <div>
-        <section>
-            <menu></menu>
-
-            <img src="../../assets/sky_2-min.png" id="sky">
-            <img src="../../assets/ground_2-min.png" id="ground">
-            <div class="transition"><p style="display: none;"></p></div>
-
-        </section>
-    
-        <div class="top_text">
-    
-            <h2 id="title">big bond</h2>
-            <div id="subtitle">
-                April 
-                <div class="dates">29 & 30 </div>
-            </div>
+        <h2 id="title">big bond</h2>
+        <div id="subtitle">
+            April 
+            <div class="dates">29 & 30 </div>
         </div>
-        <img id="logo" src="../../assets/logo_transparent_white.gif" class="img-fluid mx-auto d-block">
     </div>
+    <img id="logo" src="../../assets/logo_transparent_white.gif" class="img-fluid mx-auto d-block">
+
 </div>
+<div class="transition"><p style="display: none;"></p></div>
+
 <div class="content">
+    
     <p style="text-align: center; letter-spacing: 3px;">We can all escape.<br> Let's dance in the desert.</p>
     <div style="display: flex; justify-content: center; padding: 30px;">
         <button mdbBtn color="primary" (click)="wristbandsClicked()" 
-        style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
+        style="border-radius: 5px;font-family: Moon; letter-spacing: 3px; font-size: 15px;">
             wristbands
         </button>
+
     </div>
+
+    <mat-accordion >
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <div class="main-txt" style="text-align: center;width: 100%; letter-spacing: 3px;">
+                    Featured Artists
+                </div>
+            </mat-expansion-panel-header>
+            <div id="dt-lineup">
+                <button class="dt-artist-name" (click)="setArtistName($event)">Bastiansé</button>
+                <span> &#8226;</span>
+                <button class="dt-artist-name" (click)="setArtistName($event)">Biagi</button>
+                <span> &#8226;</span>
+                <button class="dt-artist-name" (click)="setArtistName($event)">CJ.</button>
+                <span>&#8226;</span> 
+                <button class="dt-artist-name" (click)="setArtistName($event)">Cut & Sew</button>
+                <br>
+                <button class="dt-artist-name" (click)="setArtistName($event)">Fomentum</button>
+                <span> &#8226;</span>
+                <button class="dt-artist-name" (click)="setArtistName($event)">James Lang</button>
+                <span> &#8226;</span>
+                <button class="dt-artist-name" (click)="setArtistName($event)">Jorco</button>
+                <br>
+                <button class="dt-artist-name" (click)="setArtistName($event)">Manic Muse</button>
+                <span> &#8226;</span>
+                <button class="dt-artist-name" (click)="setArtistName($event)">TiDDY</button>
+                <span> &#8226;</span>
+                <button class="dt-artist-name" (click)="setArtistName($event)">Trunk Space</button>
+                <span> &#8226;</span>
+                <button class="dt-artist-name" (click)="setArtistName($event)">Weix</button>
+
+            </div>
+            <div style="letter-spacing: 3px; font-size: 18px;" id="mobile-lineup">
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Bastiansé</button><br> 
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Biagi</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">CJ.</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Cut & Sew</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Fomentum</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">James Lang</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Jorco</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Manic Muse</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">TiDDY</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Trunk Space</button> <br>
+                <button class="mobile-artist-name" (click)="setArtistName($event)">Weix</button>
+            </div>
+            <p style="font-size: 12px;color:#a4a4a6;">Tap artist name for details</p>
+            
+        </mat-expansion-panel>
+    
+    </mat-accordion>
+      
+    <info-card name={{selectedName}} image={{artistInfoMap[selectedName].pic}} insta={{artistInfoMap[selectedName].insta}}
+    spotify={{artistInfoMap[selectedName].spotify}} soundcloud={{artistInfoMap[selectedName].soundCloud}}></info-card>
+
     <no-ceil-floor></no-ceil-floor>
 
 </div>
+

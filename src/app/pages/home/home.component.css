@@ -1,3 +1,8 @@
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
 section {
   width: 100%;
   min-height: 100vh;
@@ -8,9 +13,9 @@ section img {
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100vh);
   object-fit: cover;
   pointer-events: none;
+  z-index: -3;
 }
 
 .top_text {
@@ -52,6 +57,11 @@ section img {
   height: 100%;
 }
 
+#sky {
+  z-index: 1;
+  height: 100%;
+}
+
 .transition {
   content: '';
   position: absolute;
@@ -61,20 +71,20 @@ section img {
   width: 100%;
   z-index: 100;
   background: linear-gradient(to top, #1a1a20, transparent);
-  /* background-color: purple; */
 }
 
-
 .content{
-  position: absolute;
+  position: relative;
+  z-index: 998;
   font-size: 22px;  width: 100%;
-  align-content: center;
-  top: calc(100%);
+  display: block;
   color: white;
-  padding: 100px;
   padding-bottom: 0;
   padding-top: 50px;
+  text-align: center;
   background-color: #1a1a20;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 div button {
@@ -83,6 +93,42 @@ div button {
   align-items: center;
 }
 
+span {
+  padding: 10px;
+}
+
+#mobile-lineup {
+  display: none;
+  margin-bottom: 20px;
+  letter-spacing: 3px; 
+  font-size: 18px;
+}
+
+#dt-lineup {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#dt-lineup button {
+  display: inline-block !important;
+  background-color: transparent;
+  border: none;
+  color: white;
+  letter-spacing: 3px; 
+  font-size: 18px;
+  outline: none;
+  padding-bottom: 16px;
+}
+
+#mobile-lineup button {
+  display: inline-block !important;
+  background-color: transparent;
+  border: none;
+  color: white;
+  letter-spacing: 3px; 
+  font-size: 18px;
+  outline: none;
+}
 
 #logo {
   z-index: 100;
@@ -94,14 +140,38 @@ div button {
   left: 0px;
 }
 
+mat-accordion mat-expansion-panel{
+  margin: auto auto;
+  background-color: #14141a;
+  box-shadow: 0 0 5px 5px #2a2a33;
+  color: white;
+  max-width: 600px;
+  width: 90%;
+}
 
-@media only screen and (max-width: 430px) {
+mat-expansion-panel-header:hover {
+  background-color: inherit !important;
+}
+
+mat-expansion-panel-header {
+  color: white;
+  padding: 0;
+}
+
+@media only screen and (max-width: 630px) {
+  #mobile-lineup {
+    display: block;
+  }
+  #mobile-lineup button{
+    padding: 5px;
+  }
+  
+  #dt-lineup {
+    display: none;
+  }
 
   .top_text {
     letter-spacing: 3px;
-  }
-  .content {
-    padding: 20px;
   }
   p {
     font-size: 18px;
