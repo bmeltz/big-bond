@@ -38,6 +38,7 @@ td, th {
     width: 100%;
 
     padding: 10px;
+    margin: 0px;
 }
 
 tr:nth-child(even) {

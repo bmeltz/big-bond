@@ -12,7 +12,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   @ViewChild(MatAccordion) accordion: MatAccordion;
   // set a default. just to silence errors.
   public selectedName: string = "Bastiansé";
-  private basePath: string = "../../../assets/artist_pics/"
+  private basePath: string = "../../../assets/artist_pics/";
+  // this is the easiest least-awful solution I thought of. I know it's still not great.
+  // hardcoding things everywhere is a recipe for unmaintanable code, but this won't matter in 2 weeks (3/29/22)
   public artistInfoMap = {
     "Bastiansé": {
       pic: this.basePath + "bastianse.jpg",
@@ -26,7 +28,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       insta: "https://www.instagram.com/biagidj/",
       spotify: ""
     },
-    "CJ": {
+    "CJ.": {
       pic: this.basePath + "cj.jpg",
       soundCloud: "https://soundcloud.com/cj-music-rips",
       insta: "https://www.instagram.com/cj.music__/",

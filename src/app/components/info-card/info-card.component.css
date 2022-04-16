@@ -1,4 +1,6 @@
-
+a {
+  border-radius: 20em;
+}
 
 #artist-card {
   z-index: 9998;
@@ -50,7 +52,7 @@
 .link-area img{
   width: 50px;
   height: auto;
-  border-radius: 50%;
+  border-radius: 50em;
   margin: 20px;
   box-shadow:  7px 7px 15px #1a1a20b2,
   -7px -7px 15px #cccccca9;
