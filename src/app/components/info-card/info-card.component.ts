@@ -19,6 +19,12 @@ export class InfoCardComponent implements OnInit, OnDestroy {
   constructor(private router: Router,
     private cardService: ArtistCardService) 
   {
+    window.addEventListener('scroll', function(){
+      if(cardService.cardIsActive){
+        document.getElementById("artist-card").classList.toggle("close");
+        cardService.cardIsActive = false;
+      }
+    });
 
     this.toggleCard = function toggleCard(e) {
       console.log(this.insta, 'spotify:', this.spotify);
@@ -52,3 +58,4 @@ export class InfoCardComponent implements OnInit, OnDestroy {
   }
 
 }
+

@@ -142,7 +142,7 @@ span {
 
 mat-accordion mat-expansion-panel{
   margin: auto auto;
-  background-color: inherit;
+  background-color: #14141a;
   box-shadow: 0 0 5px 5px #2a2a33;
   color: white;
   max-width: 600px;
