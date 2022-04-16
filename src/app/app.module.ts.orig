@@ -18,6 +18,7 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { NoCeilFloorComponent } from './components/no-ceil-floor/no-ceil-floor.component';
 <<<<<<< HEAD
 import { scheduleComponent } from './pages/schedule/schedule.component';
+import { TandcComponent } from './pages/tandc/tandc.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
 import { MatExpansionModule } from '@angular/material/expansion'
 =======
@@ -36,6 +37,7 @@ import { TandcComponent } from './pages/tandc/tandc.component';
     NoCeilFloorComponent,
 <<<<<<< HEAD
     scheduleComponent,
+    TandcComponent,
     InfoCardComponent
 =======
     TandcComponent
@@ -47,12 +49,10 @@ import { TandcComponent } from './pages/tandc/tandc.component';
     MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule, 
-<<<<<<< HEAD
-    NgxNumberSpinnerModule,
-    MatExpansionModule
-    
-=======
     NgxNumberSpinnerModule,    
+<<<<<<< HEAD
+    MatExpansionModule
+=======
 >>>>>>> develop
   ],
   providers: [
