@@ -76,7 +76,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       insta: "https://www.instagram.com/trunkspacebeats/",
       spotify: "https://open.spotify.com/artist/0E9PXzwyBnIwMOE44WBxxu?si=Sf1pEUNHSnW-B7dq3v2VXg"
     },
-    "Weix": {
+    "weix": {
       pic: this.basePath + "weix.jpg",
       soundCloud: "https://soundcloud.com/weix-music",
       insta: "https://www.instagram.com/weix.jpg/",
