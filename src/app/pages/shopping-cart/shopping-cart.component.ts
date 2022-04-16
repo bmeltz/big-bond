@@ -11,6 +11,13 @@ import { environment } from 'src/environments/environment';
 export class ShoppingCartComponent implements OnInit {
   public price: number = 80.0;
   public quantity: number;
+  public checkboxStatus: boolean = false;
+  origin = window.location.origin;
+  success_url = origin.concat("/success");
+  cancel_url = origin.concat("/cart");
+  // change these to the live values when the time comes
+  priceId = environment.PRICE;
+  stripePromise = loadStripe(environment.STRIPE_PUBLISHABLE_KEY);
 
   constructor(private router: Router) { }
 
@@ -23,22 +30,24 @@ export class ShoppingCartComponent implements OnInit {
     }
   }
 
+  public onCheckboxChange() {
+    console.log(this.checkboxStatus);
+    this.checkboxStatus = !this.checkboxStatus;
+  }
+
   public homeClicked() {
     this.router.navigate(['home']);
   }
 
-  origin = window.location.origin;
-  success_url = origin.concat("/success");
-  cancel_url = origin.concat("/cart");
-  // change these to the live values when the time comes
-  priceId = environment.PRICE;
-  stripePromise = loadStripe(environment.STRIPE_PUBLISHABLE_KEY);
+  public updateSessionQuantity() {
+    window.sessionStorage.setItem("quantity", this.quantity.toString());
+  }
 
 
   async checkout() {
 
-    window.sessionStorage.setItem("quantity", this.quantity.toString());
-
+    // this call is probably unnecessary, but can't hurt.
+    this.updateSessionQuantity();
     // Call your backend to create the Checkout session.
     // When the customer clicks on the button, redirect them to Checkout.
     const stripe = await this.stripePromise;
@@ -50,7 +59,7 @@ export class ShoppingCartComponent implements OnInit {
           quantity: this.quantity
         }
       ],
-      shippingAddressCollection: {allowedCountries: ["US"]},
+      // shippingAddressCollection: {allowedCountries: ["US"]},
       successUrl: this.success_url,
       cancelUrl: this.cancel_url,
     });

@@ -6,6 +6,7 @@ import { scheduleComponent } from './pages/schedule/schedule.component';
 import { PackingListComponent } from './pages/packing-list/packing-list.component';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { SuccessComponent } from './pages/success/success.component';
+import { TandcComponent } from './pages/tandc/tandc.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'packing-list', component: PackingListComponent},
   { path: 'directions', component: DirectionsComponent},
   { path: 'schedule', component: scheduleComponent},
+  { path: 'terms-and-conditions', component: TandcComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home' }
 ];

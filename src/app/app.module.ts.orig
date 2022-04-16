@@ -16,10 +16,14 @@ import { MenuComponent } from './components/menu/menu.component';
 import { DirectionsComponent } from './pages/directions/directions.component'
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { NoCeilFloorComponent } from './components/no-ceil-floor/no-ceil-floor.component';
+<<<<<<< HEAD
 import { scheduleComponent } from './pages/schedule/schedule.component';
-import { TandcComponent } from './pages/tandc/tandc.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
 import { MatExpansionModule } from '@angular/material/expansion'
+=======
+import { TandcComponent } from './pages/tandc/tandc.component';
+
+>>>>>>> develop
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +34,12 @@ import { MatExpansionModule } from '@angular/material/expansion'
     MenuComponent,
     DirectionsComponent,
     NoCeilFloorComponent,
+<<<<<<< HEAD
     scheduleComponent,
-    TandcComponent,
     InfoCardComponent
+=======
+    TandcComponent
+>>>>>>> develop
   ],
   imports: [
     BrowserModule,
@@ -40,8 +47,13 @@ import { MatExpansionModule } from '@angular/material/expansion'
     MDBBootstrapModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule, 
-    NgxNumberSpinnerModule,    
+<<<<<<< HEAD
+    NgxNumberSpinnerModule,
     MatExpansionModule
+    
+=======
+    NgxNumberSpinnerModule,    
+>>>>>>> develop
   ],
   providers: [
     { provide: LocationStrategy, useClass: PathLocationStrategy },

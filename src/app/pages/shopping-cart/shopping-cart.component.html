@@ -2,7 +2,7 @@
     <menu></menu>
     <div class="page">
         <div id="info">
-            <p style="color:#a4a4a6; font-size: 30px;">big bond <br> wristband</p>
+            <p style="color:#a4a4a6; font-size: 30px;">Big Bond <br> wristband</p>
             <h2>${{quantity * price}}</h2>
             <p style="color:#a4a4a6; font-size: 14px;">Qty. {{quantity}}, ${{price}} each <br>
             <br> Entrance to the camp grounds <br>and two nights of dancing in the desert.</p>
@@ -15,11 +15,14 @@
             [value]="1"
             [min]="1"
             [max]="10"
+            (change)="updateSessionQuantity()"
             [(ngModel)]="quantity">
         </ngx-number-spinner>
-    
+        <mdb-checkbox style="color: white; font-size: 14px; margin: 15px;" (change)="onCheckboxChange()" ([ngModel])="checkboxStatus" [default]="true">
+            I agree to the <a [routerLink]="['/terms-and-conditions']">terms and conditions</a>
+        </mdb-checkbox>       
         <div style="display: flex; justify-content: center;">
-            <button mdbBtn color="primary" (click)="checkout()" style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
+            <button mdbBtn color="primary" (click)="checkout()" [disabled]="!checkboxStatus" style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
                 checkout
             </button>
         </div>
