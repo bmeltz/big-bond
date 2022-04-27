@@ -19,7 +19,8 @@ import { NoCeilFloorComponent } from './components/no-ceil-floor/no-ceil-floor.c
 import { scheduleComponent } from './pages/schedule/schedule.component';
 import { TandcComponent } from './pages/tandc/tandc.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
-import { MatExpansionModule } from '@angular/material/expansion'
+import { MatExpansionModule } from '@angular/material/expansion';
+import { DetailedComponent } from './pages/packing-list/detailed/detailed.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { MatExpansionModule } from '@angular/material/expansion'
     NoCeilFloorComponent,
     scheduleComponent,
     TandcComponent,
-    InfoCardComponent
+    InfoCardComponent,
+    DetailedComponent
   ],
   imports: [
     BrowserModule,
