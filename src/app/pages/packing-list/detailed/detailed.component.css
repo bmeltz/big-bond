@@ -1,0 +1,17 @@
+
+
+.list-content {
+    text-align: center;
+    padding: 30px;
+}
+
+.list-content p{
+    padding: 30px;
+    margin: auto auto;
+    max-width: 1050px !important;
+
+}
+
+i {
+    font-size: 30px;
+}

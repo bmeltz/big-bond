@@ -156,3 +156,10 @@
    transform: none;
    opacity: 1;
  }
+
+ @-moz-document url-prefix() {
+  #menu{
+    background-color: rgba(196, 196, 196) !important;
+
+  }
+}
