@@ -32,7 +32,8 @@
     "ngx-number-spinner": "^2.2.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "ansi-html-community": "^0.0.8"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1001.2",
