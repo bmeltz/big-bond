@@ -41,6 +41,7 @@
     "resolve-url-loader": "^5.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "webpack-subresource-integrity": "^5.1.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
