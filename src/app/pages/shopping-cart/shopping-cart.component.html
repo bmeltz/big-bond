@@ -2,27 +2,28 @@
     <menu></menu>
     <div class="page">
         <div id="info">
-            <p style="color:#a4a4a6; font-size: 30px;">Big Bond <br> wristband</p>
+            <!-- <p style="color:#a4a4a6; font-size: 30px;">Big Bond <br> wristband</p>
             <h2>${{quantity * price}}</h2>
             <p style="color:#a4a4a6; font-size: 14px;">Qty. {{quantity}}, ${{price}} each <br>
             <br> Entrance to the camp grounds <br>and two nights of dancing in the desert.</p>
-            <p style="font-size: 10px;color:#a4a4a6;">All sales are final</p>
+            <p style="font-size: 10px;color:#a4a4a6;">All sales are final</p> -->
+            <p style="color:#a4a4a6; font-size: 30px;">Big Bond 2023 <br> wristbands coming soon!</p>
 
         </div>
         <img id="product-image" src="../../../assets/bands_smaller.jpg" >
-        <ngx-number-spinner 
+        <!-- <ngx-number-spinner 
             style="color: black; width: 120px; margin: 20px auto; background-color: rgb(214, 214, 214); border-radius: 7px;"
             [value]="1"
             [min]="1"
             [max]="10"
             (change)="updateSessionQuantity()"
             [(ngModel)]="quantity">
-        </ngx-number-spinner>
+        </ngx-number-spinner> -->
         <mdb-checkbox style="color: white; font-size: 14px; margin: 15px;" (change)="onCheckboxChange()" ([ngModel])="checkboxStatus" [default]="true">
             I agree to the <a [routerLink]="['/terms-and-conditions']">terms and conditions</a>
         </mdb-checkbox>       
         <div style="display: flex; justify-content: center;">
-            <button mdbBtn color="primary" (click)="checkout()" [disabled]="!checkboxStatus" style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
+            <button mdbBtn color="primary" (click)="checkout()" disabled style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
                 checkout
             </button>
             <!-- <button mdbBtn color="primary" (click)="checkout()" [disabled]="true" style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
