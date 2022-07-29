@@ -7,40 +7,55 @@ section {
   width: 100%;
   min-height: 100vh;
 }
+.video-wrapper {
+  /* Telling our absolute positioned video to 
+  be relative to this element */
+  position: relative;
+  /* Will not allow the video to overflow the 
+  container */
+  overflow: hidden;
 
-section img {
+  height: 100vh;
+  /* Centering the container's content vertically 
+  and horizontally */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  object-fit: cover;
-  pointer-events: none;
-  z-index: -3;
 }
 
-.top_text {
+.title {
+  
+}
+.content {
   font-family: "Moon";
   letter-spacing: 3vw;
-  position: absolute;
+  position: static;
   right: 0px;
   left: 0;
   top: 12vh;
-  text-shadow: 0 0 10px white;
-  z-index: 10;
-
+  text-shadow: 0 0 10px rgb(190, 190, 190);
 }
 
 #title {
   text-align: center;
-  color: white;
+  color: rgb(190, 190, 190);
   font-size: 70px;
   white-space: nowrap;
   padding-top: 3vh;
 }
 
-#subtitle {
+#subtitle{
   text-align: center;
-  color: white;
+  color: rgb(190, 190, 190);
   font-size: 18px;
   letter-spacing: 2px;
 
@@ -50,41 +65,6 @@ section img {
   font-size: 18px; 
   letter-spacing: 10px;
   text-align: center;
-}
-
-#ground {
-  z-index: 2;
-  height: 100%;
-}
-
-#sky {
-  z-index: 1;
-  height: 100%;
-}
-
-.transition {
-  content: '';
-  position: absolute;
-  /* the height and calc number needs to match */
-  height: 70px;
-  top: calc(100% - 70px);
-  width: 100%;
-  z-index: 100;
-  background: linear-gradient(to top, #1a1a20, transparent);
-}
-
-.content{
-  position: relative;
-  z-index: 998;
-  font-size: 22px;  width: 100%;
-  display: block;
-  color: white;
-  padding-bottom: 0;
-  padding-top: 50px;
-  text-align: center;
-  background-color: #1a1a20;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 div button {
@@ -131,13 +111,13 @@ span {
 }
 
 #logo {
-  z-index: 100;
   height: 20%;
-  
   position: absolute;
-  bottom: 25%;
+  bottom: 20%;
   right: 0px;
   left: 0px;
+
+
 }
 
 mat-accordion mat-expansion-panel{
@@ -195,9 +175,6 @@ mat-expansion-panel-header {
   .top_text {
     top: 50%;
     transform: translateY(-50%);
-  }
-  #logo {
-    z-index: -2;
   }
 }
 

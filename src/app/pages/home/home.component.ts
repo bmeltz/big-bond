@@ -90,7 +90,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
 
     const sky = window.document.getElementById('sky');
-
+    const video = window.document.getElementById('backgound-vid') as HTMLVideoElement;
+    video.play();
     window.addEventListener('scroll', function(){
       let value = window.scrollY;
       sky.style.top = value * .5 + 'px';
