@@ -1,23 +1,21 @@
 body {
   min-height: 100vh;
-  min-height: -webkit-fill-available;
+  overflow: scroll;
+
 }
 
-section {
-  width: 100%;
-  min-height: 100vh;
-}
 .video-wrapper {
   /* Telling our absolute positioned video to 
   be relative to this element */
   position: relative;
   /* Will not allow the video to overflow the 
   container */
-  overflow: hidden;
+  overflow: auto;
   color: black;
-  /* height: 100vh; */
+  height: 100vh;
+  max-height: -webkit-fill-available;
+  max-height: -moz-available;          /* WebKit-based browsers will ignore this. */
   width:100vw;
-  height: 100%;
 
     /* Centering the container's content vertically 
   and horizontally */
@@ -36,12 +34,24 @@ section {
 }
 
 .content {
+  height: -webkit-fill-available; 
+  height: 100vh; 
+  max-height: -webkit-fill-available;
+  max-height: -moz-available; 
+  width:100vw; 
+  overflow-x: hidden; 
+  position: relative; 
+  display: flex; 
+  flex-flow: column;
+}
+
+.title-container {
   font-family: "Moon";
   letter-spacing: 3vw;
   position: static;
+  flex: 0 1 auto;
   right: 0;
   left: 0;
-  background-color: aqua;
 }
 
 #title {
@@ -94,9 +104,10 @@ section {
 }
 
 #logo {
-  width: 150px;
+  width: 20vh;
   right: 0px;
   left: 0px;
+  min-width: 100px;
 }
 
 mat-accordion mat-expansion-panel{
