@@ -65,7 +65,7 @@
    margin-bottom: 5px;
    position: relative;
    
-   background: #cdcdcd;
+   background: black;
    border-radius: 3px;
    
    z-index: 1;
@@ -124,7 +124,6 @@
  {
   color: #1a1a20;
   text-align: left;
-  text-shadow: 0 0 20px white;
   position: absolute;
   width: 300px;
   margin: -120px 0 0 0;
@@ -134,7 +133,7 @@
   border-radius: 10px;
   
   background-color: rgba(196, 196, 196, 0.473);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(9px);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
