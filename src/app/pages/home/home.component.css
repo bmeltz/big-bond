@@ -14,9 +14,12 @@ section {
   /* Will not allow the video to overflow the 
   container */
   overflow: hidden;
+  color: black;
+  /* height: 100vh; */
+  width:100vw;
+  height: 100%;
 
-  height: 100vh;
-  /* Centering the container's content vertically 
+    /* Centering the container's content vertically 
   and horizontally */
   text-align: center;
   display: flex;
@@ -32,9 +35,6 @@ section {
   left: 0;
 }
 
-.title {
-  
-}
 .content {
   font-family: "Moon";
   letter-spacing: 3vw;
@@ -42,12 +42,11 @@ section {
   right: 0px;
   left: 0;
   top: 12vh;
-  text-shadow: 0 0 10px rgb(190, 190, 190);
 }
 
 #title {
   text-align: center;
-  color: rgb(190, 190, 190);
+  color: black;
   font-size: 70px;
   white-space: nowrap;
   padding-top: 3vh;
@@ -55,9 +54,9 @@ section {
 
 #subtitle{
   text-align: center;
-  color: rgb(190, 190, 190);
-  font-size: 18px;
-  letter-spacing: 2px;
+  color: black;
+  font-size: 48px;
+  letter-spacing: 2vw;
 
 }
 
@@ -111,9 +110,7 @@ span {
 }
 
 #logo {
-  height: 20%;
-  position: absolute;
-  bottom: 20%;
+  height: 20vh;
   right: 0px;
   left: 0px;
 
@@ -158,24 +155,24 @@ mat-expansion-panel-header {
   }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 430px) {
   #title {
     font-size: 15vw;
     text-align: center;
   }
   #subtitle {
-    font-size: 4vw;
+    font-size: 10vw;
   }
   .dates {
     font-size: 5vw;
   }
 }
-
+/* 
 @media only screen and (max-height: 400px) {
   .top_text {
     top: 50%;
     transform: translateY(-50%);
   }
-}
+} */
 
 
