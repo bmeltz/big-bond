@@ -4,14 +4,15 @@
         <source src="../../../assets/desert.mp4" type="video/mp4">
     </video>
     <!-- NOTE: problem is with the height style here -->
-    <div style="height: -webkit-fill-available; min-height: 100vh; width:100vw; 
-    overflow: hidden; position: relative; ">
+
+    <div style="min-height: 100vh; width:100vw; 
+    overflow: hidden; position: relative; display: flex; 
+        flex-flow: column;">
 
 
         <menu></menu>
 
         <div class="content">
-
             <h2 id="title">big bond</h2>
             <div id="subtitle">
                 2023
@@ -19,22 +20,21 @@
         </div>
         <!-- <p style="text-align: center; letter-spacing: 3px;">We can all escape.<br> Let's dance in the desert.</p> -->
 
-        <div style="margin-left: auto; margin-right: auto;">
-            <img id="logo" src="../../../assets/logo_black.png" class="img-fluid mx-auto d-block">
-            <div style="display: flex; justify-content: center; padding: 30px; margin-top: 20px">
-                <button mdbBtn color="dark" (click)="wristbandsClicked()" 
-                style="border-radius: 5px;font-family: Moon; letter-spacing: 3px; font-size: 15px;">
-                    wristbands
-                </button>
+        <div style="margin-left: auto; margin-right: auto; background-color: teal; ">
+            <div style="display: flex;">
+                <img id="logo" src="../../../assets/logo_black.png">   
+
             </div>
-                
-        
+            <div style="position: absolute; bottom: 0; right: 0; left: 0;">
+                <div style="display: flex; justify-content: center; padding: 20px;">
+                    <button mdbBtn color="dark" (click)="wristbandsClicked()" 
+                    style="border-radius: 5px;font-family: Moon; letter-spacing: 3px; font-size: 15px;">
+                        wristbands
+                    </button>
+                </div>
+                <no-ceil-floor></no-ceil-floor>
+            </div>     
         </div>
-
-        <div style="background-color: red; vertical-align: bottom;">
-            <no-ceil-floor></no-ceil-floor>
-        </div>
-
 
     </div>
 </div>
