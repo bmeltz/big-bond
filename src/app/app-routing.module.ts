@@ -8,6 +8,7 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
 import { SuccessComponent } from './pages/success/success.component';
 import { TandcComponent } from './pages/tandc/tandc.component';
 import { DetailedComponent } from './pages/packing-list/detailed/detailed.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'packing-list', component: PackingListComponent},
   { path: 'directions', component: DirectionsComponent},
   { path: 'schedule', component: scheduleComponent},
+  { path: 'gallery', component: GalleryComponent},
   { path: 'terms-and-conditions', component: TandcComponent},
   { path: 'detailed', component: DetailedComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },

@@ -34,4 +34,8 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['cart']);
   }
 
+  goToGallery() {
+    this.router.navigate(['gallery']);
+  }
+
 }
