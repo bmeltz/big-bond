@@ -1,25 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import photos from '../../../assets/photogallery/photos.json'
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css']
+  styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
 
+  images = [];
+  gallery_dir = "../../../assets/photogallery/";
   constructor() { }
 
   ngOnInit(): void {
-    // const fs = require('fs')
-    // const path = require('path')
-
-    // const dir = '../../../../assets/photogallery';
-    // const files = fs.readdirSync(dir);
-
-    // for (const file of files) {
-    //   const stat = fs.lstatSync(path.join(dir, file))
-    //   console.log(stat)
-    // }
+    console.log(photos)
+    for(let key in photos){
+      this.images.push({
+        path: this.gallery_dir + photos[key],
+        cols: 1,
+        rows: 1
+      });
+    }
   }
 
 }

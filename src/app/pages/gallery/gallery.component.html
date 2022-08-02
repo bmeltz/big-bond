@@ -1,12 +1,8 @@
-<mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile>
-      <img src="../../../assets/photogallery/DSC06045.jpg">
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <img src="../../../assets/photogallery/DSC06073.jpg">
-
-    </mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
-  </mat-grid-list>
-  
+<mat-grid-list cols="2" rowHeight="300px">
+  <mat-grid-tile
+      *ngFor="let image of images"
+      [colspan]="image.cols"
+      [rowspan]="image.rows">
+    <img src = {{image.path}}>
+  </mat-grid-tile>
+</mat-grid-list>
