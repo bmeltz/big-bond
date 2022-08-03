@@ -5,7 +5,7 @@ import { ArtistCardService } from 'src/app/services/artist-card.service';
 @Component({
   selector: 'info-card',
   templateUrl: './info-card.component.html',
-  styleUrls: ['./info-card.component.css']
+  styleUrls: ['./info-card.component.scss']
 })
 export class InfoCardComponent implements OnInit, OnDestroy {
   

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'terms-and-conditions',
   templateUrl: './tandc.component.html',
-  styleUrls: ['./tandc.component.css']
+  styleUrls: ['./tandc.component.scss']
 })
 export class TandcComponent implements OnInit {
 

@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { SuccessComponent } from './pages/success/success.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // If You need animations
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +19,10 @@ import { scheduleComponent } from './pages/schedule/schedule.component';
 import { TandcComponent } from './pages/tandc/tandc.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { DetailedComponent } from './pages/packing-list/detailed/detailed.component'
+import { DetailedComponent } from './pages/packing-list/detailed/detailed.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { MatGridListModule } from '@angular/material/grid-list'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { DetailedComponent } from './pages/packing-list/detailed/detailed.compon
     scheduleComponent,
     TandcComponent,
     InfoCardComponent,
-    DetailedComponent
+    DetailedComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { DetailedComponent } from './pages/packing-list/detailed/detailed.compon
     BrowserAnimationsModule,
     FormsModule, 
     NgxNumberSpinnerModule,    
-    MatExpansionModule
+    MatExpansionModule,
+    MatGridListModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: PathLocationStrategy },

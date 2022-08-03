@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-packing-list',
   templateUrl: './packing-list.component.html',
-  styleUrls: ['./packing-list.component.css']
+  styleUrls: ['./packing-list.component.scss']
 })
 export class PackingListComponent implements OnInit {
 
