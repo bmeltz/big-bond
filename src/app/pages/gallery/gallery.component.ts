@@ -13,12 +13,9 @@ export class GalleryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(photos)
     for(let key in photos){
       this.images.push({
-        path: this.gallery_dir + photos[key],
-        cols: 1,
-        rows: 1
+        path: this.gallery_dir + photos[key]
       });
     }
   }
