@@ -22,6 +22,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { DetailedComponent } from './pages/packing-list/detailed/detailed.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { MatGridListModule } from '@angular/material/grid-list'
+import { MatCardModule } from '@angular/material/card'
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { MatGridListModule } from '@angular/material/grid-list'
     FormsModule, 
     NgxNumberSpinnerModule,    
     MatExpansionModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: PathLocationStrategy },

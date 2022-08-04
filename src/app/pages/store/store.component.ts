@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { loadStripe } from '@stripe/stripe-js';
-import { environment } from 'src/environments/environment';
 
+import { environment } from 'src/environments/environment';
+declare var require: any
 @Component({
   selector: 'app-store-cart',
   templateUrl: './store.component.html',
@@ -16,27 +17,46 @@ export class StoreComponent implements OnInit {
   success_url = origin.concat("/success");
   cancel_url = origin.concat("/cart");
   // change these to the live values when the time comes
-  priceId = environment.PRICE;
+  priceId = environment.PRICE_BAND;
   stripePromise = loadStripe(environment.STRIPE_PUBLISHABLE_KEY);
 
-  constructor(private router: Router) { }
+  test_mode = true;
+ 
+  constructor() { }
 
   ngOnInit(): void {
-    if(window.sessionStorage.getItem("quantity") == null) {
-      this.quantity = 1;
+    if(this.test_mode) {
+      this.priceId = environment.TEST_PRICE_BAND;
+      this.stripePromise = loadStripe(environment.STRIPE_TEST_PUBLISHABLE_KEY);
     }
-    else {
-      this.quantity = +window.sessionStorage.getItem("quantity");
-    }
+    // if(window.sessionStorage.getItem("quantity") == null) {
+    //   this.quantity = 1;
+    // }
+    // else {
+    //   this.quantity = +window.sessionStorage.getItem("quantity");
+    // }
+
+    this.testfunc();
+
+  }
+
+  async testfunc() {
+    console.log("yo does this even work??");
+
+    const stripe = require('stripe')('sk_test_51JHiV9L2xwG7RCwgEtYrcHDj69dXwqZwYD9llUJVVAXvryq2VgyKLNseoOyUWyT12XFIhY5KiCFopLU9MaNR4uKX00eGRScZrf');
+    console.log("what about here??");
+
+    const product = await stripe.products.retrieve(
+      'prod_MBJa4KYuE2iu5Y'
+    );
+    console.log("or even here??");
+
+    console.log(product);
   }
 
   public onCheckboxChange() {
     console.log(this.checkboxStatus);
     this.checkboxStatus = !this.checkboxStatus;
-  }
-
-  public homeClicked() {
-    this.router.navigate(['home']);
   }
 
   public updateSessionQuantity() {
@@ -73,3 +93,13 @@ export class StoreComponent implements OnInit {
   }
 
 }
+
+interface Product {
+  image: string;
+  quantity: number;
+  name: string;
+  description: string;
+  price: number;
+  maximumQuantity: number;
+}
+
