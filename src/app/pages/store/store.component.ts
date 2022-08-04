@@ -4,11 +4,11 @@ import { loadStripe } from '@stripe/stripe-js';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-shopping-cart',
-  templateUrl: './shopping-cart.component.html',
-  styleUrls: ['./shopping-cart.component.scss']
+  selector: 'app-store-cart',
+  templateUrl: './store.component.html',
+  styleUrls: ['./store.component.scss']
 })
-export class ShoppingCartComponent implements OnInit {
+export class StoreComponent implements OnInit {
   public price: number = 80.0;
   public quantity: number;
   public checkboxStatus: boolean = false;

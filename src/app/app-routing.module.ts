@@ -4,7 +4,7 @@ import { DirectionsComponent } from './pages/directions/directions.component';
 import { HomeComponent } from './pages/home/home.component';
 import { scheduleComponent } from './pages/schedule/schedule.component';
 import { PackingListComponent } from './pages/packing-list/packing-list.component';
-import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+import { StoreComponent } from './pages/store/store.component';
 import { SuccessComponent } from './pages/success/success.component';
 import { TandcComponent } from './pages/tandc/tandc.component';
 import { DetailedComponent } from './pages/packing-list/detailed/detailed.component';
@@ -13,7 +13,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
-  { path: 'cart', component: ShoppingCartComponent},
+  { path: 'store', component: StoreComponent},
   { path: 'success', component: SuccessComponent},
   { path: 'packing-list', component: PackingListComponent},
   { path: 'directions', component: DirectionsComponent},

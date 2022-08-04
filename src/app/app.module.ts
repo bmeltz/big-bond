@@ -8,7 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // If You need animations
 import { AppRoutingModule } from './app-routing.module';
-import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+import { StoreComponent } from './pages/store/store.component';
 import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
 import { PackingListComponent } from './pages/packing-list/packing-list.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -28,7 +28,7 @@ import { MatGridListModule } from '@angular/material/grid-list'
     AppComponent,
     SuccessComponent,
     HomeComponent,
-    ShoppingCartComponent,
+    StoreComponent,
     PackingListComponent,
     MenuComponent,
     DirectionsComponent,

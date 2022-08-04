@@ -17,25 +17,23 @@ input[type=number] {
   flex-direction: column;
   text-align: center;
   height: 100vh;
-  background-color: #1a1a20;
 
 }
 
-.back-button {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: white;
-  margin: 20px;
-  padding-left: 100px;
-  margin-top: 50px;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-}
+// .back-button {
+//   display: flex;
+//   align-items: center;
+//   text-align: center;
+//   margin: 20px;
+//   padding-left: 100px;
+//   margin-top: 50px;
+//   background-color: transparent;
+//   background-repeat: no-repeat;
+//   border: none;
+//   cursor: pointer;
+//   overflow: hidden;
+//   outline: none;
+// }
 
 #product-image {
   margin: 0 auto;
@@ -45,7 +43,6 @@ input[type=number] {
 }
 
 #info {
-  color: white;
   margin-top:60px;
 }
 

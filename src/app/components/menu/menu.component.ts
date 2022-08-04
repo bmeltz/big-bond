@@ -30,8 +30,8 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['schedule']);
   }
 
-  goToCart() {
-    this.router.navigate(['cart']);
+  goToStore() {
+    this.router.navigate(['store']);
   }
 
   goToGallery() {
