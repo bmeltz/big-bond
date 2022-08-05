@@ -38,19 +38,23 @@ mat-card {
   object-fit: cover;
   border-radius: 10px;
   border: none;
+  height: 100%;
   // width: 100%;
 }
 
+button{
+  border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 13px;
+}
 /* Responsive image gallery rules begin*/
 
-.image-gallery {
+.product-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
 }
 
-.image-gallery > li {
+.product-gallery > li {
   flex-basis: 450px; /*width: 350px;*/
   position: relative;
   box-shadow:  10px 10px 20px #869385,
@@ -63,6 +67,7 @@ mat-card {
 mat-card img {
   object-fit: cover;
   width: 100%;
+  height: 100%;
   height: 550px;
   vertical-align: middle;
   border-radius: 5px;

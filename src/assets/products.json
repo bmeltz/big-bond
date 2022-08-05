@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Hoodie",
+        "properties":{
+            "price": 3500,
+            "image": "/assets/product_pics/hoodie.jpg",
+            "sizes": ["small", "medium"],
+            "stripeIds": {
+                "small":
+                {
+                    "testStripeProdId": "prod_M7EqcfQGmXJ8pn",
+                    "testStripePriceId": "price_1LP0MlL2xwG7RCwgawH8MCto"
+                },
+                "medium":
+                {
+                    "testStripeProdId": "prod_MBaROw6g455FG1",
+                    "testStripePriceId": "price_1LTDGaL2xwG7RCwgFdR42WN7"
+                }
+            },
+            "qty": [0, 1, 2, 3, 4, 5]
+        }
+    },
+    {
+        "name": "Wristband: Squad Pack",
+        "properties":{
+            "price": 32000,
+            "image": "/assets/product_pics/bands_smaller.jpg",
+            "stripeIds": {
+                "testStripeProdId": "prod_MBaROw6g455FG1",
+                "testStripePriceId": "price_1LTDGaL2xwG7RCwgFdR42WN7"
+            },
+            "qty": [0, 1]
+        }
+    }
+]

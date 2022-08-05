@@ -23,6 +23,9 @@ import { DetailedComponent } from './pages/packing-list/detailed/detailed.compon
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { MatGridListModule } from '@angular/material/grid-list'
 import { MatCardModule } from '@angular/material/card'
+import {MatSelectModule} from '@angular/material/select'; 
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { CartComponent } from './cart/cart.component'; 
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import { MatCardModule } from '@angular/material/card'
     TandcComponent,
     InfoCardComponent,
     DetailedComponent,
-    GalleryComponent
+    GalleryComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,9 @@ import { MatCardModule } from '@angular/material/card'
     NgxNumberSpinnerModule,    
     MatExpansionModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule,
+    MatFormFieldModule, 
   ],
   providers: [
     { provide: LocationStrategy, useClass: PathLocationStrategy },

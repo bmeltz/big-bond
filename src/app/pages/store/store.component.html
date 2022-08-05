@@ -4,14 +4,15 @@
         <img src="../../../assets/logo_black.png" style="width: 15vw; max-width: 100px;">
     </div>
     <div class="container">
-        <ul class="image-gallery">
-            <li>
+        <ul class="product-gallery">
+            <li *ngFor="let product of products">
                 <mat-card >
                     <mat-card-header>
                       <div style="background-size: cover; background-image: url()"></div>
-                      <mat-card-title>Hoodie</mat-card-title>
+                      <mat-card-title>{{product.name}}</mat-card-title>
+                      <mat-card-subtitle>${{product.properties.price/100}}</mat-card-subtitle>
                     </mat-card-header>
-                    <img mat-card-image src="https://i.pinimg.com/736x/a7/d5/86/a7d5863e090eeadc610752d71700aca8.jpg" 
+                    <img mat-card-image src={{product.properties.image}} 
                     alt="Error loading image :(" style="margin: auto auto; margin-bottom: 10px;">
                     <mat-card-content>
                       <p>
@@ -20,18 +21,24 @@
                       </p>
                     </mat-card-content>
                     <mat-card-actions>
-                      <button mdbBtn color="light">size</button>
-                      <button mdbBtn color="light">add to cart</button>
+                      <select *ngIf="hasProp(product.properties, 'sizes')" required id="size">
+                        <option *ngFor="let size of product.properties.sizes" value="{{size}}">{{size}}</option>
+                      </select>
+                      <select required id="qty">
+                        <option *ngFor="let qty of product.properties.qty" value="{{qty}}">{{qty}}</option>
+                      </select>
+                      <button mdbBtn color="dark" (click)="addToCart(product)">add to cart</button>
                     </mat-card-actions>
                   </mat-card>
             </li>
               
-            <li>
+            <!-- <li>
                 <mat-card >
                     <mat-card-header>
                       <div style="background-size: cover; background-image: url()"></div>
                       <mat-card-title>Wristband pack</mat-card-title>
-                      
+                      <mat-card-subtitle>$320.00</mat-card-subtitle>
+
                     </mat-card-header>
                     <img mat-card-image src="../../../assets/bands_smaller.jpg" 
                     alt="Error loading image :(" style="margin: auto auto; margin-bottom: 10px;">
@@ -42,7 +49,6 @@
                       </p>
                     </mat-card-content>
                     <mat-card-actions>
-                      <button mdbBtn color="light">size</button>
                       <button mdbBtn color="light">add to cart</button>
                     </mat-card-actions>
                   </mat-card>
@@ -54,7 +60,7 @@
                       <mat-card-title>White T-shirt</mat-card-title>
                       
                     </mat-card-header>
-                    <img mat-card-image src="https://elevennewyork.com/wp-content/uploads/2018/02/04_white-tee_model-back-scaled-680x935.jpg" 
+                    <img mat-card-image src="src/assets/product_pics/white_tshirt.jpg" 
                     alt="Error loading image :(" style="margin: auto auto; margin-bottom: 10px;">
                     <mat-card-content>
                       <p>
@@ -67,7 +73,7 @@
                       <button mdbBtn color="light">add to cart</button>
                     </mat-card-actions>
                   </mat-card>
-            </li>
+            </li> -->
         </ul>
       </div>
     <div class="page">
@@ -89,16 +95,13 @@
             (change)="updateSessionQuantity()"
             [(ngModel)]="quantity">
         </ngx-number-spinner> -->
-        <mdb-checkbox style=" font-size: 14px; margin: 15px;" (change)="onCheckboxChange()" ([ngModel])="checkboxStatus" [default]="true">
+        <!-- <mdb-checkbox style=" font-size: 14px; margin: 15px;" (change)="onCheckboxChange()" ([ngModel])="checkboxStatus" [default]="true">
             I agree to the <a [routerLink]="['/terms-and-conditions']">terms and conditions</a>
-        </mdb-checkbox>       
+        </mdb-checkbox>        -->
         <div style="display: flex; justify-content: center;">
-            <button mdbBtn color="dark" (click)="checkout()" disabled style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
-                checkout
-            </button>
-            <!-- <button mdbBtn color="dark" (click)="checkout()" [disabled]="true" style="border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 15px;">
-                checkout
-            </button> -->
+          <button mdbBtn color="dark" (click)="viewCart()">
+              view cart
+          </button>
         </div>
         <no-ceil-floor></no-ceil-floor>
 

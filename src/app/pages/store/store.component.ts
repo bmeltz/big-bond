@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { loadStripe } from '@stripe/stripe-js';
-
 import { environment } from 'src/environments/environment';
-declare var require: any
+import products from '@assets/products.json';
+import { CartService, Product } from 'src/app/services/cart.service';
+
 @Component({
-  selector: 'app-store-cart',
+  selector: 'store',
   templateUrl: './store.component.html',
   styleUrls: ['./store.component.scss']
 })
@@ -17,57 +18,79 @@ export class StoreComponent implements OnInit {
   success_url = origin.concat("/success");
   cancel_url = origin.concat("/cart");
   // change these to the live values when the time comes
-  priceId = environment.PRICE_BAND;
-  stripePromise = loadStripe(environment.STRIPE_PUBLISHABLE_KEY);
-
+  bandPriceId: string = environment.PRICE_BAND;
+  publishable_key: string = environment.STRIPE_PUBLISHABLE_KEY;
+  stripePromise: any;
   test_mode = true;
+  hoodieSize: string;
+
+  public products = products;
  
-  constructor() { }
+  constructor(private router: Router, private _cart: CartService) { }
 
   ngOnInit(): void {
     if(this.test_mode) {
-      this.priceId = environment.TEST_PRICE_BAND;
-      this.stripePromise = loadStripe(environment.STRIPE_TEST_PUBLISHABLE_KEY);
+      this.bandPriceId = environment.TEST_PRICE_BAND;
+      this.publishable_key = environment.STRIPE_TEST_PUBLISHABLE_KEY;
     }
-    // if(window.sessionStorage.getItem("quantity") == null) {
-    //   this.quantity = 1;
-    // }
-    // else {
-    //   this.quantity = +window.sessionStorage.getItem("quantity");
-    // }
-
-    this.testfunc();
-
   }
 
-  async testfunc() {
-    console.log("yo does this even work??");
+  // public onCheckboxChange() {
+  //   console.log(this.checkboxStatus);
+  //   this.checkboxStatus = !this.checkboxStatus;
+  // }
 
-    const stripe = require('stripe')('sk_test_51JHiV9L2xwG7RCwgEtYrcHDj69dXwqZwYD9llUJVVAXvryq2VgyKLNseoOyUWyT12XFIhY5KiCFopLU9MaNR4uKX00eGRScZrf');
-    console.log("what about here??");
-
-    const product = await stripe.products.retrieve(
-      'prod_MBJa4KYuE2iu5Y'
-    );
-    console.log("or even here??");
-
-    console.log(product);
+  hasProp(obj, prop) {
+    return obj.hasOwnProperty(prop);
   }
 
-  public onCheckboxChange() {
-    console.log(this.checkboxStatus);
-    this.checkboxStatus = !this.checkboxStatus;
+  addToCart(product) {
+    console.log(+(<HTMLInputElement>document.getElementById("qty")).value);
+    let prod: Product = {
+      name: product.name ,
+      price: product.properties.price,
+      priceId: this.getPriceId(product),
+      quantity: +(<HTMLInputElement>document.getElementById("qty")).value,
+      productId: this.getProductId(product)
+    }
+    this._cart.putInCart(prod);
+    console.log("-------------------")
+    this._cart.logCartContents();
   }
 
-  public updateSessionQuantity() {
-    window.sessionStorage.setItem("quantity", this.quantity.toString());
+  private getPriceId(product) {
+    let price_id: string;
+    if(product.properties.hasOwnProperty('sizes')){
+      let size = (<HTMLInputElement>document.getElementById("size")).value;
+      price_id = product.properties.stripeIds[size].testStripePriceId;
+    }
+    else{
+      price_id = product.properties.stripeIds.testStripePriceId;
+    }
+    return price_id;
   }
 
+  private getProductId(product) {
+    let prod_id: string;
+    if(product.properties.hasOwnProperty('sizes')){
+      let size = (<HTMLInputElement>document.getElementById("size")).value;
+      prod_id = product.properties.stripeIds[size].testStripeProdId;
+    }
+    else{
+      prod_id = product.properties.stripeIds.testStripeProdId;
+    }
+    return prod_id;
+  }
+
+  viewCart() {
+    this.router.navigate(['cart']);
+  }
 
   async checkout() {
+    this.stripePromise = loadStripe(this.publishable_key);
 
     // this call is probably unnecessary, but can't hurt.
-    this.updateSessionQuantity();
+    // this.updateSessionQuantity();
     // Call your backend to create the Checkout session.
     // When the customer clicks on the button, redirect them to Checkout.
     const stripe = await this.stripePromise;
@@ -75,7 +98,7 @@ export class StoreComponent implements OnInit {
       mode: 'payment',
       lineItems: [
         { 
-          price: this.priceId,
+          price: this.bandPriceId,
           quantity: this.quantity
         }
       ],
@@ -92,14 +115,5 @@ export class StoreComponent implements OnInit {
 
   }
 
-}
-
-interface Product {
-  image: string;
-  quantity: number;
-  name: string;
-  description: string;
-  price: number;
-  maximumQuantity: number;
 }
 

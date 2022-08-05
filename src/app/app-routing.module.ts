@@ -9,11 +9,13 @@ import { SuccessComponent } from './pages/success/success.component';
 import { TandcComponent } from './pages/tandc/tandc.component';
 import { DetailedComponent } from './pages/packing-list/detailed/detailed.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'store', component: StoreComponent},
+  { path: 'cart', component: CartComponent},
   { path: 'success', component: SuccessComponent},
   { path: 'packing-list', component: PackingListComponent},
   { path: 'directions', component: DirectionsComponent},
