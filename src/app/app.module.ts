@@ -21,11 +21,11 @@ import { InfoCardComponent } from './components/info-card/info-card.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { DetailedComponent } from './pages/packing-list/detailed/detailed.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
-import { MatGridListModule } from '@angular/material/grid-list'
 import { MatCardModule } from '@angular/material/card'
 import {MatSelectModule} from '@angular/material/select'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { CartComponent } from './cart/cart.component'; 
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -52,13 +52,16 @@ import { CartComponent } from './cart/cart.component';
     FormsModule, 
     NgxNumberSpinnerModule,    
     MatExpansionModule,
-    MatGridListModule,
     MatCardModule,
     MatSelectModule,
     MatFormFieldModule, 
+    MatTableModule
   ],
   providers: [
-    { provide: LocationStrategy, useClass: PathLocationStrategy },
+    { provide: [
+      LocationStrategy
+    ],
+      useClass: PathLocationStrategy },
   ],
   bootstrap: [AppComponent]
 })

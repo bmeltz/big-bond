@@ -6,10 +6,10 @@ Responsive Image gallery Style rules
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} 
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
@@ -37,9 +37,6 @@ mat-card {
   background-color: #9ead9d;
   object-fit: cover;
   border-radius: 10px;
-  border: none;
-  height: 100%;
-  // width: 100%;
 }
 
 button{
@@ -55,20 +52,19 @@ button{
 }
 
 .product-gallery > li {
-  flex-basis: 450px; /*width: 350px;*/
+  flex-basis: 300px; /*width: 300px;*/
   position: relative;
   box-shadow:  10px 10px 20px #869385,
   -10px -10px 30px #b6c7b5;
   border-radius: 10px;
-
+  height: 100%;
 }
 
 
 mat-card img {
   object-fit: cover;
   width: 100%;
-  height: 100%;
-  height: 550px;
+  height: 400px;
   vertical-align: middle;
   border-radius: 5px;
 }

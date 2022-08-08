@@ -26,8 +26,8 @@
             "price": 32000,
             "image": "/assets/product_pics/bands_smaller.jpg",
             "stripeIds": {
-                "testStripeProdId": "prod_MBaROw6g455FG1",
-                "testStripePriceId": "price_1LTDGaL2xwG7RCwgFdR42WN7"
+                "testStripeProdId": "prod_MBJa4KYuE2iu5Y",
+                "testStripePriceId": "price_1LSwxQL2xwG7RCwgi37vl8eb"
             },
             "qty": [0, 1]
         }

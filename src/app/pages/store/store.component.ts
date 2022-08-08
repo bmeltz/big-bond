@@ -45,16 +45,14 @@ export class StoreComponent implements OnInit {
   }
 
   addToCart(product) {
-    console.log(+(<HTMLInputElement>document.getElementById("qty")).value);
     let prod: Product = {
       name: product.name ,
       price: product.properties.price,
       priceId: this.getPriceId(product),
-      quantity: +(<HTMLInputElement>document.getElementById("qty")).value,
+      quantity: +(<HTMLInputElement>document.getElementById(product.name)).value,
       productId: this.getProductId(product)
     }
     this._cart.putInCart(prod);
-    console.log("-------------------")
     this._cart.logCartContents();
   }
 
@@ -84,35 +82,6 @@ export class StoreComponent implements OnInit {
 
   viewCart() {
     this.router.navigate(['cart']);
-  }
-
-  async checkout() {
-    this.stripePromise = loadStripe(this.publishable_key);
-
-    // this call is probably unnecessary, but can't hurt.
-    // this.updateSessionQuantity();
-    // Call your backend to create the Checkout session.
-    // When the customer clicks on the button, redirect them to Checkout.
-    const stripe = await this.stripePromise;
-    const { error } = await stripe.redirectToCheckout({
-      mode: 'payment',
-      lineItems: [
-        { 
-          price: this.bandPriceId,
-          quantity: this.quantity
-        }
-      ],
-      // shippingAddressCollection: {allowedCountries: ["US"]},
-      successUrl: this.success_url,
-      cancelUrl: this.cancel_url,
-    });
-    // If `redirectToCheckout` fails due to a browser or network
-    // error, display the localized error message to your customer
-    // using `error.message`.
-    if (error) {
-      console.log(error);
-    }
-
   }
 
 }
