@@ -10,7 +10,6 @@ export class CartService {
 
     public putInCart(item: Product){
         if(!(item.productId in this._itemsInCart)){
-            console.log('was empty now it not')
             this._itemsInCart[item.productId] = {
                 name: item.name,
                 price: item.price,
@@ -18,14 +17,30 @@ export class CartService {
                 priceId: item.priceId
             };
         }
+        // if identical product is already in the cart, just increase the quantity.
         else {
             this._itemsInCart[item.productId].quantity += item.quantity;
         }
-
     }
 
-    public removeFromCart(item: Product) {
-        delete this._itemsInCart[item.productId];
+    public removeOneFromCart(item: Product) {
+        if(this._itemsInCart.hasOwnProperty(item.productId) && 
+        this._itemsInCart[item.productId].quantity > 0) {
+            this._itemsInCart[item.productId].quantity = this._itemsInCart[item.productId].quantity - 1;
+            return this._itemsInCart[item.productId].quantity;
+        }
+        return 0;
+    }
+
+    public clearCart() {
+        this._itemsInCart = {};
+        return this._itemsInCart;
+    }
+
+    public removeProductFromCart(item: Product) {
+        if(this._itemsInCart.hasOwnProperty(item.productId)){
+            this._itemsInCart[item.productId].quantity = 0;
+        }
     }
 
     public calculateTotal() {

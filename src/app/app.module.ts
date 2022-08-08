@@ -25,7 +25,6 @@ import { MatCardModule } from '@angular/material/card'
 import {MatSelectModule} from '@angular/material/select'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { CartComponent } from './cart/cart.component'; 
-import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -54,8 +53,7 @@ import { MatTableModule } from '@angular/material/table';
     MatExpansionModule,
     MatCardModule,
     MatSelectModule,
-    MatFormFieldModule, 
-    MatTableModule
+    MatFormFieldModule
   ],
   providers: [
     { provide: [

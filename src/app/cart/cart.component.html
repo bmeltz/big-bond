@@ -1,20 +1,42 @@
+<div style="overflow: hidden; width: 100%">
+  <menu></menu>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
+  <div class="container">
+    <table class="table ">
+      <thead>
+        <tr>
+          <th scope="col">item</th>
+          <th scope="col">quantity & price</th>
+          <th scope="col">total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><div>
+            <p>hoodie</p><img src="../../assets/product_pics/hoodie.jpg">
+          </div></th>
+          <td>
+            <div style="display: inline-block">
+              <p>testing things</p>
+              <select required >
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+
+              </select>
+            </div>
+          </td>
+          <td>Consectetur</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-        <mat-header-cell *matHeaderCellDef> User name </mat-header-cell>
-        <mat-cell *matCellDef="let row">  {{element.position}} </mat-cell>
-    </ng-container>
-</table>
-
-
-  
-<!-- <div style="display: flex; justify-content: center;">
+  <div style="display: flex; justify-content: center;">
     <button mdbBtn (click)="checkout()" class="mdbBtn">
         checkout
     </button>
-</div> -->
+  </div>
+  <no-ceil-floor></no-ceil-floor>
+</div>
