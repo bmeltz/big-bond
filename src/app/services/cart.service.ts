@@ -14,7 +14,9 @@ export class CartService {
                 name: item.name,
                 price: item.price,
                 quantity: item.quantity,
-                priceId: item.priceId
+                priceId: item.priceId,
+                image: item.image,
+                allowed_quantities: item.allowed_quantities
             };
         }
         // if identical product is already in the cart, just increase the quantity.
@@ -43,6 +45,18 @@ export class CartService {
         }
     }
 
+    private getProductIdsInCart() {
+        let prod_ids = [];
+        for(let key in this._itemsInCart) {
+            prod_ids.push(key);
+        }
+        return prod_ids;
+    }
+
+    get productIdsInCart() {
+        return this.getProductIdsInCart();
+    }
+
     public calculateTotal() {
         let total = 0;
         for(let prodId in this._itemsInCart) {
@@ -67,6 +81,8 @@ export interface Product {
     quantity: number;
     priceId: string;
     productId: string;
+    image: string;
+    allowed_quantities: number[];
 }
 
 interface CartItem {

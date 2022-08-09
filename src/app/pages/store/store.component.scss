@@ -39,9 +39,11 @@ mat-card {
   border-radius: 10px;
 }
 
-button{
-  border-radius: 5px; font-family: Moon; letter-spacing: 3px; font-size: 13px;
+mat-card-actions {
+  white-space: nowrap;
+  width: 100%;
 }
+
 /* Responsive image gallery rules begin*/
 
 .product-gallery {

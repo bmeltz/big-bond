@@ -50,7 +50,9 @@ export class StoreComponent implements OnInit {
       price: product.properties.price,
       priceId: this.getPriceId(product),
       quantity: +(<HTMLInputElement>document.getElementById(product.name)).value,
-      productId: this.getProductId(product)
+      productId: this.getProductId(product),
+      image: product.properties.image,
+      allowed_quantities: product.properties.qty
     }
     this._cart.putInCart(prod);
     this._cart.logCartContents();

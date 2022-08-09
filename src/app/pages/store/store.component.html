@@ -24,13 +24,24 @@
                       </p>
                     </mat-card-content>
                     <mat-card-actions>
-                      <select *ngIf="hasProp(product.properties, 'sizes')" required id="size">
+                      <div class="select">
+                        <select *ngIf="hasProp(product.properties, 'sizes')" required id="size">
+                          <option *ngFor="let size of product.properties.sizes" value="{{size}}">{{size}}</option>
+                        </select>
+                        <select required id="{{product.name}}">
+                          <option *ngFor="let qty of product.properties.qty" value="{{qty}}">{{qty}}</option>
+                        </select>
+                        <div class="select_arrow">
+                        </div>
+                      </div>
+                      <!-- <select *ngIf="hasProp(product.properties, 'sizes')" required id="size">
                         <option *ngFor="let size of product.properties.sizes" value="{{size}}">{{size}}</option>
                       </select>
                       <select required id="{{product.name}}">
                         <option *ngFor="let qty of product.properties.qty" value="{{qty}}">{{qty}}</option>
-                      </select>
-                      <button mdbBtn class="mdbBtn"  (click)="addToCart(product)">add to cart</button>
+                      </select> -->
+                      <button mdbBtn class="mdbBtn"  (click)="addToCart(product)"
+                        style="width: 50%; padding: 7px;position: absolute; right: 4px;bottom: 4px;">add to cart</button>
                     </mat-card-actions>
                   </mat-card>
             </li>

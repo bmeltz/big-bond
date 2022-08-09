@@ -1,7 +1,9 @@
 <div style="overflow: hidden; width: 100%">
   <menu></menu>
 
-
+  <div style="text-align: center; padding-bottom: 0px;" >
+    <h2 class="main-txt" style="text-align: center;">Cart</h2>
+  </div>
   <div class="container">
     <table class="table ">
       <thead>
@@ -12,26 +14,33 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row"><div>
-            <p>hoodie</p><img src="../../assets/product_pics/hoodie.jpg">
-          </div></th>
-          <td>
-            <div style="display: inline-block">
-              <p>testing things</p>
-              <select required >
-                <option>0</option>
-                <option>1</option>
-                <option>2</option>
-
-              </select>
-            </div>
-          </td>
-          <td>Consectetur</td>
-        </tr>
+        <ng-container *ngFor="let product of this._cart.productIdsInCart">
+          <tr >
+            <th scope="row">
+              <div>
+                <p>{{this._cart.itemsInCart[product].name}}</p><img src="{{this._cart.itemsInCart[product].image}}">
+              </div></th>
+              <td>
+                <div style="display: inline">
+                  quantity:
+                  <div class="select">
+                    <select required>
+                      <option value="" disabled selected>{{this._cart.itemsInCart[product].quantity}}</option>
+                      <option *ngFor="let qty of this._cart.itemsInCart[product].allowed_quantities" value="{{qty}}">{{qty}}</option>
+                    </select>
+                    <div class="select_arrow"></div>
+                  </div>
+                  <br>
+                  x ${{this._cart.itemsInCart[product].price/100}}
+                </div>
+              </td>
+              <td>${{this._cart.itemsInCart[product].price/100 * this._cart.itemsInCart[product].quantity}}</td>
+          </tr>
+        </ng-container>
       </tbody>
     </table>
   </div>
+  <!-- <button mdbBtn (click)="test()"> click to test</button> -->
   
   <div style="display: flex; justify-content: center;">
     <button mdbBtn (click)="checkout()" class="mdbBtn">

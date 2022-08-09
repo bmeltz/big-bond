@@ -4,6 +4,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { environment } from 'src/environments/environment';
 // import products from '@assets/products.json';
 import { CartService, Product } from 'src/app/services/cart.service';
+import products from '@assets/products.json';
 
 @Component({
   selector: 'app-cart',
@@ -20,10 +21,13 @@ export class CartComponent implements OnInit {
   stripePromise: any;
   test_mode = true;
 
+  public prodList = this._cart.productIdsInCart;
+
  
-  constructor(private _cart: CartService) { }
+  constructor(public _cart: CartService) { }
 
   ngOnInit(): void {
+    console.log(this._cart.itemsInCart);
     if(this.test_mode) {
       this.publishable_key = environment.STRIPE_TEST_PUBLISHABLE_KEY;
     }
@@ -33,6 +37,15 @@ export class CartComponent implements OnInit {
   //   console.log(this.checkboxStatus);
   //   this.checkboxStatus = !this.checkboxStatus;
   // }
+
+  public test() {
+    for(let product in this._cart.itemsInCart){
+      console.log(this._cart.itemsInCart[product])
+
+    }
+    // console.log('uh wtf', this._cart.itemsInCart["prod_M7EqcfQGmXJ8pn"].image)
+    // this._cart.clearCart();
+  }
 
   private buildLineItems() {
     var cart_items = this._cart.itemsInCart;
@@ -46,6 +59,13 @@ export class CartComponent implements OnInit {
     return line_items;
   }
 
+
+  // NOTE/TODO:
+  // when the user clicks 'back' in checkout, the line items/cart service is cleared.
+  // so the user would have to start all over filling their cart.
+  // would be cool to not require them to do this.
+  // ghetto solution idea: store the contents of the cart in session memory or whatever
+  // and then rebuild the cart contents if back is pressed.. maybe?
   async checkout() {
     if(this.buildLineItems().length != 0)
     {
