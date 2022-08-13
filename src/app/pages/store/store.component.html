@@ -9,7 +9,7 @@
     <div class="container">
         <ul class="product-gallery">
             <li *ngFor="let product of products">
-                <mat-card >
+                <mat-card [class.mat-elevation-z0]="true">
                     <mat-card-header>
                       <div style="background-size: cover; background-image: url()"></div>
                       <mat-card-title>{{product.name}}</mat-card-title>
@@ -24,24 +24,13 @@
                       </p>
                     </mat-card-content>
                     <mat-card-actions>
-                      <div class="select">
                         <select *ngIf="hasProp(product.properties, 'sizes')" required id="size">
                           <option *ngFor="let size of product.properties.sizes" value="{{size}}">{{size}}</option>
                         </select>
                         <select required id="{{product.name}}">
                           <option *ngFor="let qty of product.properties.qty" value="{{qty}}">{{qty}}</option>
                         </select>
-                        <div class="select_arrow">
-                        </div>
-                      </div>
-                      <!-- <select *ngIf="hasProp(product.properties, 'sizes')" required id="size">
-                        <option *ngFor="let size of product.properties.sizes" value="{{size}}">{{size}}</option>
-                      </select>
-                      <select required id="{{product.name}}">
-                        <option *ngFor="let qty of product.properties.qty" value="{{qty}}">{{qty}}</option>
-                      </select> -->
-                      <button mdbBtn class="mdbBtn"  (click)="addToCart(product)"
-                        style="width: 50%; padding: 7px;position: absolute; right: 4px;bottom: 4px;">add to cart</button>
+                        <button mdbBtn class="mdbBtn"  (click)="addToCart(product)">add to cart</button>
                     </mat-card-actions>
                   </mat-card>
             </li>

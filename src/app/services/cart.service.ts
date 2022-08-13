@@ -23,12 +23,18 @@ export class CartService {
         else {
             this._itemsInCart[item.productId].quantity += item.quantity;
         }
+        sessionStorage.setItem('cart', JSON.stringify(this._itemsInCart));
+    }
+
+    public getCartFromSessionStorage(): JSON {
+        return JSON.parse(sessionStorage.getItem('cart'));
     }
 
     public removeOneFromCart(item: Product) {
         if(this._itemsInCart.hasOwnProperty(item.productId) && 
         this._itemsInCart[item.productId].quantity > 0) {
             this._itemsInCart[item.productId].quantity = this._itemsInCart[item.productId].quantity - 1;
+            sessionStorage.setItem('cart', JSON.stringify(this._itemsInCart));
             return this._itemsInCart[item.productId].quantity;
         }
         return 0;
@@ -36,18 +42,20 @@ export class CartService {
 
     public clearCart() {
         this._itemsInCart = {};
+        sessionStorage.setItem('cart', JSON.stringify(this._itemsInCart));
         return this._itemsInCart;
     }
 
     public removeProductFromCart(item: Product) {
         if(this._itemsInCart.hasOwnProperty(item.productId)){
             this._itemsInCart[item.productId].quantity = 0;
+            sessionStorage.setItem('cart', JSON.stringify(this._itemsInCart));
         }
     }
 
     private getProductIdsInCart() {
         let prod_ids = [];
-        for(let key in this._itemsInCart) {
+        for(let key in this.getCartFromSessionStorage()) {
             prod_ids.push(key);
         }
         return prod_ids;
@@ -83,11 +91,4 @@ export interface Product {
     productId: string;
     image: string;
     allowed_quantities: number[];
-}
-
-interface CartItem {
-    name: string;
-    price: number;
-    quantity: number;
-    sizes?: string[];
 }

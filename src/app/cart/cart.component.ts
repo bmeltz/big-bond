@@ -27,7 +27,6 @@ export class CartComponent implements OnInit {
   constructor(public _cart: CartService) { }
 
   ngOnInit(): void {
-    console.log(this._cart.itemsInCart);
     if(this.test_mode) {
       this.publishable_key = environment.STRIPE_TEST_PUBLISHABLE_KEY;
     }
@@ -39,16 +38,14 @@ export class CartComponent implements OnInit {
   // }
 
   public test() {
-    for(let product in this._cart.itemsInCart){
-      console.log(this._cart.itemsInCart[product])
-
-    }
+    console.log(this._cart.getCartFromSessionStorage());
+    console.log(this._cart.itemsInCart);
     // console.log('uh wtf', this._cart.itemsInCart["prod_M7EqcfQGmXJ8pn"].image)
     // this._cart.clearCart();
   }
 
   private buildLineItems() {
-    var cart_items = this._cart.itemsInCart;
+    var cart_items = this._cart.getCartFromSessionStorage();
     var line_items = [];
     for(let productId in cart_items) {
       line_items.push({

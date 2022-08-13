@@ -40,10 +40,20 @@ mat-card {
 }
 
 mat-card-actions {
-  white-space: nowrap;
   width: 100%;
+  background-color: teal;
 }
 
+mat-card-actions button {
+  padding: 7px 10px;
+  width: auto;
+  float:right;
+
+}
+
+mat-card-actions select {
+  width: 20%;
+}
 /* Responsive image gallery rules begin*/
 
 .product-gallery {

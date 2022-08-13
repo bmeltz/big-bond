@@ -55,7 +55,6 @@ export class StoreComponent implements OnInit {
       allowed_quantities: product.properties.qty
     }
     this._cart.putInCart(prod);
-    this._cart.logCartContents();
   }
 
   private getPriceId(product) {

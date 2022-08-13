@@ -31,52 +31,52 @@ a {
   color: rgb(13, 128, 236);
   text-decoration: underline;
 }
-.select {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 15px;
-}    .select select {
-      display: inline-block;
-      // width: 100%;
-      cursor: pointer;
-      padding: 5px 11px;
-      outline: 0;
-      border: 0px hidden #000000;
-      border-radius: 6px;
-      background: #000000;
-      color: #ffffff;
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-  }
-      .select select::-ms-expand {
-          display: none;
-      }
-      .select select:hover,
-      .select select:focus {
-          color: #ffffff;
-          background: #000000;
-      }
-      .select select:disabled {
-          opacity: 0.5;
-          pointer-events: none;
-      }
-.select_arrow {
-  width: 6px;
-  height: 6px;
-  border: solid #ffffff;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-.select select:hover ~ .select_arrow,
-.select select:focus ~ .select_arrow {
-}
-.select select:disabled ~ .select_arrow {
-  border-top-color: #cccccc;
-}
+// .select {
+//   position: relative;
+//   display: inline-block;
+//   margin-bottom: 15px;
+// }    .select select {
+//       display: inline-block;
+//       // width: 100%;
+//       cursor: pointer;
+//       padding: 5px 11px;
+//       outline: 0;
+//       border: 0px hidden #000000;
+//       border-radius: 6px;
+//       background: #000000;
+//       color: #ffffff;
+//       appearance: none;
+//       -webkit-appearance: none;
+//       -moz-appearance: none;
+//   }
+//       .select select::-ms-expand {
+//           display: none;
+//       }
+//       .select select:hover,
+//       .select select:focus {
+//           color: #ffffff;
+//           background: #000000;
+//       }
+//       .select select:disabled {
+//           opacity: 0.5;
+//           pointer-events: none;
+//       }
+// .select_arrow {
+//   width: 6px;
+//   height: 6px;
+//   border: solid #ffffff;
+//   border-width: 0 3px 3px 0;
+//   display: inline-block;
+//   padding: 3px;
+//   transform: rotate(45deg);
+//   -webkit-transform: rotate(45deg);
+// }
+// .select select:hover ~ .select_arrow,
+// .select select:focus ~ .select_arrow {
+// }
+// .select select:disabled ~ .select_arrow {
+//   border-top-color: #cccccc;
+// }
 
 .mdbBtn {
   border-radius: 5px;
@@ -97,7 +97,7 @@ hr.divider {
   margin: 2px;
   height:1px;
   border:none;
-  background-color: white;
+  background-color: black;
   width: 100px;
   margin-left: auto;
   margin-right: auto;

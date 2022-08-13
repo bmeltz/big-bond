@@ -17,7 +17,7 @@
                     "testStripePriceId": "price_1LTDGaL2xwG7RCwgFdR42WN7"
                 }
             },
-            "qty": [0, 1, 2, 3, 4, 5]
+            "qty": [1, 2, 3, 4, 5, 6]
         }
     },
     {
@@ -29,7 +29,7 @@
                 "testStripeProdId": "prod_MBJa4KYuE2iu5Y",
                 "testStripePriceId": "price_1LSwxQL2xwG7RCwgi37vl8eb"
             },
-            "qty": [0, 1]
+            "qty": [1, 2]
         }
     }
 ]
