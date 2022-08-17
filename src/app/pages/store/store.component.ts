@@ -1,89 +1,46 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { loadStripe } from '@stripe/stripe-js';
-import { environment } from 'src/environments/environment';
-import products from '@assets/products.json';
-import { CartService, Product } from 'src/app/services/cart.service';
+import { Component, Renderer2, OnInit, Inject, OnDestroy, AfterViewInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'store',
   templateUrl: './store.component.html',
   styleUrls: ['./store.component.scss']
 })
-export class StoreComponent implements OnInit {
-  public price: number = 80.0;
-  public quantity: number;
-  public checkboxStatus: boolean = false;
-  origin = window.location.origin;
-  success_url = origin.concat("/success");
-  cancel_url = origin.concat("/cart");
-  // change these to the live values when the time comes
-  bandPriceId: string = environment.PRICE_BAND;
-  publishable_key: string = environment.STRIPE_PUBLISHABLE_KEY;
-  stripePromise: any;
-  test_mode = true;
-  hoodieSize: string;
+export class StoreComponent implements AfterViewInit {
+  
+  constructor(private renderer2: Renderer2,
+    @Inject(DOCUMENT) private document: Document) {
+      if(this.document.getElementById('testScript')){
+        this.document.getElementById("testScript").remove();
+      }
+      if(this.document.getElementById('my-store-78062460')){
+        this.document.getElementById("my-store-78062460").remove();
+      }
 
-  public products = products;
- 
-  constructor(private router: Router, private _cart: CartService) { }
-
-  ngOnInit(): void {
-    if(this.test_mode) {
-      this.bandPriceId = environment.TEST_PRICE_BAND;
-      this.publishable_key = environment.STRIPE_TEST_PUBLISHABLE_KEY;
     }
+
+  public ngAfterViewInit(): void {
+
+    const storeId = 78062460;
+    const script = this.renderer2.createElement('script');
+    script.setAttribute('type', 'text/javascript');
+    script.setAttribute('charset', 'utf-8');
+    script.setAttribute('data-cfasync', 'false');
+    script.setAttribute('id', 'testScript');
+    script.setAttribute('src', `https://app.ecwid.com/script.js?${storeId}&data_platform=code&data_date=2020-02-17`);
+    script.onload = this.injectEcwidProductBrowser(storeId);
+    console.log(script);
+    this.renderer2.appendChild(this.document.body, script);
+    
   }
 
-  // public onCheckboxChange() {
-  //   console.log(this.checkboxStatus);
-  //   this.checkboxStatus = !this.checkboxStatus;
-  // }
-
-  hasProp(obj, prop) {
-    return obj.hasOwnProperty(prop);
+  private injectEcwidProductBrowser(storeId) {
+    return () => {
+      const ecwidBrowserScript = document.createElement('script');
+      ecwidBrowserScript.setAttribute('type', 'text/javascript');
+      ecwidBrowserScript.setAttribute('charset', 'utf-8');
+      ecwidBrowserScript.text = `xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-${storeId}");`;
+      document.head.appendChild(ecwidBrowserScript);
+    };
   }
-
-  addToCart(product) {
-    let prod: Product = {
-      name: product.name ,
-      price: product.properties.price,
-      priceId: this.getPriceId(product),
-      quantity: +(<HTMLInputElement>document.getElementById(product.name)).value,
-      productId: this.getProductId(product),
-      image: product.properties.image,
-      allowed_quantities: product.properties.qty
-    }
-    this._cart.putInCart(prod);
-  }
-
-  private getPriceId(product) {
-    let price_id: string;
-    if(product.properties.hasOwnProperty('sizes')){
-      let size = (<HTMLInputElement>document.getElementById("size")).value;
-      price_id = product.properties.stripeIds[size].testStripePriceId;
-    }
-    else{
-      price_id = product.properties.stripeIds.testStripePriceId;
-    }
-    return price_id;
-  }
-
-  private getProductId(product) {
-    let prod_id: string;
-    if(product.properties.hasOwnProperty('sizes')){
-      let size = (<HTMLInputElement>document.getElementById("size")).value;
-      prod_id = product.properties.stripeIds[size].testStripeProdId;
-    }
-    else{
-      prod_id = product.properties.stripeIds.testStripeProdId;
-    }
-    return prod_id;
-  }
-
-  viewCart() {
-    this.router.navigate(['cart']);
-  }
-
 }
-

@@ -94,6 +94,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   wristbandsClicked(){
+    
     this.router.navigate(['store']);
   }
 

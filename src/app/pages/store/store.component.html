@@ -1,63 +1,15 @@
-<div style="overflow: hidden; width: 100%">
-    <menu></menu>
-    <!-- <div style="text-align: center; padding-bottom: 0px;" >
-        <img src="../../../assets/logo_black.png" style="width: 15vw; max-width: 100px;">
-    </div> -->
-    <div style="text-align: center; padding-bottom: 0px;" >
-      <h2 class="main-txt" style="text-align: center;">Store</h2>
-    </div>
-    <div class="container">
-        <ul class="product-gallery">
-            <li *ngFor="let product of products">
-                <mat-card [class.mat-elevation-z0]="true">
-                    <mat-card-header>
-                      <div style="background-size: cover; background-image: url()"></div>
-                      <mat-card-title>{{product.name}}</mat-card-title>
-                      <mat-card-subtitle>${{product.properties.price/100}}</mat-card-subtitle>
-                    </mat-card-header>
-                    <img src={{product.properties.image}} 
-                    alt="Error loading image :(" style="margin: auto auto; margin-bottom: 10px;">
-                    <mat-card-content>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi obcaecati laborum ipsa odit ipsum. Dicta quis tenetur non numquam, 
-                        dignissimos nulla vitae nihil, recusandae vero aliquam distinctio excepturi et cum.
-                      </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <select *ngIf="hasProp(product.properties, 'sizes')" required id="size">
-                          <option *ngFor="let size of product.properties.sizes" value="{{size}}">{{size}}</option>
-                        </select>
-                        <select required id="{{product.name}}">
-                          <option *ngFor="let qty of product.properties.qty" value="{{qty}}">{{qty}}</option>
-                        </select>
-                        <button mdbBtn class="mdbBtn"  (click)="addToCart(product)">add to cart</button>
-                    </mat-card-actions>
-                  </mat-card>
-            </li>
-        </ul>
-      </div>
-    <div class="page">
-        <!-- <div id="info"> -->
-            <!-- <p style="color:#a4a4a6; font-size: 30px;">Big Bond <br> wristband</p>
-            <h2>${{quantity * price}}</h2>
-            <p style="color:#a4a4a6; font-size: 14px;">Qty. {{quantity}}, ${{price}} each <br>
-            <br> Entrance to the camp grounds <br>and two nights of dancing in the desert.</p>
-            <p style="font-size: 10px;color:#a4a4a6;">All sales are final</p> -->
-            <!-- <p style="font-size: 30px;">Big Bond 2023 <br> wristbands coming soon!</p> -->
-
-        <!-- </div> -->
+<div style="overflow: hidden">
+  <menu></menu>
+  <div style="text-align: center; padding-bottom: 0px;" >
+      <h2 class="main-txt" style="text-align: center;">STORE</h2>
+  </div>
+  <!-- <div id="my-store-78062460"></div> -->
+  <!-- <div id="ecwidScriptsSection"></div> -->
+  
+  <div id="my-store-78062460"></div>
+  <div>
+  <script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-78062460");</script>
+  </div>
 
 
-        <!-- <mdb-checkbox style=" font-size: 14px; margin: 15px;" (change)="onCheckboxChange()" ([ngModel])="checkboxStatus" [default]="true">
-            I agree to the <a [routerLink]="['/terms-and-conditions']">terms and conditions</a>
-        </mdb-checkbox>        -->
-        <div style="display: flex; justify-content: center;">
-          <button mdbBtn class="mdbBtn" (click)="viewCart()">
-              view cart
-          </button>
-        </div>
-        <no-ceil-floor></no-ceil-floor>
-
-    </div>
 </div>
-
