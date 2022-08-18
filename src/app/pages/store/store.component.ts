@@ -10,13 +10,24 @@ export class StoreComponent implements AfterViewInit {
   
   constructor(private renderer2: Renderer2,
     @Inject(DOCUMENT) private document: Document) {
-      if(this.document.getElementById('testScript')){
-        this.document.getElementById("testScript").remove();
-      }
-      if(this.document.getElementById('my-store-78062460')){
-        this.document.getElementById("my-store-78062460").remove();
-      }
+      const storeId = 78062460;
 
+      // if(document.getElementById('testScript')){
+      //   document.getElementById("testScript").remove();
+      // }
+      // if(document.getElementById('my-store-78062460')){
+      //   document.getElementById("my-store-78062460").remove();
+      // }
+      // var testScript = document.createElement("script");
+      // testScript.setAttribute("id", "testScript");
+      // testScript.setAttribute("src", `https://app.ecwid.com/script.js?${storeId}&data_platform=code&data_date=2020-02-17`)
+      // document.body.appendChild(testScript);
+
+      // var ecwidBrowserScript = document.createElement('script');
+      // ecwidBrowserScript.setAttribute('type', 'text/javascript');
+      // ecwidBrowserScript.setAttribute('charset', 'utf-8');
+      // ecwidBrowserScript.text = `xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-${storeId}");`;
+      // document.body.appendChild(ecwidBrowserScript);
     }
 
   public ngAfterViewInit(): void {
@@ -30,17 +41,18 @@ export class StoreComponent implements AfterViewInit {
     script.setAttribute('src', `https://app.ecwid.com/script.js?${storeId}&data_platform=code&data_date=2020-02-17`);
     script.onload = this.injectEcwidProductBrowser(storeId);
     console.log(script);
-    this.renderer2.appendChild(this.document.body, script);
+    this.renderer2.appendChild(document.body, script);
     
   }
 
   private injectEcwidProductBrowser(storeId) {
     return () => {
-      const ecwidBrowserScript = document.createElement('script');
+      const ecwidBrowserScript = this.renderer2.createElement('script');
       ecwidBrowserScript.setAttribute('type', 'text/javascript');
       ecwidBrowserScript.setAttribute('charset', 'utf-8');
-      ecwidBrowserScript.text = `xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-${storeId}");`;
-      document.head.appendChild(ecwidBrowserScript);
+      ecwidBrowserScript.setAttribute('id', "id=my-store-${storeId}");
+      ecwidBrowserScript.text = `xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list");`;
+      this.renderer2.appendChild(document.body, ecwidBrowserScript);
     };
   }
 }
