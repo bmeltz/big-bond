@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,9 +8,14 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  @Input() panelstyle: Object;
+  
+  constructor(private router: Router) { 
+  }
 
   ngOnInit(): void {
+    console.log('panel here', typeof this.panelstyle)
+
   }
 
   goHome() {
@@ -31,6 +36,8 @@ export class MenuComponent implements OnInit {
   }
 
   goToStore() {
+    window.location.reload();
+
     this.router.navigate(['store']);
   }
 

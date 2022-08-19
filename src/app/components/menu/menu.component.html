@@ -19,7 +19,7 @@
         <!--
         The menu has to be inside of the button
         -->
-        <ul id="menu" class='main-txt'>
+        <ul id="menu" class='main-txt' [ngStyle]="panelstyle">
             <a role="button" (click)="goHome()"><li>Home</li></a>
             <a role="button" (click)="goToPackingList()"><li>Packing List</li></a>
             <a role="button" (click)="goToDirections()"><li>Directions</li></a>
