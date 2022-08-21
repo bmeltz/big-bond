@@ -36,8 +36,6 @@ export class MenuComponent implements OnInit {
   }
 
   goToStore() {
-    window.location.reload();
-
     this.router.navigate(['store']);
   }
 
