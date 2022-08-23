@@ -14,7 +14,6 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('panel here', typeof this.panelstyle)
 
   }
 
