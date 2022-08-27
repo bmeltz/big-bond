@@ -4,8 +4,8 @@
   
   .grid-product__wrap {
     margin: 20px !important;
-  box-shadow:  5px 5px 23px #c5b59c,
-               -5px -5px 23px #fff5d4 !important;
+  box-shadow:  8px 8px 19px #bbad99,
+               -8px -8px 19px #fde9cf !important;
     border-radius: 10px !important;
   padding: 20px !important;
   }
@@ -19,5 +19,5 @@
   }
   
   .grid__products {
-   margin: 0 !important;
+   margin: auto !important;
   }
