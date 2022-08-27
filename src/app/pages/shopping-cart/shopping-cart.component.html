@@ -7,7 +7,7 @@
             <p style="color:#a4a4a6; font-size: 14px;">Qty. {{quantity}}, ${{price}} each <br>
             <br> Entrance to the camp grounds <br>and two nights of dancing in the desert.</p>
             <p style="font-size: 10px;color:#a4a4a6;">All sales are final</p> -->
-            <p style="color:#a4a4a6; font-size: 30px;">Big Bond 2023 <br> wristbands coming soon!</p>
+            <p style=" font-size: 30px;">Big Bond 2023 <br> wristbands coming soon!</p>
 
         </div>
         <img id="product-image" src="../../../assets/bands_smaller.jpg" >
@@ -19,7 +19,7 @@
             (change)="updateSessionQuantity()"
             [(ngModel)]="quantity">
         </ngx-number-spinner> -->
-        <mdb-checkbox style="color: white; font-size: 14px; margin: 15px;" (change)="onCheckboxChange()" ([ngModel])="checkboxStatus" [default]="true">
+        <mdb-checkbox style=" font-size: 14px; margin: 15px;" (change)="onCheckboxChange()" ([ngModel])="checkboxStatus" [default]="true">
             I agree to the <a [routerLink]="['/terms-and-conditions']">terms and conditions</a>
         </mdb-checkbox>       
         <div style="display: flex; justify-content: center;">
