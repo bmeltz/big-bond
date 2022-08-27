@@ -1,0 +1,23 @@
+.grid-product__image-wrap  {
+    border-radius: 10px !important;
+  }
+  
+  .grid-product__wrap {
+    margin: 20px !important;
+  box-shadow:  5px 5px 23px #c5b59c,
+               -5px -5px 23px #fff5d4 !important;
+    border-radius: 10px !important;
+  padding: 20px !important;
+  }
+  
+  .grid-product__bg {
+    background-color: transparent !important;
+  }
+  
+  .ec-grid {
+    padding: 10px !important;
+  }
+  
+  .grid__products {
+   margin: 0 !important;
+  }
