@@ -64,8 +64,8 @@ body {
 #subtitle{
   text-align: center;
   color: black;
-  font-size: 48px;
-  letter-spacing: 2vw;
+  font-size: 24px;
+  letter-spacing: 10px;
 
 }
 
@@ -148,21 +148,15 @@ mat-expansion-panel-header {
   }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 740px) {
   #title {
-    font-size: 15vw;
+    font-size: 12vw;
     text-align: center;
   }
   #subtitle {
-    font-size: 10vw;
+    font-size: 4vw;
+    letter-spacing: 4px;
   }
 }
-/* 
-@media only screen and (max-height: 400px) {
-  .top_text {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-} */
 
 
