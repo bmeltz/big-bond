@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import photos from '../../../assets/photogallery/photos.json'
+import photos from '@assets/photogallery/photos.json'
 
 @Component({
   selector: 'app-gallery',

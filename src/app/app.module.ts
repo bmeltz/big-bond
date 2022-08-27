@@ -8,7 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // If You need animations
 import { AppRoutingModule } from './app-routing.module';
-import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+import { StoreComponent } from './pages/store/store.component';
 import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
 import { PackingListComponent } from './pages/packing-list/packing-list.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -21,14 +21,16 @@ import { InfoCardComponent } from './components/info-card/info-card.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { DetailedComponent } from './pages/packing-list/detailed/detailed.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
-import { MatGridListModule } from '@angular/material/grid-list'
+import { MatCardModule } from '@angular/material/card'
+import {MatSelectModule} from '@angular/material/select'; 
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
     AppComponent,
     SuccessComponent,
     HomeComponent,
-    ShoppingCartComponent,
+    StoreComponent,
     PackingListComponent,
     MenuComponent,
     DirectionsComponent,
@@ -47,10 +49,15 @@ import { MatGridListModule } from '@angular/material/grid-list'
     FormsModule, 
     NgxNumberSpinnerModule,    
     MatExpansionModule,
-    MatGridListModule
+    MatCardModule,
+    MatSelectModule,
+    MatFormFieldModule
   ],
   providers: [
-    { provide: LocationStrategy, useClass: PathLocationStrategy },
+    { provide: [
+      LocationStrategy
+    ],
+      useClass: PathLocationStrategy },
   ],
   bootstrap: [AppComponent]
 })

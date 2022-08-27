@@ -12,8 +12,8 @@ export class TandcComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public backToCart() {
-    this.router.navigate(['cart']);
+  public goBack() {
+
   }
 
 }
