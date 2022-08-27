@@ -132,8 +132,8 @@
   right: -100px;
   border-radius: 15px;
   
-  background-color: rgba(196, 196, 196, 0.473);
-  backdrop-filter: blur(9px);
+  background-color: rgba(221, 219, 219, 0.473);
+  backdrop-filter: blur(15px);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -159,7 +159,7 @@
 
  @-moz-document url-prefix() {
   #menu{
-    background-color: rgba(196, 196, 196) !important;
+    background-color: rgb(219, 213, 199) !important;
 
   }
 }
