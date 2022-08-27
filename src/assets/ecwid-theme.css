@@ -21,3 +21,7 @@
   .grid__products {
    margin: auto !important;
   }
+  
+  .details-gallery__wrap{
+    border-radius: 10px !important;
+  }

@@ -36,6 +36,9 @@ export class MenuComponent implements OnInit {
 
   goToStore() {
     this.router.navigate(['store']);
+    // TODO: test if this actually works when live
+    if(this.router.url == '/store')
+      window.location.reload();
   }
 
   goToGallery() {
