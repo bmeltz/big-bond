@@ -20,7 +20,7 @@ body {
   font-family: Nunito;
   font-size: 18px;
   margin: 0;
-  background-color: #9ead9d;
+  background-color: #dccbb4;
 }
 
 .main-txt {
@@ -32,11 +32,27 @@ a {
   text-decoration: underline;
 }
 
+
+.mdbBtn {
+  border-radius: 5px;
+  background-color: black;
+  color: white !important;
+  font-family: Moon; 
+  letter-spacing: 2px; font-size: 1px;
+  border-radius: 7px !important;
+}
+
+.mdbBtn:hover {
+  border-radius: 5px;
+  background-color: white;
+  color: black !important;
+}
+
 hr.divider {
   margin: 2px;
   height:1px;
   border:none;
-  color: black;
+  background-color: black;
   width: 100px;
   margin-left: auto;
   margin-right: auto;

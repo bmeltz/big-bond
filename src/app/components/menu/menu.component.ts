@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,9 +8,13 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  @Input() panelstyle: Object;
+  
+  constructor(private router: Router) { 
+  }
 
   ngOnInit(): void {
+
   }
 
   goHome() {
@@ -30,8 +34,12 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['schedule']);
   }
 
-  goToCart() {
-    this.router.navigate(['cart']);
+  goToStore() {
+    this.router.navigate(['store']);
+    // TODO: test if this actually works when live. there may be a more robust way to do this.
+    // might want to do this for all of these "goTo" calls.
+    if(this.router.url == '/store')
+      window.location.reload();
   }
 
   goToGallery() {

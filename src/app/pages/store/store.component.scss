@@ -1,0 +1,8 @@
+// not sure why mobile screens shift stuff right 8 pixels when desktop at the same screen size doesn't
+// but they do.
+// i think its a decent bet that desktop/laptop screens wont be used with widths below 740px, but its still hacky.
+@media only screen and (max-width: 740px) {
+    .frame-container{
+        transform: translateX(-8px) !important;
+    }
+ }
