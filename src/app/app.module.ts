@@ -24,6 +24,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { MatCardModule } from '@angular/material/card'
 import {MatSelectModule} from '@angular/material/select'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatExpansionModule,
     MatCardModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    HttpClientModule
   ],
   providers: [
     { provide: [

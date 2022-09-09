@@ -3,13 +3,18 @@
   <div style="text-align: center; padding-bottom: 0px;" >
     <h2 class="main-txt" style="text-align: center;">Gallery</h2>
   </div>
-  <div class="container">
+  <!-- <div class="container">
     <ul class="image-gallery">
       <li *ngFor="let image of images">
         <img src={{image.path}} alt="" />
       </li>
     </ul>
+  </div> -->
+  <div *ngFor="let message of messages | async">
+    {{message.message}}
+
   </div>
+  <button (click)="post()">create user</button>
   <no-ceil-floor></no-ceil-floor>
 </div>
 
