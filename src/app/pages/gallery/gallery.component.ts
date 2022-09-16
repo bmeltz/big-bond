@@ -20,8 +20,9 @@ export class GalleryComponent {
   getImages() {
     let gallery_url = this.createCompleteRoute(environment.BASE_URL, 'gallery');
     console.log(gallery_url);
-    this.http.get<any>(gallery_url).subscribe(next=> 
-    console.log(next));
+    this.http.get<any>(gallery_url).subscribe(function(next){
+      console.log(next);
+    });
   }
 
   private createCompleteRoute = (envAddress: string, route: string) => {

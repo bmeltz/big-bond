@@ -1,7 +1,7 @@
 {
   "name": "big-bond",
   "version": "0.0.0",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -36,6 +36,7 @@
     "body-parser": "^1.20.0",
     "chart.js": "^2.7.2",
     "concurrently": "^7.4.0",
+    "cors": "^2.8.5",
     "dompurify": "^2.3.10",
     "express": "^4.18.1",
     "glob-parent": "^6.0.2",
