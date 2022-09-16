@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import photos from '@assets/photogallery/photos.json'
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 const dir = '../../../assets/photogallery/'
 
@@ -12,17 +11,21 @@ const dir = '../../../assets/photogallery/'
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent {
-  public messages = this.http.get<any[]>('http://localhost:4201');
 
   images = [];
-  gallery_dir = "../../../assets/photogallery/";
   constructor(private http: HttpClient) { 
     // this.getMessages();
   }
 
-  post() {
-    this.http.post<any>("http://localhost:4201/users", {username: 'benny'}).subscribe(next=> 
+  getImages() {
+    let gallery_url = this.createCompleteRoute(environment.BASE_URL, 'gallery');
+    console.log(gallery_url);
+    this.http.get<any>(gallery_url).subscribe(next=> 
     console.log(next));
+  }
+
+  private createCompleteRoute = (envAddress: string, route: string) => {
+    return `${envAddress}/${route}`;
   }
   // ngOnInit(): void {
 
