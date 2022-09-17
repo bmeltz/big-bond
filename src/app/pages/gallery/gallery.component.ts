@@ -12,17 +12,26 @@ const dir = '../../../assets/photogallery/'
 })
 export class GalleryComponent {
 
-  images = [];
+  public images = [];
   constructor(private http: HttpClient) { 
-    // this.getMessages();
+    this.getImages();
   }
 
   getImages() {
     let gallery_url = this.createCompleteRoute(environment.BASE_URL, 'gallery');
     console.log(gallery_url);
-    this.http.get<any>(gallery_url).subscribe(function(next){
+    this.http.get<any>(gallery_url).subscribe((next) => {
       console.log(next);
+      for(let image of next){
+        let path = gallery_url + '/' + image;
+        console.log(path);
+        this.images.push(path);
+      }
     });
+    // let gallery_url = this.createCompleteRoute(environment.BASE_URL, 'gallery');
+    // console.log(gallery_url);
+    // this.images = this.http.get<any>(gallery_url);
+    // console.log(this.images)
   }
 
   private createCompleteRoute = (envAddress: string, route: string) => {
