@@ -10,7 +10,7 @@ body {
   position: relative;
   /* Will not allow the video to overflow the 
   container */
-  overflow: auto;
+  overflow: hidden;
   color: black;
   height: 100vh;
   max-height: -webkit-fill-available;
@@ -39,7 +39,7 @@ body {
   max-height: -webkit-fill-available;
   max-height: -moz-available; 
   width:100vw; 
-  overflow-x: hidden; 
+  overflow: hidden; 
   position: relative; 
   display: flex; 
   flex-flow: column;
