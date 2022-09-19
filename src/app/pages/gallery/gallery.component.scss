@@ -35,6 +35,7 @@ Responsive Image gallery Style rules
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
   }
   
   .image-gallery > li {

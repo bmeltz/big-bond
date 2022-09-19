@@ -2,6 +2,7 @@ const express = require('express');
 
 const app = express();
 const router = express();
+var fs=require('fs');
 
 const allowedMethods = ['GET']
 
@@ -24,24 +25,23 @@ app.get('/', (req, res) => {
 const path = require('path')
 app.use('/gallery', express.static(path.join(__dirname, 'photogallery')))
 router.get('/gallery', function(req, res) {
-    var fs=require('fs'),
     
-    EventEmitter=require('events').EventEmitter,
+    var EventEmitter=require('events').EventEmitter,
     filesEE=new EventEmitter(),
-    myfiles=[];
+    photos=[];
     const path = require('path');
 
     const dirPath = path.resolve(__dirname, './photogallery');
-    // this event will be called when all files have been added to myfiles
+    // this event will be called when all files have been added to photos
     filesEE.on('files_ready',function(){
-        res.send(myfiles);
+        res.send(photos);
     });
 
     // read all files from current directory
     fs.readdir(dirPath, function(err,files){
     if(err) throw err;
     files.forEach(function(file){
-        myfiles.push(file);
+        photos.push(file);
     });
     filesEE.emit('files_ready'); // trigger files_ready event
     });
