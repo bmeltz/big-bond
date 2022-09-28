@@ -13,7 +13,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
-  { path: 'store', component: StoreComponent},
+  { path: 'shop', component: StoreComponent},
   { path: 'success', component: SuccessComponent},
   { path: 'packing-list', component: PackingListComponent},
   { path: 'directions', component: DirectionsComponent},

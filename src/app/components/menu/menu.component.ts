@@ -34,11 +34,11 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['schedule']);
   }
 
-  goToStore() {
-    this.router.navigate(['store']);
+  goToShop() {
+    this.router.navigate(['shop']);
     // TODO: test if this actually works when live. there may be a more robust way to do this.
     // might want to do this for all of these "goTo" calls.
-    if(this.router.url == '/store')
+    if(this.router.url == '/shop')
       window.location.reload();
   }
 

@@ -1,7 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: 'store',
+  selector: 'shop',
   templateUrl: './store.component.html',
   styleUrls: ['./store.component.scss']
 })
