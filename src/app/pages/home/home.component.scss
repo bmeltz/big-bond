@@ -148,13 +148,14 @@ mat-expansion-panel-header {
 
 @media only screen and (max-width: 740px) {
   #title {
-    font-size: 15vw;
+    font-size: 17vw;
     text-align: center;
   }
   #subtitle {
-    font-size: 3vw;
+    font-size: 3.5vw;
+    line-height: 3vw;
     letter-spacing: 1px;
-    transform: translateY(-6vw);
+    transform: translateY(-5vw);
   }
 }
 
