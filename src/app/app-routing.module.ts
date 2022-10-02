@@ -9,11 +9,13 @@ import { SuccessComponent } from './pages/success/success.component';
 import { TandcComponent } from './pages/tandc/tandc.component';
 import { DetailedComponent } from './pages/packing-list/detailed/detailed.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
 
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'shop', component: StoreComponent},
+  { path: 'shop-policies', component: ShopPoliciesComponent},
   { path: 'success', component: SuccessComponent},
   { path: 'packing-list', component: PackingListComponent},
   { path: 'directions', component: DirectionsComponent},

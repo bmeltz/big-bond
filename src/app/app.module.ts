@@ -24,6 +24,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { MatCardModule } from '@angular/material/card'
 import {MatSelectModule} from '@angular/material/select'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     SuccessComponent,
     HomeComponent,
     StoreComponent,
+    ShopPoliciesComponent,
     PackingListComponent,
     MenuComponent,
     DirectionsComponent,
@@ -39,7 +41,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     TandcComponent,
     InfoCardComponent,
     DetailedComponent,
-    GalleryComponent
+    GalleryComponent,
+    ShopPoliciesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'shop',
@@ -6,8 +7,12 @@ import { Component, AfterViewInit } from '@angular/core';
   styleUrls: ['./store.component.scss']
 })
 export class StoreComponent implements AfterViewInit {
-  constructor() {
+  constructor(public router: Router) {
 
+  }
+
+  goToStorePolicies() {
+    this.router.navigate(['shop-policies'])
   }
 
   // this is such a hacky solution to get a good iframe height after the ecwid store has fully loaded.
@@ -33,14 +38,13 @@ export class StoreComponent implements AfterViewInit {
         let current = iFrameID.style.height;
         let possible_new = iFrameID.contentWindow.document.body.scrollHeight + "px";
         iFrameID.style.height = possible_new;
-
         //TODO: get this to work. need to figure out a good way to stop checking
         // if(stopChecking(current, possible_new)){
           //clearInterval()
         // }
             
       } 
-    }, 1000);
+    }, 200);
 
     
   }
