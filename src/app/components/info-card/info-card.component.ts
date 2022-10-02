@@ -54,7 +54,7 @@ export class InfoCardComponent implements OnInit, OnDestroy {
   }
 
   wristbandsClicked(){
-    this.router.navigate(['store']);
+    this.router.navigate(['shop']);
   }
 
 }

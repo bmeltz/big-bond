@@ -31,7 +31,7 @@ section img {
   color: white;
   text-align: center;
   background-color: rgba(126, 126, 126, 0.384);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(7px);
   padding-top: 10px;
   padding-left: 30px;
   padding-right: 30px;
@@ -40,11 +40,11 @@ section img {
   width: 600px;
 
   border-radius: 20px;
-  -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 1.5s; /* Firefox < 16 */
-   -ms-animation: fadein 1.5s; /* Internet Explorer */
-    -o-animation: fadein 1.5s; /* Opera < 12.1 */
-       animation: fadein 1.5s;
+  -webkit-animation: fadein 2.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2.5s; /* Firefox < 16 */
+   -ms-animation: fadein 2.5s; /* Internet Explorer */
+    -o-animation: fadein 2.5s; /* Opera < 12.1 */
+       animation: fadein 2.5s;
 }
 
 
@@ -67,8 +67,8 @@ section img {
 .header {
   font-size: 30px;
   letter-spacing: 5px;
-  font-family: "Moon";
-  text-shadow: 0 0 10px white;
+  font-family: "Patita";
+  text-shadow: 0 0 7px white;
 
 
 }

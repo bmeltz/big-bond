@@ -10,7 +10,7 @@ body {
   position: relative;
   /* Will not allow the video to overflow the 
   container */
-  overflow: auto;
+  overflow: hidden;
   color: black;
   height: 100vh;
   max-height: -webkit-fill-available;
@@ -39,15 +39,13 @@ body {
   max-height: -webkit-fill-available;
   max-height: -moz-available; 
   width:100vw; 
-  overflow-x: hidden; 
+  overflow: hidden; 
   position: relative; 
   display: flex; 
   flex-flow: column;
 }
 
 .title-container {
-  font-family: "Moon";
-  letter-spacing: 3vw;
   position: static;
   flex: 0 1 auto;
   right: 0;
@@ -55,18 +53,21 @@ body {
 }
 
 #title {
+  letter-spacing: -6px;
   text-align: center;
   color: black;
-  font-size: 70px;
+  font-size: 110px;
   white-space: nowrap;
 }
 
 #subtitle{
+  position: relative;
+  font-family: Roboto_Reg;
   text-align: center;
   color: black;
-  font-size: 24px;
-  letter-spacing: 10px;
-
+  font-size: 17px;
+  line-height: 18px;
+  transform: translateY(-40px);
 }
 
 
@@ -140,10 +141,6 @@ mat-expansion-panel-header {
   #dt-lineup {
     display: none;
   }
-
-  .top_text {
-    letter-spacing: 3px;
-  }
   p {
     font-size: 18px;
   }
@@ -151,12 +148,14 @@ mat-expansion-panel-header {
 
 @media only screen and (max-width: 740px) {
   #title {
-    font-size: 12vw;
+    font-size: 17vw;
     text-align: center;
   }
   #subtitle {
-    font-size: 4vw;
-    letter-spacing: 4px;
+    font-size: 3.5vw;
+    line-height: 3vw;
+    letter-spacing: 1px;
+    transform: translateY(-5vw);
   }
 }
 

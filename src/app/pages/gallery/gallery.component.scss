@@ -45,10 +45,10 @@ Responsive Image gallery Style rules
     position: relative;
   }
   
-  .image-gallery::after {
-    content: "";
-    flex-grow: 999;
-  }
+  // .image-gallery::after {
+  //   content: "";
+  //   flex-grow: 999;
+  // }
   
   .image-gallery li img {
     object-fit: cover;

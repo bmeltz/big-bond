@@ -7,6 +7,21 @@
 }
 
 @font-face {
+  font-family: Patita;
+  src: url("assets/fonts/Patita-Black.otf");
+}
+
+@font-face {
+  font-family: Roboto_Thin;
+  src: url("assets/fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: Roboto_Reg;
+  src: url("assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
   font-family: Nunito;
   src: url("assets/fonts/Nunito-VariableFont_wght.ttf");
 }
@@ -17,14 +32,14 @@ html {
 
 body {
   color: black;
-  font-family: Nunito;
+  font-family: Roboto_Thin;
   font-size: 18px;
   margin: 0;
   background-color: #dccbb4;
 }
 
 .main-txt {
-  font-family: 'Moon';
+  font-family: 'Patita';
 }
 
 a {
@@ -37,7 +52,7 @@ a {
   border-radius: 5px;
   background-color: black;
   color: white !important;
-  font-family: Moon; 
+  font-family: Roboto_Reg; 
   letter-spacing: 2px; font-size: 1px;
   border-radius: 7px !important;
 }
