@@ -24,6 +24,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { MatCardModule } from '@angular/material/card'
 import {MatSelectModule} from '@angular/material/select'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { FaqComponent } from './pages/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     TandcComponent,
     InfoCardComponent,
     DetailedComponent,
-    GalleryComponent
+    GalleryComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
