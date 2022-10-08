@@ -5,43 +5,48 @@ import { AppComponent } from './app.component';
 import { SuccessComponent } from './pages/success/success.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // If You need animations
 import { AppRoutingModule } from './app-routing.module';
-import { StoreComponent } from './pages/shopping-cart/shopping-cart.component';
+import { StoreComponent } from './pages/store/store.component';
 import { NgxNumberSpinnerModule } from 'ngx-number-spinner';
 import { PackingListComponent } from './pages/packing-list/packing-list.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { DirectionsComponent } from './pages/directions/directions.component'
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { NoCeilFloorComponent } from './components/no-ceil-floor/no-ceil-floor.component';
-<<<<<<< HEAD
 import { scheduleComponent } from './pages/schedule/schedule.component';
 import { TandcComponent } from './pages/tandc/tandc.component';
 import { InfoCardComponent } from './components/info-card/info-card.component';
-import { MatExpansionModule } from '@angular/material/expansion'
+import { MatExpansionModule } from '@angular/material/expansion';
+import { DetailedComponent } from './pages/packing-list/detailed/detailed.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { MatCardModule } from '@angular/material/card'
+import {MatSelectModule} from '@angular/material/select'; 
+import {MatFormFieldModule} from '@angular/material/form-field';
+<<<<<<< HEAD
+import { HttpClientModule } from '@angular/common/http'
 =======
-import { TandcComponent } from './pages/tandc/tandc.component';
-
+import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
 >>>>>>> develop
+
 @NgModule({
   declarations: [
     AppComponent,
     SuccessComponent,
     HomeComponent,
     StoreComponent,
+    ShopPoliciesComponent,
     PackingListComponent,
     MenuComponent,
     DirectionsComponent,
     NoCeilFloorComponent,
-<<<<<<< HEAD
     scheduleComponent,
     TandcComponent,
-    InfoCardComponent
-=======
-    TandcComponent
->>>>>>> develop
+    InfoCardComponent,
+    DetailedComponent,
+    GalleryComponent,
+    ShopPoliciesComponent
   ],
   imports: [
     BrowserModule,
@@ -50,13 +55,17 @@ import { TandcComponent } from './pages/tandc/tandc.component';
     BrowserAnimationsModule,
     FormsModule, 
     NgxNumberSpinnerModule,    
-<<<<<<< HEAD
-    MatExpansionModule
-=======
->>>>>>> develop
+    MatExpansionModule,
+    MatCardModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    HttpClientModule
   ],
   providers: [
-    { provide: LocationStrategy, useClass: PathLocationStrategy },
+    { provide: [
+      LocationStrategy
+    ],
+      useClass: PathLocationStrategy },
   ],
   bootstrap: [AppComponent]
 })

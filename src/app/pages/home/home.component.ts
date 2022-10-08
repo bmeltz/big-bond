@@ -94,7 +94,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   wristbandsClicked(){
-    this.router.navigate(['store']);
+    this.router.navigate(['shop']);
   }
 
   public setArtistName(event: any) {
