@@ -32,7 +32,11 @@ html {
 
 body {
   color: black;
+<<<<<<< HEAD
+  font-family: Roboto_Thin;
+=======
   font-family: Roboto_Reg;
+>>>>>>> develop
   font-size: 18px;
   margin: 0;
   background-color: #dccbb4;
