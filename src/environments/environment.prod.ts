@@ -1,8 +1,3 @@
 export const environment = {
-  production: true,
-  STRIPE_PUBLISHABLE_KEY: "pk_live_51JHiV9L2xwG7RCwgRoJ4v2MN1N81ObxBrKQImAlRZJBzFmDaFVn4hzFfZmoipf9qmaf2CdZBKUILmPO666rvOCQO00d42DXpwx",
-  STRIPE_TEST_PUBLISHABLE_KEY: "pk_test_51JHiV9L2xwG7RCwgbcBanu6hjEI5ZZqdMhC6bHemx86O7OyJwXzYT6DEQ20MNiZH9nh7wZfl4Hn20aW4bguu3PlD002J1nMdsY",
-  TEST_PRICE: "price_1KLDjnL2xwG7RCwgW2GO13XB",
-  PRICE: "price_1KLDstL2xwG7RCwgTGX8CvV3",
-  PAYMENT_METHOD_TYPES: "card"
+  production: true
 };
