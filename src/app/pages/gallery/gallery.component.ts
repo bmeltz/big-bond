@@ -9,14 +9,16 @@ import photos from '@assets/photogallery/photos.json'
 export class GalleryComponent implements OnInit {
 
   images = [];
-  gallery_dir = "../../../assets/photogallery/";
+  gallery_dir = "../../../assets/photogallery/photos/";
   constructor() { }
 
   ngOnInit(): void {
-    for(let key in photos){
+    console.log(photos["file_list"])
+    for(let img in photos["file_list"]){
       this.images.push({
-        path: this.gallery_dir + photos[key]
+        path: this.gallery_dir + photos["file_list"][img]
       });
+      console.log(this.gallery_dir+ photos["file_list"][img])
     }
   }
 
