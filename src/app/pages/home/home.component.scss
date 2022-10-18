@@ -71,40 +71,6 @@ body {
 }
 
 
-#mobile-lineup {
-  display: none;
-  margin-bottom: 20px;
-  letter-spacing: 3px; 
-  font-size: 18px;
-}
-
-#dt-lineup {
-  display: block;
-  margin-bottom: 20px;
-}
-
-#dt-lineup button {
-  display: inline-block !important;
-  background-color: transparent;
-  border: none;
-  color: white;
-  letter-spacing: 3px; 
-  font-size: 18px;
-  outline: none;
-  padding-bottom: 16px;
-}
-
-#mobile-lineup button {
-  display: inline-block !important;
-  background-color: transparent;
-  border: none;
-  color: white;
-  letter-spacing: 3px; 
-  font-size: 18px;
-  outline: none;
-}
-
-
 #logo {
   width: 20vh;
   right: 0px;
@@ -112,35 +78,7 @@ body {
   min-width: 100px;
 }
 
-mat-accordion mat-expansion-panel{
-  margin: auto auto;
-  background-color: #14141a;
-  box-shadow: 0 0 5px 5px #2a2a33;
-  color: white;
-  max-width: 600px;
-  width: 90%;
-}
-
-mat-expansion-panel-header:hover {
-  background-color: inherit !important;
-}
-
-mat-expansion-panel-header {
-  color: white;
-  padding: 0;
-}
-
 @media only screen and (max-width: 630px) {
-  #mobile-lineup {
-    display: block;
-  }
-  #mobile-lineup button{
-    padding: 5px;
-  }
-  
-  #dt-lineup {
-    display: none;
-  }
   p {
     font-size: 18px;
   }
@@ -153,7 +91,7 @@ mat-expansion-panel-header {
   }
   #subtitle {
     font-size: 3.5vw;
-    line-height: 3vw;
+    line-height: 4.4vw;
     letter-spacing: 1px;
     transform: translateY(-5vw);
   }

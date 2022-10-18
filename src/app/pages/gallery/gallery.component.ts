@@ -12,8 +12,8 @@ export class GalleryComponent implements OnInit {
   gallery_dir = "../../../assets/photogallery/photos/";
   constructor() { }
 
+  // TODO: find out the pros/cons of doing this with a backend instead.
   ngOnInit(): void {
-    console.log(photos["file_list"])
     for(let img in photos["file_list"]){
       this.images.push({
         path: this.gallery_dir + photos["file_list"][img]
@@ -21,5 +21,4 @@ export class GalleryComponent implements OnInit {
       console.log(this.gallery_dir+ photos["file_list"][img])
     }
   }
-
 }
