@@ -23,6 +23,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { MatCardModule } from '@angular/material/card'
 import {MatSelectModule} from '@angular/material/select'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { FaqComponent } from './pages/faq/faq.component';
 import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
 
 @NgModule({
@@ -40,7 +41,7 @@ import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.compo
     TandcComponent,
     DetailedComponent,
     GalleryComponent,
-    ShopPoliciesComponent
+    FaqComponent
   ],
   imports: [
     BrowserModule,

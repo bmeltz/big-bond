@@ -9,6 +9,7 @@ import { SuccessComponent } from './pages/success/success.component';
 import { TandcComponent } from './pages/tandc/tandc.component';
 import { DetailedComponent } from './pages/packing-list/detailed/detailed.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import { FaqComponent } from './pages/faq/faq.component';
 import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
 
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'gallery', component: GalleryComponent},
   { path: 'terms-and-conditions', component: TandcComponent},
   { path: 'detailed', component: DetailedComponent},
+  { path: 'faq', component: FaqComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home' }
 ];
