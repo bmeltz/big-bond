@@ -14,7 +14,7 @@ export class PackingListComponent implements OnInit {
   }
 
   goToDetailedList() {
-    this.router.navigate(['detailed']);
+    this.router.navigate(['detailed-packing-list']);
   }
 
 }

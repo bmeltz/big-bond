@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    console.log("Hey, email us. We could probably use some help updating the website for next year")
   }
 
   ngOnDestroy(): void {    

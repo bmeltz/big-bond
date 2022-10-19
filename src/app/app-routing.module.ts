@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'schedule', component: scheduleComponent},
   { path: 'gallery', component: GalleryComponent},
   { path: 'terms-and-conditions', component: TandcComponent},
-  { path: 'detailed', component: DetailedComponent},
+  { path: 'detailed-packing-list', component: DetailedComponent},
   { path: 'faq', component: FaqComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home' }
