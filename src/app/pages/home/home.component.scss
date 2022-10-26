@@ -16,8 +16,6 @@ body {
   max-height: -moz-available;          /* WebKit-based browsers will ignore this. */
   width:100vw;
 
-
-
     /* Centering the container's content vertically 
   and horizontally */
   text-align: center;
@@ -44,8 +42,13 @@ body {
   position: relative; 
   display: flex; 
   flex-flow: column;
-  -webkit-animation: 2.5s ease 0s normal forwards 1 fadein;
-  animation: 2.5s ease 0s normal forwards 1 fadein;
+  // -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+  // animation: 3s ease 0s normal forwards 1 fadein;
+  -webkit-animation: fadein 2.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2.5s; /* Firefox < 16 */
+   -ms-animation: fadein 2.5s; /* Internet Explorer */
+    -o-animation: fadein 2.5s; /* Opera < 12.1 */
+       animation: fadein 2.5s;
 }
 
 .title-container {
@@ -59,7 +62,6 @@ body {
 
 menu {
   --menu-background: white;
-  --menu-shadow: 0px 0px 30px rgb(40, 40, 40);
 }
   
   @keyframes fadein{
@@ -109,12 +111,48 @@ menu {
   transform: translateY(-40px);
 }
 
+
+#mobile-lineup {
+  display: none;
+  margin-bottom: 20px;
+  letter-spacing: 3px; 
+  font-size: 18px;
+}
+
+#dt-lineup {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#dt-lineup button {
+  display: inline-block !important;
+  background-color: transparent;
+  border: none;
+  color: white;
+  letter-spacing: 3px; 
+  font-size: 18px;
+  outline: none;
+  padding-bottom: 16px;
+}
+
+#mobile-lineup button {
+  display: inline-block !important;
+  background-color: transparent;
+  border: none;
+  color: white;
+  letter-spacing: 3px; 
+  font-size: 18px;
+  outline: none;
+}
+
+
 #logo {
   width: 20vh;
   right: 0px;
   left: 0px;
   min-width: 100px;
 }
+
 
 @media only screen and (max-width: 740px) {
   #title {
@@ -123,7 +161,7 @@ menu {
   }
   #subtitle {
     font-size: 3.5vw;
-    line-height: 4.6vw;
+    line-height: 4.5vw;
     letter-spacing: 1px;
     transform: translateY(-5vw);
   }
