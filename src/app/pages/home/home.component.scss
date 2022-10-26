@@ -1,7 +1,6 @@
 body {
   min-height: 100vh;
   overflow: scroll;
-
 }
 
 .video-wrapper {
@@ -16,6 +15,8 @@ body {
   max-height: -webkit-fill-available;
   max-height: -moz-available;          /* WebKit-based browsers will ignore this. */
   width:100vw;
+
+
 
     /* Centering the container's content vertically 
   and horizontally */
@@ -43,9 +44,8 @@ body {
   position: relative; 
   display: flex; 
   flex-flow: column;
-  -webkit-animation: 3s ease 0s normal forwards 1 fadein;
-  animation: 3s ease 0s normal forwards 1 fadein;
-
+  -webkit-animation: 2.5s ease 0s normal forwards 1 fadein;
+  animation: 2.5s ease 0s normal forwards 1 fadein;
 }
 
 .title-container {
@@ -61,34 +61,35 @@ menu {
   --menu-background: white;
   --menu-shadow: 0px 0px 30px rgb(40, 40, 40);
 }
-
-@keyframes fadein{
-  0% { opacity:0; }
-  66% { opacity:0; }
-  100% { opacity:1; }
-}
-
-@-webkit-keyframes fadein{
-  0% { opacity:0; }
-  66% { opacity:0; }
-  100% { opacity:1; }
-}
-
-.mtbBtn {
-  border-radius: 5px;
-  margin: 10px;
-  background-color: white !important;
-  color: black !important;
-  font-family: Roboto_Reg; 
-  letter-spacing: 2px;
-  border-radius: 7px !important;
-}
-
+  
+  @keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+  }
+  
+  @-webkit-keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+  }
+  
+  .mtbBtn {
+    border-radius: 5px;
+    margin: 10px;
+    background-color: white !important;
+    color: black !important;
+    font-family: Roboto_Reg; 
+    letter-spacing: 2px;
+    border-radius: 7px !important;
+  }
+  
 .mtbBtn:hover {
   border-radius: 5px;
   background-color: black !important;
   color: white !important;
 }
+  
 
 #title {
   letter-spacing: -6px;
@@ -106,21 +107,13 @@ menu {
   font-size: 17px;
   line-height: 24px;
   transform: translateY(-40px);
-
 }
-
 
 #logo {
   width: 20vh;
   right: 0px;
   left: 0px;
   min-width: 100px;
-}
-
-@media only screen and (max-width: 630px) {
-  p {
-    font-size: 18px;
-  }
 }
 
 @media only screen and (max-width: 740px) {
@@ -130,7 +123,7 @@ menu {
   }
   #subtitle {
     font-size: 3.5vw;
-    line-height: 4.4vw;
+    line-height: 4.6vw;
     letter-spacing: 1px;
     transform: translateY(-5vw);
   }
