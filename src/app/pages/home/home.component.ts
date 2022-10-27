@@ -18,6 +18,19 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     console.log("Hey, email us. We could probably use some help updating the website for next year")
+    
+    // hacky solution to make using in low power mode bearable.
+    // touching or clicking will begin playing the video.
+    document.addEventListener('touchstart', function () {
+      const video = <HTMLVideoElement>document.getElementById('video');
+      video.play();
+
+    });
+    document.addEventListener('mousemove', function () {
+      const video = <HTMLVideoElement>document.getElementById('video');
+      video.play();
+    });
+  
   }
 
   ngOnDestroy(): void {    
