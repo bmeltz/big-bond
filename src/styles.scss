@@ -7,6 +7,21 @@
 }
 
 @font-face {
+  font-family: Patita;
+  src: url("assets/fonts/Patita-Black.otf");
+}
+
+@font-face {
+  font-family: Roboto_Thin;
+  src: url("assets/fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: Roboto_Reg;
+  src: url("assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
   font-family: Nunito;
   src: url("assets/fonts/Nunito-VariableFont_wght.ttf");
 }
@@ -16,28 +31,43 @@ html {
 }
 
 body {
-  color: white;
-  font-family: Nunito;
+  color: black;
+  font-family: Roboto_Reg;
   font-size: 18px;
   margin: 0;
-  background-color: #1a1a20;
+  background-color: #dccbb4;
 }
 
 .main-txt {
-  font-family: 'Moon';
+  font-family: 'Patita';
 }
 
 a {
-  color: rgb(57, 179, 235);
+  color: rgb(13, 128, 236);
   text-decoration: underline;
+}
+
+
+.mdbBtn {
+  border-radius: 5px;
+  background-color: black;
+  color: white !important;
+  font-family: Roboto_Reg; 
+  letter-spacing: 2px; font-size: 1px;
+  border-radius: 7px !important;
+}
+
+.mdbBtn:hover {
+  border-radius: 5px;
+  background-color: white;
+  color: black !important;
 }
 
 hr.divider {
   margin: 2px;
   height:1px;
   border:none;
-  color:rgb(201, 201, 201); 
-  background-color:rgb(201, 201, 201); 
+  background-color: black;
   width: 100px;
   margin-left: auto;
   margin-right: auto;

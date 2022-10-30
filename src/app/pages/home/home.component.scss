@@ -1,0 +1,138 @@
+body {
+  min-height: 100vh;
+  overflow: scroll;
+}
+
+.video-wrapper {
+  /* Telling our absolute positioned video to 
+  be relative to this element */
+  position: relative;
+  /* Will not allow the video to overflow the 
+  container */
+  overflow: hidden;
+  color: black;
+  height: 100vh;
+  max-height: -webkit-fill-available;
+  max-height: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width:100vw;
+
+    /* Centering the container's content vertically 
+  and horizontally */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  height: -webkit-fill-available; 
+  height: 100vh; 
+  max-height: -webkit-fill-available;
+  max-height: -moz-available; 
+  width:100vw; 
+  overflow: hidden; 
+  position: relative; 
+  display: flex; 
+  flex-flow: column;
+  // -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+  // animation: 3s ease 0s normal forwards 1 fadein;
+  -webkit-animation: fadein 2.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2.5s; /* Firefox < 16 */
+   -ms-animation: fadein 2.5s; /* Internet Explorer */
+    -o-animation: fadein 2.5s; /* Opera < 12.1 */
+       animation: fadein 2.5s;
+}
+
+.title-container {
+  position: static;
+  flex: 0 1 auto;
+  right: 0;
+  left: 0;
+  text-shadow: 0 0 10px rgb(202, 202, 202);
+
+}
+
+
+menu {
+  --menu-background: white;
+  --toggle-shadow: 0px 0px 20px rgba(26, 33, 48, 0.624);
+}
+  
+  @keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+  }
+  
+  @-webkit-keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+  }
+  
+  .mtbBtn {
+    border-radius: 5px;
+    margin: 10px;
+    background-color: white !important;
+    color: black !important;
+    font-family: Roboto_Reg; 
+    letter-spacing: 2px;
+    border-radius: 7px !important;
+  }
+  
+.mtbBtn:hover {
+  border-radius: 5px;
+  background-color: black !important;
+  color: white !important;
+}
+  
+
+#title {
+  letter-spacing: -6px;
+  text-align: center;
+  color: white;
+  font-size: 110px;
+  white-space: nowrap;
+}
+
+#subtitle{
+  position: relative;
+  font-family: Roboto_Reg;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  line-height: 24px;
+  transform: translateY(-40px);
+}
+
+
+#logo {
+  width: 20vh;
+  right: 0px;
+  left: 0px;
+  min-width: 100px;
+}
+
+
+@media only screen and (max-width: 740px) {
+  #title {
+    font-size: 17vw;
+    text-align: center;
+  }
+  #subtitle {
+    font-size: 3.5vw;
+    line-height: 4.5vw;
+    letter-spacing: 1px;
+    transform: translateY(-5vw);
+  }
+}
+
+

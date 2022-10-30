@@ -1,0 +1,16 @@
+<div style="overflow: hidden;">
+  <menu></menu>
+  <div style="text-align: center; padding-bottom: 0px;" >
+    <h2 class="main-txt" style="text-align: center;">GALLERY</h2>
+  </div>
+  <div class="container">
+    <ul class="image-gallery">
+      <li *ngFor="let image of images">
+        <img src={{image.path}} alt="" />
+      </li>
+    </ul>
+  </div>
+  <no-ceil-floor></no-ceil-floor>
+</div>
+
+

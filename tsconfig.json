@@ -10,8 +10,13 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "target": "es2015",
     "module": "es2020",
+    "paths": {
+      "@assets/*": ["./src/assets/*"]
+    },
     "lib": [
       "es2018",
       "dom"
