@@ -48,6 +48,7 @@
    cursor: pointer;
    
    opacity: 0; /* hide this */
+   
    z-index: 2; /* and place it over the hamburger */
    
    -webkit-touch-callout: none;
@@ -122,48 +123,43 @@
  #menu
  {
   color: #1a1a20;
-    text-shadow: 0 0 20px white;
-
-   position: absolute;
-   width: 300px;
-   margin: -120px 0 0 0;
-   padding: 30px;
-   padding-top: 125px;
-   right: -100px;
-   border-radius: 10px;
-   
-   background-color: rgba(196, 196, 196, 0.473);
-   backdrop-filter: blur(5px);
-   list-style-type: none;
-   -webkit-font-smoothing: antialiased;
-   /* to stop flickering of text in safari */
-   
-   transform-origin: 0% 0%;
-   transform: translate(100%, 0);
-   
-   transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
+  text-shadow: 0 0 20px white;
+  position: absolute;
+  width: 300px;
+  margin: -120px 0 0 0;
+  padding: 30px;
+  padding-top: 125px;
+  right: -100px;
+  border-radius: 10px;
+  
+  background-color: rgba(196, 196, 196, 0.473);
+  backdrop-filter: blur(5px);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
  }
- 
+
  #menu li
  {
    padding: 10px 0;
    font-size: 22px;
  }
  
- /*
-  * And let's fade it in from the left
-  */
+
  #menuToggle input:checked ~ ul
  {
    transform: none;
    opacity: 1;
  }
- 
- @media screen and (max-width: 768px) {
-   #menu {
-     transform: none;
-     opacity: 0;
- 
-     transition: opacity 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
-   }
- }
+
+ @-moz-document url-prefix() {
+  #menu{
+    background-color: rgba(196, 196, 196) !important;
+
+  }
+}
