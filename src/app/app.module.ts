@@ -23,7 +23,6 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FaqComponent } from './pages/faq/faq.component';
 import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
-import { FACEBOOK_PIXEL_PROVIDER } from './services/facebook-pixel.provider'
 
 @NgModule({
   declarations: [
@@ -53,7 +52,6 @@ import { FACEBOOK_PIXEL_PROVIDER } from './services/facebook-pixel.provider'
     MatFormFieldModule
   ],
   providers: [
-    FACEBOOK_PIXEL_PROVIDER,
     { provide: [
       LocationStrategy
     ],
