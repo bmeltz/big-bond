@@ -1,6 +1,8 @@
 import os
 import json
 import random
+
+# call this from the the big bond root directory.
 def main():
     file_list = os.listdir('src/assets/photogallery/photos/')
     random.shuffle(file_list)
