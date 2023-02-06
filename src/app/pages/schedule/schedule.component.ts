@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'schedule',
@@ -8,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class scheduleComponent implements OnInit {
 
   constructor() { }
+  screenWidth: number;
 
-  ngOnInit(): void {
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.screenWidth = event.target.innerWidth;
+    console.log(this.screenWidth)
+  }
+
+  ngOnInit() {
+    this.screenWidth = window.innerWidth;
   }
 
 }

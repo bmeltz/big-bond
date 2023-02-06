@@ -23,6 +23,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FaqComponent } from './pages/faq/faq.component';
 import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.compo
     FormsModule, 
     MatCardModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatTabsModule
   ],
   providers: [
     { provide: [

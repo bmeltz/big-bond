@@ -1,52 +1,46 @@
-.top {
-    padding: 20px;
+img {
+    width: 90vw !important;
+    max-width: 700px;
 }
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-tr {
-    width: 100%
-}
-td, th {
+.mat-tab-label {
+  font-family: 'Patita' !important;
+  }
+.video-wrapper {
+    /* Telling our absolute positioned video to 
+    be relative to this element */
+    position: relative;
+    /* Will not allow the video to overflow the 
+    container */
+    overflow-x: hidden;
+    color: black;
+    height: 100vh;
+    max-height: -webkit-fill-available;
+    max-height: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width:100vw;
+  
+      /* Centering the container's content vertically 
+    and horizontally */
     text-align: center;
-    padding: 8px;
-    /* font-size: 17px; */
-  }
-
-.center-container {
     display: flex;
-    background-color: #14141a;
-    /* border: solid 1px #ffffff; */
-    /* round the corners */
-    -webkit-border-radius: 10px;
-    -moz-border-radius:    10px;
-         border-radius:    10px;
-
-
-  /* make it glow! */
-  -webkit-box-shadow: 0 0 5px 5px #2a2a33;
-     -moz-box-shadow: 0 0 5px 5px #2a2a33;
-          box-shadow: 0 0 5px 5px #2a2a33;
-
-}
-
-.day {
-    display: block;
-    font-size: 18px;
-    margin: auto auto;
-    width: 100%;
-
-    padding: 10px;
-    margin: 0px;
-}
-
-tr:nth-child(even) {
-    background-color: #23232b;
+    align-items: center;
+    justify-content: center;
+  }
+.content {
+    height: -webkit-fill-available; 
+    height: 100vh; 
+    max-height: -webkit-fill-available;
+    max-height: -moz-available; 
+    width:100vw; 
+    position: relative; 
+    display: flex; 
+    flex-flow: column;
   }
 
-@media only screen and (max-width: 630px) {
-    .center-container {
-        display: block;
-    }
-}
+.title-container {
+    position: static;
+    flex: 0 1 auto;
+    right: 0;
+    left: 0;
+    text-shadow: 0 0 10px rgb(202, 202, 202);
+  
+  }
