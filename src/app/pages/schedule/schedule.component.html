@@ -9,7 +9,45 @@
         </div>
       </div>
       <div style="margin-left: auto; margin-right: auto;flex: 1 1 auto; display: flex; align-items: center;">
-        <img src="../../../assets/bigbond_schedule.jpg">
+        <mat-tab-group mat-align-tabs="center">
+
+          <mat-tab>
+            <ng-template mat-tab-label class="mat-tab-label">
+              <p class="main-txt" style="padding: 0; margin: 0; height: 20px;">FRIDAY</p>
+            </ng-template>
+            <ng-container *ngIf="screenWidth < 800">
+              <img src="../../../assets/schedule_friday_story.webp">
+            </ng-container>
+            <ng-container *ngIf="screenWidth >= 800">
+              <img src="../../../assets/schedule_friday.webp">
+            </ng-container>
+          </mat-tab>
+
+          <mat-tab label="saturday">
+            <ng-template mat-tab-label class="mat-tab-label">
+              <p class="main-txt" style="padding: 0; margin: 0; height: 20px;">SATURDAY</p>
+            </ng-template>
+            <ng-container *ngIf="screenWidth < 800">
+              <img src="../../../assets/schedule_saturday_story.webp">
+            </ng-container>
+            <ng-container *ngIf="screenWidth >= 800">
+              <img src="../../../assets/schedule_saturday.webp">
+            </ng-container>
+          </mat-tab>
+
+          <mat-tab label="saturday">
+            <ng-template mat-tab-label class="mat-tab-label">
+              <p class="main-txt" style="padding: 0; margin: 0; height: 20px;">LINEUP</p>
+            </ng-template>
+            <ng-container *ngIf="screenWidth < 800">
+              <img src="../../../assets/lineup_story.webp">
+            </ng-container>
+            <ng-container *ngIf="screenWidth >= 800">
+              <img src="../../../assets/lineup.webp">
+            </ng-container>
+          </mat-tab>
+
+        </mat-tab-group>
       </div>
       <div style="flex: 0 0 0px; margin-top: 20px; line-height: 0px;">
           <no-ceil-floor></no-ceil-floor>
