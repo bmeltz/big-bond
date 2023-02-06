@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { SuccessComponent } from './pages/success/success.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -28,7 +27,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 @NgModule({
   declarations: [
     AppComponent,
-    SuccessComponent,
     HomeComponent,
     StoreComponent,
     ShopPoliciesComponent,
