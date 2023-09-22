@@ -21,8 +21,8 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['home']);
   }
 
-  goToFAQ() {
-    this.router.navigate(['faq']);
+  goToInfo() {
+    this.router.navigate(['info']);
   }
 
   goToDirections() {

@@ -20,7 +20,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { MatCardModule } from '@angular/material/card'
 import {MatSelectModule} from '@angular/material/select'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { FaqComponent } from './pages/faq/faq.component';
+import { InfoComponent } from './pages/info/info.component';
 import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
 import { MatTabsModule } from '@angular/material/tabs';
 
@@ -38,7 +38,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     TandcComponent,
     DetailedComponent,
     GalleryComponent,
-    FaqComponent
+    InfoComponent
   ],
   imports: [
     BrowserModule,
