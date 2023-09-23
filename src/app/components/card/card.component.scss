@@ -1,13 +1,3 @@
-.card-body{
-    background-color: red;
-    padding: 10px;
-    margin:20px;
-}
-
-
-/* Font */
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
-
 /* Design */
 *,
 *::before,
@@ -28,15 +18,15 @@ body {
   padding: 1rem;
 }
 
-.main{
+.main {
   max-width: 1200px;
   margin: 0 auto;
 }
 
 h1 {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
 }
 
 img {
@@ -50,9 +40,10 @@ img {
   padding: 0.8rem;
   font-size: 14px;
   text-transform: uppercase;
-  border-radius: 4px;
+  border-radius: .5rem;
   font-weight: 400;
   display: block;
+  position: relative;
   width: 100%;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -60,7 +51,7 @@ img {
 }
 
 .btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: #75c8ae;
 }
 
 .cards {
@@ -69,11 +60,13 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  border-radius: 1rem;
 }
 
 .cards_item {
   display: flex;
   padding: 1rem;
+  border-radius: 1rem;
 }
 
 @media (min-width: 40rem) {
@@ -89,38 +82,72 @@ img {
 }
 
 .card {
-  background-color: white;
-  border-radius: 0.25rem;
+  background-color: transparent;
+  border-radius: 1rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  min-height: 300px;
+  position: relative;
+  background: #aba58d;
+  box-shadow: 12px 12px 25px #7b7767, -12px -12px 25px #d0c9af;
+}
+
+.card_image {
+  background-size: cover;
+  background-position: center center;
+  flex-grow: 1;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.card_image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(225, 15, 15, 0), rgba(0, 0, 0, 0.307));
+  border-radius: 1rem;
+  pointer-events: none;
 }
 
 .card_content {
-  padding: 1rem;
-  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2rem;
+}
+
+.card_title,
+.card_text,
+.card_btn {
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
 }
 
 .card_title {
-  color: #ffffff;
   font-size: 1.1rem;
   font-weight: 700;
+  font-family: 'Patita';
   letter-spacing: 1px;
   text-transform: capitalize;
-  margin: 0px;
+  margin-bottom: 1rem;
 }
 
 .card_text {
-  color: #ffffff;
   font-size: 0.875rem;
   line-height: 1.5;
-  margin-bottom: 1.25rem;    
   font-weight: 400;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
-.made_by{
-  font-weight: 400;
-  font-size: 13px;
-  margin-top: 35px;
-  text-align: center;
+
+.card_btn {
+  margin-top: auto;
+  align-self: center;
 }

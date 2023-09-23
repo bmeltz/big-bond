@@ -1,10 +1,13 @@
 <li class="cards_item">
     <div class="card">
-      <div class="card_image"><img [src]="imageString"></div>
-      <div class="card_content">
-        <h2 class="card_title">{{ title }}</h2>
-        <p class="card_text">{{ description }}</p>
-        <button class="btn card_btn">Read More</button>
+      <div class="card_image" [ngStyle]="{ 'background-image': 'url(' + imageString + ')' }">
+        <div class="card_content">
+          <div class="card_inner">
+            <h2 class="card_title">{{ title }}</h2>
+            <p class="card_text">{{ description }}</p>
+          </div>
+          <button class="btn card_btn">Read More</button>
+        </div>
       </div>
     </div>
   </li>
