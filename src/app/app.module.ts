@@ -19,10 +19,13 @@ import { DetailedComponent } from './pages/packing-list/detailed/detailed.compon
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { MatCardModule } from '@angular/material/card'
 import {MatSelectModule} from '@angular/material/select'; 
-import {MatFormFieldModule} from '@angular/material/form-field';
 import { InfoComponent } from './pages/info/info.component';
 import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { FaqComponent } from './pages/faq/faq.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { CardComponent } from './components/card/card.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     TandcComponent,
     DetailedComponent,
     GalleryComponent,
-    InfoComponent
+    InfoComponent,
+    FaqComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -48,8 +53,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     FormsModule, 
     MatCardModule,
     MatSelectModule,
-    MatFormFieldModule,
-    MatTabsModule
+    MatTabsModule,
+    MatGridListModule
   ],
   providers: [
     { provide: [

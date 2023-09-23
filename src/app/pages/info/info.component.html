@@ -1,139 +1,73 @@
 <div style="overflow: hidden">
     <menu></menu>
-    <div style="padding-bottom: 0px;" >
-        <h2 class="main-txt" style="text-align: center;">FAQ</h2>
+    <div style="padding-bottom: 0px;">
+        <h2 class="main-txt" style="text-align: center;">ABOUT BIG BOND</h2>
 
         <div class="top">
-            <hr style="height:1px;border:none; background-color:black;">
-            <p class="main-txt" >
-                What should I bring to Big Bond?
-            </p> 
-            Please see our suggested <a href="/packing-list">packing list</a> and the corresponding 
-            <a href="/detailed-packing-list">detailed packing list</a>. The information found there isn't comprehensive, but it is a good start.
-            If you would like further guidance please reach out via <a href="https://www.instagram.com/bigbond.us/?hl=en">social media</a> 
-            or send us an email at info@bigbond.us. 
-
-            <p class="main-txt">
-                What comes with my wristband?
-            </p>
-            A wristband grants you entry and camping to the grounds of Big Bond, where you can immerse yourself into two days of camping, hiking, and music.
-            <p class="main-txt" >
-                Who needs a wristband?
-            </p>    
-            All attendees need a wristband.
-            <p class="main-txt">
-                Are tickets expected to sell out?
-            </p>
-            There is a limited number of wristbands so it is possible that they can sell out.
-            Get your tickets now — we want to make sure you don’t miss out!
-            <p class="main-txt" >
-                When will I get my wristband?
-            </p>  
-            Wristbands will be shipped to the address provided at checkout. If you are buying a wristband after 
-            the shipping deadline, show your order confirmation email at check-in to receive your wristband. 
-            Please email info@bigbond.us if you need to update 
-            your shipping address prior to the festival or if you have any questions.
-
-            <p class="main-txt" >
-                What if I lose my wristband?
-            </p>
-            Please take extra care to not lose your wristband as they are not replaceable.
-            <p class="main-txt" >
-                Are there refunds for wristbands?
-            </p>  
-            No, all sales are final for wristband purchases. 
-            <p class="main-txt" >
-                What are the festival hours?
-            </p>  
-            Festival hours for 2024 are TBA.
-            
-            
-            <p class="main-txt" >
-                Can I cook/grill at the campsite?
-            </p> 
-            Yes! Small, portable propane stoves/grills are allowed for cooking. 
-            Please monitor your cooking devices and fully turn off butane tanks whenever 
-            you are not using them. Inhaling flamable gases is dangerous so keep these items away
-            from enclosed spaces.
-            Stay safe, and be aware of your surroundings while cooking. 
-            Campfire cooking is also allowed within designated fire pits. Never use gasoline to 
-            start a fire.
-            
-            <p class="main-txt">
-                What comes with a campsite?
-            </p>
-            Campsites are included with your Big Bond wristband and the Big Bond 
-            grounds have bathrooms and showers without potable water as well as fire pits. 
-            Cars, RVs, Vans, and tent camping is allowed.
-            
-            <p class="main-txt" >
-                Will there be a general store at the campsites?
-            </p> 
-            No, please bring all essentials. A cash only food truck may be available, but be prepared with all your own
-            food. You are responsible for your own supplies. 
-            Sadly Uber eats will not make it out to the camp grounds but there is a gas station and a few 
-            restaurants within minutes.  
-            <p class="main-txt" >
-                How do I get to Big Bond?
-            </p> 
-            Check out the <a href="/directions">Directions page.</a>
-            
-            <p class="main-txt" >
-                Can I leave the campsite and come back?
-            </p>
-            Yep! as long as you are still wearing your valid Big Bond wristband you will not be asked to leave and you may come
-            and go as you please.
-
-            <p class="main-txt" >
-                Is it ok if I'm not planning on camping on the festival grounds?
-            </p>
-            Not a problem.
-            It gets very dark at night, so driving around the festival grounds in the dark isn't allowed.
-            However, there will be a designated parking area near the gate for attendees that 
-            aren't camping at the festival. You can come and go from this parking area as you please.
-
-            <p class="main-txt" >
-                Will I be able to camp by my car?
-            </p>
-            You may park and set up camp almost anywhere in the grounds. 
-            Spots are given on a first come first serve basis. 
-            Please see the festival grounds map on the <a href="/directions">directions page.</a> 
-
-            <p class="main-txt" >
-                Is there festival map?
-            </p>
-            There is a map of the Big Bond grounds on the <a href="/directions">directions page.</a>
-            Landmarks on the map are farther apart than they appear. Big Bond takes place on 640 acres
-            of beautiful desert.
-
-            <p class="main-txt" >
-                Do I need a 4 wheel drive vehicle?
-            </p>
-            Unless you drive a Ferrari, your vehicle will have no trouble.
-
-            <p class="main-txt" >
-                How does check-in work?
-            </p>
-            There are not assigned check-in times. 2024 check-in date and time is TBA. If you cannot arrive within
-            the designated check-in window, please send Big Bond an email so organizers can plan accordingly.
-            Please already be wearing your wristband when you arrive.
-            Big Bond volunteers will be waiting at the gate to check wristbands and welcome you to Big Bond.
-            <p class="main-txt">
-                What is the difference between wristband tiers?
-            </p>
-            The only difference is the price, but a fixed number of wirstbands will be sold at each tier, so lock in 
-            a lower price while you still can.
-
-            <p class="main-txt" >
-                I want to check out the national park. What should I do?
-            </p> 
-            Check out the <a href="https://www.nps.gov/bibe/index.htm">national park website</a> for current updates and activities.
-            
-        </div> 
-    </div> 
+            <div class="main">
+                <h1>Responsive Card Grid Layout</h1>
+                <ul class="cards">
+                  <card
+                    [imageString]="'hill_squad.webp'"
+                    [title]="'title'"
+                    [description]="'lorem ipsum'"
+                  ></card>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn">Read More</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn">Read More</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=14"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn">Read More</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=17"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn">Read More</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">Card Grid Layout</h2>
+                        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                        <button class="btn card_btn">Read More</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              
+              <h3 class="made_by">Made with ♡</h3>
+        </div>
+    </div>
     <br><br><br>
     <no-ceil-floor></no-ceil-floor>
-
 </div>
-
-
