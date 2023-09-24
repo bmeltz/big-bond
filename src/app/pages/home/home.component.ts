@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnDestroy(): void {    
   }
 
-  wristbandsClicked(){
+  shopClicked(){
     this.router.navigate(['shop']);
   }
 }

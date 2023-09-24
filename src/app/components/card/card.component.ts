@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'card',
@@ -10,15 +11,19 @@ export class CardComponent implements OnInit {
   @Input() title: string;
   @Input() description: string;
 
+  @Input() navToSelector: string;
   gallery_dir = "../../../assets/photogallery/photos/";
 
-  constructor() {
+  constructor(private router: Router) {
   }
-
-
 
   ngOnInit(): void {
     this.imageString = this.gallery_dir + this.imageString;
+  }
+
+  readClicked(){
+    console.log(this.navToSelector);
+    this.router.navigate([this.navToSelector]);
   }
 
 }
