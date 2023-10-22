@@ -1,23 +1,28 @@
-<div style="overflow-x: hidden;">
-  <menu ></menu>
-  <h2 class="main-txt" style="text-align: center;">SHOP</h2>
 
-  <div class="frame-container">
-    <iframe style="border: none; width: 100vw;" scrolling="no" id='frame'
-    srcdoc=
-    '<div id="my-store-78062460"></div>
-      <div>
-        <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?78062460&data_platform=code&data_date=2022-08-20" charset="utf-8">
-        </script>
-        <script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-78062460");</script>
-      </div>'>
+
+<div style="display: flex; flex-direction: column; min-height: 100vh;">
+  <!-- Content that should be above the bottom section -->
+  <div style="overflow-x: hidden;">
+    <menu ></menu>
+    <h2 class="main-txt" style="text-align: center;">SHOP</h2>
   
-    </iframe>
-  </div>
-  <div style="width: 100%;">
-    <a role="button" style="  color: rgb(13, 128, 236);
-    text-decoration: underline; text-align: center; display: block;" (click)="goToStorePolicies()">shop policies</a>
+    <div class="frame-container">
+      <iframe style="border: none; width: 100vw;" scrolling="no" id='frame'
+      srcdoc=
+      '<div id="my-store-78062460"></div>
+        <div>
+          <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?78062460&data_platform=code&data_date=2022-08-20" charset="utf-8">
+          </script>
+          <script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-78062460");</script>
+        </div>'>
     
+      </iframe>
+    </div>
   </div>
-  <no-ceil-floor></no-ceil-floor>
+
+  <!-- Bottom section -->
+  <div style="margin-top: auto;">
+    <a role="button" style="color: rgb(13, 128, 236); padding-bottom: 1rem; text-decoration: underline; text-align: center; display: block;" (click)="goToStorePolicies()">shop policies</a>
+    <no-ceil-floor></no-ceil-floor>
+  </div>
 </div>
