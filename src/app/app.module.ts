@@ -25,6 +25,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { FaqComponent } from './pages/faq/faq.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { CardComponent } from './components/card/card.component';
+import { SurvivalGuideComponent } from './survival-guide/survival-guide.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { CardComponent } from './components/card/card.component';
     GalleryComponent,
     InfoComponent,
     FaqComponent,
-    CardComponent
+    CardComponent,
+    SurvivalGuideComponent
   ],
   imports: [
     BrowserModule,

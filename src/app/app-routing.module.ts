@@ -11,6 +11,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { InfoComponent } from './pages/info/info.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
+import { SurvivalGuideComponent } from './survival-guide/survival-guide.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'detailed-packing-list', component: DetailedComponent},
   { path: 'info', component: InfoComponent},
   { path: 'faq', component: FaqComponent},
+  { path: 'survival-guide', component: SurvivalGuideComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home' }
 ];

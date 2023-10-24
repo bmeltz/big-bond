@@ -9,7 +9,9 @@
 html {
   background-color: #ecf9ff;
 }
+.top{
 
+}
 body {
   color: #272727;
   font-family: 'Patita', serif;
@@ -41,11 +43,11 @@ h1 {
 
 .cards_item {
   display: flex;
-  padding: 1rem;
+  padding: 4px;
   border-radius: 1rem;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 280px) {
   .cards_item {
     width: 50%;
   }
