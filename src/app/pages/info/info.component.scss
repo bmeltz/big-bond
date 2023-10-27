@@ -36,18 +36,13 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 20px;
-  padding: 0;
+  padding: 10px;
   border-radius: 1rem;
+  justify-content: center; /* Center the cards horizontally within each row */
 }
 
-.cards_item {
-  display: flex;
-  padding: 4px;
-  border-radius: 1rem;
-}
 
-@media (min-width: 280px) {
+@media (min-width: 500px) {
   .cards_item {
     width: 50%;
   }
