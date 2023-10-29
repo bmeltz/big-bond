@@ -66,6 +66,7 @@ img {
 
 .card_inner {
     z-index: 1;
+    height: 100%;
 }
 
 .card_image {
@@ -94,6 +95,8 @@ img {
   justify-content: space-between;
   height: 100%;
   padding: 15px;
+  min-height: 300px;
+
 }
 
 .cards_item {

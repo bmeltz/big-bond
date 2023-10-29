@@ -14,6 +14,8 @@ body{
     flex: 1;
     display: flex;
     flex-direction: column;
+    max-height: -webkit-fill-available;
+    max-height: -moz-available;          /* WebKit-based browsers will ignore this. */
 }
 
 .container {
@@ -28,13 +30,23 @@ body{
     padding-right: 10px;
   }
 
+  .sub-point {
+    font-family: ROC_Grotesk_Bold;
+    font-size: 21px;
+    min-width: 100px;
+    color: #75c8ae;
+  }
+
 
   
 // Collapsible Closed
 details{
   max-width: 1400px;
   margin: 1.3rem auto;
-  background-color: #ABA58D;
+
+  background-color: black;
+  color: white;
+  // background-color: #ABA58D;
   border-radius: 1rem;
   box-shadow:  6px 6px 15px #807c6a,
   -6px -6px 15px #d6ceb0;
@@ -44,6 +56,7 @@ details{
   }
   
   summary{
+    font-family: Patita;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,7 +82,8 @@ details{
   }
   
   .content{
-    padding: 0 1.5rem 1.5rem;
+    text-align: left;
+    display: flex;
   }
 }
 
