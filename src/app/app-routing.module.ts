@@ -12,7 +12,7 @@ import { InfoComponent } from './pages/info/info.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
 import { SurvivalGuideComponent } from './survival-guide/survival-guide.component';
-
+import { EthosComponent } from './pages/ethos/ethos.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -27,6 +27,7 @@ const routes: Routes = [
   { path: 'info', component: InfoComponent},
   { path: 'faq', component: FaqComponent},
   { path: 'survival-guide', component: SurvivalGuideComponent},
+  { path: 'ethos', component: EthosComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home' }
 ];

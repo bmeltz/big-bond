@@ -26,6 +26,7 @@ import { FaqComponent } from './pages/faq/faq.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { CardComponent } from './components/card/card.component';
 import { SurvivalGuideComponent } from './survival-guide/survival-guide.component';
+import { EthosComponent } from './pages/ethos/ethos.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { SurvivalGuideComponent } from './survival-guide/survival-guide.componen
     InfoComponent,
     FaqComponent,
     CardComponent,
-    SurvivalGuideComponent
+    SurvivalGuideComponent,
+    EthosComponent
   ],
   imports: [
     BrowserModule,

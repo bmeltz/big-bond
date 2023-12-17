@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .content {
+    background: url('../../../assets/photogallery/photos/hillpeople.webp') center center ;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    text-align: justify;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  
+    h1, h2 {
+      border-bottom: 1px solid white;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    p {
+      margin-bottom: 15px;
+    }
+  .ncnf {
+    margin-top: auto; /* Push .ncnf to the bottom of .top */
+    width: 100%;
+  }
+}
+
+  .logo-container {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+  }
+
+  .logo {
+    /* Add your logo styles here */
+    max-width: 100%;
+    height: auto;
+  }
