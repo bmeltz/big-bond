@@ -1,50 +1,50 @@
-
-/* Design */
+/* Reset styles */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html {
-  background-color: #ecf9ff;
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-.top{
 
+.content {
+    flex: 1;
+    overflow: hidden;
 }
-body {
-  color: #272727;
-  font-family: 'Patita', serif;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  padding: 1rem;
-}
+
 
 .main {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 10px;
-  border-radius: 1rem;
-  justify-content: center; /* Center the cards horizontally within each row */
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 10px;
+    border-radius: 1rem;
+    justify-content: center;
 }
 
-
 @media (min-width: 500px) {
-  .cards_item {
-    width: 50%;
-  }
+    .cards_item {
+        width: 50%;
+    }
 }
 
 @media (min-width: 56rem) {
-  .cards_item {
-    width: 33.3333%;
-  }
+    .cards_item {
+        width: 33.3333%;
+    }
+}
+
+no-ceil-floor {
+    margin-top: auto;
 }
