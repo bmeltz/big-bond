@@ -1,50 +1,59 @@
-body {
-    margin: 0;
-    overflow: hidden;
+html, body {
+
+}
+
+.container {
+  background: url('../../../assets/textbkg.webp') bottom center;
+  background-size: cover;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.content {
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  padding: 20px; /* Add some padding to prevent content from touching the edges */
+
+  h1, h2 {
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
   }
-  
-  .content {
-    background: url('../../../assets/photogallery/photos/hillpeople.webp') center center ;
-    background-size: cover;
-    color: white;
-    height: 100vh;
-    text-align: justify;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-  
-    h1, h2 {
-      border-bottom: 1px solid white;
-      padding-bottom: 5px;
-      margin-bottom: 10px;
-    }
-  
-    h1 {
-      font-size: 2em;
-    }
-  
-    h2 {
-      font-size: 1.5em;
-    }
-  
-    p {
-      margin-bottom: 15px;
-    }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+
   .ncnf {
-    margin-top: auto; /* Push .ncnf to the bottom of .top */
+    margin-top: auto; /* Push .ncnf to the bottom of .content */
     width: 100%;
+  }
+
+  .logo-container {
+    text-align: center;
   }
 }
 
-  .logo-container {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    width: 100%;
-  }
-
-  .logo {
-    /* Add your logo styles here */
-    max-width: 100%;
-    height: auto;
-  }
+.ncnf {
+  margin-top: auto; /* Push .ncnf to the bottom of .top */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  z-index: 3;
+}
+img {
+  display: block;
+  margin: 0 auto;  // Center the image horizontally
+  width: 100%; 
+}
