@@ -2,40 +2,35 @@ html, body {
 
 }
 
-.container {
-  background: url('../../../assets/textbkg.webp') bottom center;
-  background-size: cover; /* Stretch the background image without repeating */
-  margin: 0;
-  overflow: hidden;
-  height: 100vh; /* Set height to 100 viewport height */
-  position: relative;
-}
 
 .content {
-  color: white;
+  color: #474133;
   text-align: center;
   font-family: Arial, sans-serif;
   line-height: 1.5;
-
   padding: 20px; /* Add some padding to prevent content from touching the edges */
+  padding-top: 0px;
 
-  h1, h2 {
-    border-bottom: 1px solid white;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+
+  h1 {
+    padding-top: 8px;
   }
 
   h1 {
-    font-size: 8vw;
+    font-size: 3em;
   }
 
-  h2 {
-    font-size: 1.5em;
+  h3 {
+    font-family: Patita;
   }
 
   p {
-    margin-bottom: 15px;
+    font-family: ROC_Grotesk_Bold;
   }
+}
+
+menu {
+  --menu-background: #474133;
 }
 
 .ncnf {
