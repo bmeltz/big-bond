@@ -11,7 +11,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { InfoComponent } from './pages/info/info.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
-import { SurvivalGuideComponent } from './survival-guide/survival-guide.component';
+import { SurvivalGuideComponent } from './pages/survival-guide/survival-guide.component';
 import { EthosComponent } from './pages/ethos/ethos.component';
 
 const routes: Routes = [
