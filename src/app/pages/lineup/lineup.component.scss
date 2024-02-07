@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    overflow: hidden;
+    padding: 10px 35px 10px; /* Adjust the top padding to accommodate the shadow */
+}
+
+.img-container {
+    border-radius: 25px; /* Adjust the value to control the curve of the corners */
+    box-shadow:  8px 8px 24px #988c7eb8,
+                -8px -8px 18px rgba(242, 233, 225, 0.765) !important;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 3rem;
+    margin-top: 10px;
+}
