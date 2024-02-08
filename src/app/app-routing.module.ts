@@ -10,6 +10,7 @@ import { DetailedComponent } from './pages/packing-list/detailed/detailed.compon
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
+import { LineupComponent } from './pages/lineup/lineup.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'terms-and-conditions', component: TandcComponent},
   { path: 'detailed-packing-list', component: DetailedComponent},
   { path: 'faq', component: FaqComponent},
+  { path: 'lineup', component: LineupComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home' }
 ];

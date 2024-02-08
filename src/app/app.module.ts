@@ -23,6 +23,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FaqComponent } from './pages/faq/faq.component';
 import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { LineupComponent } from './pages/lineup/lineup.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     TandcComponent,
     DetailedComponent,
     GalleryComponent,
-    FaqComponent
+    FaqComponent,
+    LineupComponent
   ],
   imports: [
     BrowserModule,
