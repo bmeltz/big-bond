@@ -2,13 +2,16 @@
     display: flex;
     justify-content: center; /* Horizontally center the content */
     overflow: hidden;
-    padding: 10px 35px 10px; /* Adjust the top padding to accommodate the shadow */
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 22px; /* Adjust the top padding to accommodate the shadow */
+    // background-color: red;
 }
 
 .img-container {
     border-radius: 25px; /* Adjust the value to control the curve of the corners */
-    box-shadow:  8px 8px 24px #988c7eb8,
-                -8px -8px 18px rgba(242, 233, 225, 0.765) !important;
+    box-shadow:  5px 5px 14px #8e8376cb,
+                -8px -8px 10px rgba(246, 235, 226, 0.864) !important;
     display: block;
     width: 100%;
     height: auto;
