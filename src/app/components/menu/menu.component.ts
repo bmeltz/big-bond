@@ -7,8 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-
-  @Input() panelstyle: Object;
   
   constructor(private router: Router) { 
   }
@@ -21,8 +19,8 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['home']);
   }
 
-  goToFAQ() {
-    this.router.navigate(['faq']);
+  goToInfo() {
+    this.router.navigate(['info']);
   }
 
   goToLineup() {

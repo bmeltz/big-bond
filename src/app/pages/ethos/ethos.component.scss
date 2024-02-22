@@ -1,0 +1,50 @@
+html, body {
+
+}
+
+
+.content {
+  color: #474133;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  padding: 20px; /* Add some padding to prevent content from touching the edges */
+  padding-top: 0px;
+
+
+  h1 {
+    padding-top: 8px;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-family: Patita;
+  }
+
+  p {
+    font-family: ROC_Grotesk_Bold;
+  }
+}
+
+menu {
+  --menu-background: #474133;
+}
+
+.ncnf {
+  margin-top: auto; /* Push .ncnf to the bottom of .top */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+}
+img {
+  display: block;
+  margin: 0 auto;  // Center the image horizontally
+  width: 100%; 
+  
+}

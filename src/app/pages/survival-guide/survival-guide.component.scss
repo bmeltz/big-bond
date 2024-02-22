@@ -1,0 +1,149 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto_Reg;
+}
+
+body{
+  background-color: #f1f1f1;
+}
+
+.top {
+    margin: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: -webkit-fill-available;
+    max-height: -moz-available;          /* WebKit-based browsers will ignore this. */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .content-wrapper{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .sub-point {
+    font-family: ROC_Grotesk_Bold;
+    font-size: 21px;
+    min-width: 100px;
+    color: #75c8ae;
+    text-align: center;
+  }
+
+
+  
+// Collapsible Closed
+details{
+  max-width: 1400px;
+  margin: 1.3rem auto;
+
+  background-color: black;
+  color: white;
+  // background-color: #ABA58D;
+  border-radius: 1rem;
+  box-shadow:  6px 6px 15px #807c6a,
+  -6px -6px 15px #d6ceb0;
+  &:not([open]){
+    animation-name: fold-in;
+    animation-duration: .2s;
+  }
+  
+  summary{
+    font-family: Patita;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 1.5rem;
+  }
+  
+  // Disable browser default marker
+  summary::-webkit-details-marker,
+  summary::marker{
+    content: "";
+    display: none;
+  }
+  
+  // Custom marker
+  summary::after{
+    content: "+";
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  
+  .content{
+    text-align: left;
+    display: flex;
+  }
+}
+
+// Collapsible OPEN
+details[open]{
+  
+  // Custom marker
+  summary::after{
+    content: "−";
+  }
+  
+  .content{
+    animation-name: fold-out;
+    animation-duration: .2s;
+  }
+}
+
+// Fake it 'til you make it animations
+@keyframes fold-out {
+  0% {
+    opacity: 0;
+    margin-top: -1rem;
+  }
+  
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes fold-in {
+  0% {
+    padding-bottom: 1rem;
+  }
+  
+  100% {
+    padding-bottom: 0;
+  }
+}
+
+.ncnf {
+    margin-top: auto; /* Push .ncnf to the bottom of .top */
+    width: 100%;
+  }
+
+  .column-container {
+    column-count: 2;
+    /* You can adjust the column gap if needed */
+    column-gap: 20px;
+    text-align: left;
+    page-break-inside: avoid;
+}
+.column-container p {
+  display: inline-block;
+  width: 100%;
+}
+@media (max-width: 550px) {
+  .column-container {
+      column-count: 1;
+      text-align: left;
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatAccordion } from '@angular/material/expansion';
 
 import { Router } from '@angular/router';
@@ -8,35 +8,35 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatAccordion) accordion: MatAccordion;
-  // set a default. just to silence errors.
 
-  constructor(private router: Router) 
-  {
-  }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     console.log("Hey, email us. We could probably use some help updating the website for next year")
-    
-    // hacky solution to make using in low power mode bearable.
-    // touching or clicking will begin playing the video.
-    document.addEventListener('touchstart', function () {
-      const video = <HTMLVideoElement>document.getElementById('video');
-      video.play();
+  }
 
-    });
-    document.addEventListener('mousemove', function () {
-      const video = <HTMLVideoElement>document.getElementById('video');
-      video.play();
-    });
-  
+  ngAfterViewInit(): void {
+    // Access the video element after the view has been initialized
+    const video = <HTMLVideoElement>document.getElementById('video');
+    
+    if (video) {
+      // Check if the video element exists before attempting to play it
+      document.addEventListener('touchstart', function () {
+        video.play();
+      });
+      
+      document.addEventListener('mousemove', function () {
+        video.play();
+      });
+    }
   }
 
   ngOnDestroy(): void {    
   }
 
-  wristbandsClicked(){
+  shopClicked(){
     this.router.navigate(['shop']);
   }
 }

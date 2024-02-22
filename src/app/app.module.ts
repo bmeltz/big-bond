@@ -18,12 +18,17 @@ import { TandcComponent } from './pages/tandc/tandc.component';
 import { DetailedComponent } from './pages/packing-list/detailed/detailed.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { MatCardModule } from '@angular/material/card'
-import {MatSelectModule} from '@angular/material/select'; 
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { FaqComponent } from './pages/faq/faq.component';
+import { MatSelectModule } from '@angular/material/select'; 
+import { InfoComponent } from './pages/info/info.component';
 import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { FaqComponent } from './pages/faq/faq.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { CardComponent } from './components/card/card.component';
+import { SurvivalGuideComponent } from './pages/survival-guide/survival-guide.component';
+import { EthosComponent } from './pages/ethos/ethos.component';
 import { LineupComponent } from './pages/lineup/lineup.component';
+
 
 @NgModule({
   declarations: [
@@ -39,8 +44,12 @@ import { LineupComponent } from './pages/lineup/lineup.component';
     TandcComponent,
     DetailedComponent,
     GalleryComponent,
+    InfoComponent,
     FaqComponent,
-    LineupComponent
+    LineupComponent,
+    CardComponent,
+    SurvivalGuideComponent,
+    EthosComponent
   ],
   imports: [
     BrowserModule,
@@ -50,8 +59,8 @@ import { LineupComponent } from './pages/lineup/lineup.component';
     FormsModule, 
     MatCardModule,
     MatSelectModule,
-    MatFormFieldModule,
-    MatTabsModule
+    MatTabsModule,
+    MatGridListModule
   ],
   providers: [
     { provide: [

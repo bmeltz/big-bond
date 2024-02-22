@@ -1,0 +1,50 @@
+<div style="    display: flex;
+flex-direction: column;
+min-height: 100vh; overflow: hidden;">
+    <menu></menu>
+    <div class="content">
+        <h2 class="main-txt" style="text-align: center;">ABOUT BIG BOND</h2>
+        <div class="top">
+            <div class="main">
+                <p style="text-align: center; padding-left: 20px; padding-right: 20px; font-family: ROC_Grotesk_Bold;">
+                    Big Bond is not a typical music festival. Big Bond takes place in the remote west Texas Chihuahuan Desert. 
+                    Yes, there is music and camping, but more importantly, Big Bond is a celebration of nature and community. 
+                    The Big Bond community subscribes to a collection of tenets such as Accountability, 
+                    Inclusion, and Leave No Trace, among others, which collectively are referred to as the Big Bond Ethos. 
+                    This Ethos acts as a guide for the values and culture of the Big Bond community.
+                    <br><br>
+                    You are welcomed. Lets be friends.
+                </p>
+                <ul class="cards">
+                    <li class="cards_item">
+                        <card
+                            [imageString]="'mountains.webp'"
+                            [title]="'THE BIG BOND SURVIVAL GUIDE'"
+                            [description]="'The Big Bond Survival Guide is essential reading for all who wish to join the Big Bond community.
+                                It has all the info you need and then some. Seriously, read it if you plan on coming to Big Bond.'"
+                            [navToSelector]="'survival-guide'"
+                        ></card>
+                    </li>
+                    <li class="cards_item">
+                        <card
+                            [imageString]="'manic.webp'"
+                            [title]="'FREQUENTLY ASKED QUESTIONS'"
+                            [description]="'Quick answers to common questions. Questions like: \'where is Big Bond?\', \'When can I show up?\', 
+                            \'When will I get my wristband?\' and many more are answered on the FAQ page.'"
+                            [navToSelector]="'faq'"
+                        ></card>
+                    </li>
+                    <li class="cards_item">
+                        <card
+                            [imageString]="'grounds.webp'"
+                            [title]="'THE BIG BOND ETHOS'"
+                            [description]="'The Ethos acts as a guide for the values and culture of the Big Bond community.'"
+                            [navToSelector]="'ethos'"
+                        ></card>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <no-ceil-floor></no-ceil-floor>
+</div>

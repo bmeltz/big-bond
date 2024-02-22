@@ -18,7 +18,6 @@ export class GalleryComponent implements OnInit {
       this.images.push({
         path: this.gallery_dir + photos["file_list"][img]
       });
-      console.log(this.gallery_dir+ photos["file_list"][img])
     }
   }
 }

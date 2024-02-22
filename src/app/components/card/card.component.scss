@@ -1,0 +1,136 @@
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ecf9ff;
+}
+
+body {
+  color: #272727;
+  font-family: 'Quicksand', serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: .5rem;
+  font-weight: 400;
+  display: block;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.275);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: #75c8ae;
+}
+
+.card {
+  background-color: transparent;
+  border-radius: 1rem;
+  box-shadow:  6px 6px 15px #807c6a,
+             -6px -6px 15px #d6ceb0;
+  flex: 1; // Allow each card to grow equally in a row
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+}
+
+.card_inner {
+    z-index: 1;
+    height: 100%;
+}
+
+.card_image {
+  background-size: cover;
+  background-position: center center;
+  flex-grow: 1;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.card_image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(249, 249, 249, 0), rgba(0, 0, 0, 0.942));
+  border-radius: 1rem;
+  pointer-events: none;
+}
+
+.card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 15px;
+  min-height: 340px;
+
+}
+
+.cards_item {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  // margin-bottom: 0px;
+}
+
+.card_title,
+.card_text,
+.card_btn {
+  text-align: center;
+  color: #ffffff;
+}
+
+.card_title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Patita';
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  padding: 1rem;
+  padding-bottom: 0rem;
+}
+
+.card_text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+.card_btn {
+  align-self: center;
+}
