@@ -23,6 +23,10 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['info']);
   }
 
+  goToLineup() {
+    this.router.navigate(['lineup']);
+  }
+
   goToDirections() {
     this.router.navigate(['directions']);
 

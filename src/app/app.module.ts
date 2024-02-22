@@ -18,15 +18,16 @@ import { TandcComponent } from './pages/tandc/tandc.component';
 import { DetailedComponent } from './pages/packing-list/detailed/detailed.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { MatCardModule } from '@angular/material/card'
-import {MatSelectModule} from '@angular/material/select'; 
+import { MatSelectModule } from '@angular/material/select'; 
 import { InfoComponent } from './pages/info/info.component';
 import { ShopPoliciesComponent } from './pages/shop-policies/shop-policies.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { FaqComponent } from './pages/faq/faq.component';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { CardComponent } from './components/card/card.component';
 import { SurvivalGuideComponent } from './pages/survival-guide/survival-guide.component';
 import { EthosComponent } from './pages/ethos/ethos.component';
+import { LineupComponent } from './pages/lineup/lineup.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { EthosComponent } from './pages/ethos/ethos.component';
     GalleryComponent,
     InfoComponent,
     FaqComponent,
+    LineupComponent,
     CardComponent,
     SurvivalGuideComponent,
     EthosComponent
