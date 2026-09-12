@@ -2,7 +2,7 @@
 This is an angular webapp to share information about and sell wristbands for the big bond camping and music event. To see how this angular project was generated read more about the [Angular CLI](https://github.com/angular/angular-cli) (version 10.1.2).
 
 Note: This repository previously managed the live Big Bond website, but is no longer actively used for deployment.
-The current live site is now hosted separately at: https://bigbond.us/home
+The current live site is now hosted separately at: https://www.bigbond.us/
 
 
 ## Run in a development server
